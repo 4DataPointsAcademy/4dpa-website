@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /lp/
+Disallow: /thank-you/
+
+Sitemap: https://4datapoints.com/sitemap.xml

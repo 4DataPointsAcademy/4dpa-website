@@ -53,7 +53,7 @@
     </ol>
 
     <h2>Option 2: Request deletion here</h2>
-    <p>If you no longer have the app or can't sign in, submit this form. Use the email address on your account. We may contact you to confirm the request is yours, and we will complete it within 30 days.</p>
+    <p>If you no longer have the app or can't sign in, submit this form. Use the email address on your account. We'll email you a link to confirm the request is yours. Once you click it and confirm, your account is deleted right away. If anything prevents that, we complete the request within 30 days.</p>
     <div class="lead-form" style="max-width:560px">
       <form id="deletion-form" novalidate style="display:grid;gap:12px">
         <h3>Request account deletion</h3>
@@ -126,7 +126,7 @@
     }).then(function (r) { return r.json().catch(function () { return {}; }).then(function (d) { if (!r.ok || !d.ok) throw new Error(d.message || 'failed'); }); })
       .then(function () {
         [].slice.call(f.querySelectorAll('label,button,.row2,h3')).forEach(function (el) { el.style.display = 'none'; });
-        done.textContent = 'Request received. We will confirm it with you and delete your account within 30 days.';
+        done.textContent = 'Request received. Check your email for a link to confirm the deletion. If you don\u2019t see it in a few minutes, check your spam folder.';
         done.style.display = 'block';
       })
       .catch(function () {

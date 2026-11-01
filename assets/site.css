@@ -288,3 +288,34 @@ details.qa p{color:var(--muted);padding-bottom:18px}
 .div-empire main .ticks li::before{border-color:var(--emerald)}
 .div-empire main .icon{background:rgba(11,122,85,.1);color:var(--emerald)}
 .div-empire main .cta-band{border-top-color:var(--emerald)}
+
+/* Hero variations by division (shared type, buttons and cards) */
+.sysshot{margin:0;display:grid;gap:8px}
+.sysshot img{width:100%;height:auto}
+.sysshot figcaption,.vu-photo figcaption{font-size:.85rem;color:var(--muted)}
+.quotephoto{margin:0;position:relative}
+.quotephoto blockquote{margin:-48px 24px 0;position:relative;background:var(--paper);border-left:3px solid var(--gold);border-radius:8px;padding:18px 22px;box-shadow:0 10px 30px rgba(20,20,20,.08)}
+.quotephoto blockquote p{font-family:var(--display);font-weight:600;font-size:1.15rem;line-height:1.35;color:var(--ink)}
+.quotephoto cite{display:block;margin-top:6px;font-style:normal;font-size:.85rem;color:var(--gold-dk);font-weight:600}
+.vu-hero{background:var(--ink);color:var(--paper);padding-block:clamp(56px,7vw,88px) clamp(40px,6vw,72px)}
+.vu-top{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:end;margin-bottom:36px}
+.vu-top h1 .gold{color:var(--gold-lt)}
+.vu-side{display:grid;gap:20px}
+.vu-side .lead{color:rgba(255,255,255,.88)}
+.dateline{display:inline-block;font-family:var(--display);font-weight:600;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-lt);border-top:1px solid #4a4a4a;border-bottom:1px solid #4a4a4a;padding:7px 0;margin-bottom:18px}
+.vu-photo{margin:0;display:grid;gap:10px}
+.vu-photo img{width:100%;height:auto;aspect-ratio:21/9;object-fit:cover;object-position:50% 72%;border-radius:var(--r)}
+.vu-photo figcaption{color:var(--muted-dk)}
+@media (max-width:860px){.vu-top{grid-template-columns:1fr;gap:20px;align-items:start}.vu-photo img{aspect-ratio:4/3}.quotephoto blockquote{margin:-36px 14px 0}}
+/* Empire accent */
+.div-empire .sub-hero.lite .eyebrow,.div-empire .light .eyebrow,.div-empire .white .eyebrow,.div-empire .card .tag{color:var(--emerald)}
+.div-empire .sub-hero.lite h1 .gold{color:var(--emerald)}
+/* Personal Development accent: deep burgundy */
+.div-pd{--burg:#6E2639}
+.div-pd .sub-hero.lite .eyebrow,.div-pd .light .eyebrow,.div-pd .white .eyebrow,.div-pd .card .tag{color:var(--burg)}
+.div-pd .sub-hero.lite h1 .gold{color:var(--burg)}
+.div-pd main .card{border-top:3px solid var(--burg)}
+.div-pd main .tier.feat{border-color:var(--burg)}
+.div-pd main .card .go{color:var(--burg)}
+.div-pd main img.portrait{border-color:var(--burg)!important}
+.div-pd .promo{background:#F6ECEE;border-color:#E3C9CF}

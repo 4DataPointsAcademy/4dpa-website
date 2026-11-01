@@ -18,7 +18,17 @@ var WEBSITE_LEAD_URL = "https://qqiqvxtbeswxnzqxcrye.supabase.co/functions/v1/we
     burger.addEventListener('click', function () {
       var o = menu.classList.toggle('open');
       burger.setAttribute('aria-expanded', String(o));
+      if (o) menu.style.maxHeight = Math.max(200, window.innerHeight - menu.getBoundingClientRect().top - 8) + 'px';
     });
+    function closeMenu(focusBurger) {
+      if (!menu.classList.contains('open')) return;
+      menu.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+      if (focusBurger) burger.focus();
+    }
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(true); });
+    menu.addEventListener('click', function (e) { if (e.target.closest('a')) closeMenu(false); });
+    window.addEventListener('resize', function () { if (window.innerWidth > 980) closeMenu(false); });
   }
 
   // Lead forms.

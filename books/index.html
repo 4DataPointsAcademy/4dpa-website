@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Books by Odis D. James III | 4 Data Points Academy</title>
-<meta name="description" content="Four on real estate, three on entrepreneurship, two translated into Spanish.">
+<meta name="description" content="Digital editions of all seven books by Odis D. James III, delivered instantly through the 4DPA student portal.">
 <link rel="canonical" href="https://4datapoints.com/books/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="4 Data Points Academy">
 <meta property="og:title" content="Books by Odis D. James III | 4 Data Points Academy">
-<meta property="og:description" content="Four on real estate, three on entrepreneurship, two translated into Spanish.">
+<meta property="og:description" content="Digital editions of all seven books by Odis D. James III, delivered instantly through the 4DPA student portal.">
 <meta property="og:url" content="https://4datapoints.com/books/">
 <meta property="og:image" content="https://4datapoints.com/assets/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,29 +38,180 @@
 </div></header>
 
 <main>
+<style>
+.bkgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+@media (max-width:860px){.bkgrid{grid-template-columns:1fr}}
+.bk{display:grid;grid-template-columns:150px minmax(0,1fr);gap:20px;align-items:start;padding:20px;border:1px solid var(--line);border-radius:var(--r);background:#fff}
+@media (max-width:420px){.bk{grid-template-columns:110px minmax(0,1fr);gap:14px;padding:14px}}
+.bk img{width:100%;aspect-ratio:2/3;object-fit:cover;border-radius:4px;box-shadow:0 10px 24px rgba(0,0,0,.18)}
+.bk-body{display:grid;gap:8px;min-width:0}
+.bk .tag{font-family:var(--display);font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#8A6D12}
+.bk h3{font-size:1.08rem;line-height:1.25;text-wrap:balance}
+.bk-lead{font-size:.9rem;color:var(--muted)}
+.bk-outs{margin:0;padding-left:18px;font-size:.88rem;color:var(--text);display:grid;gap:2px}
+.bk-price{display:flex;align-items:baseline;gap:10px;margin-top:4px}
+.bk-price strong{font-family:var(--display);font-size:1.4rem}
+.bk-price span{font-size:.78rem;color:var(--muted)}
+.bk-buy{justify-self:start;font-size:.9rem}
+.bk-note{font-size:.8rem;color:var(--muted)}
+.bd-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+@media (max-width:960px){.bd-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.bd-row{grid-template-columns:1fr}}
+.bd{position:relative;display:grid;gap:10px;align-content:start;padding:22px;border:1px solid var(--line);border-radius:var(--r);background:#fff}
+.bd-best{border-color:#D4AF37;box-shadow:0 0 0 1px #D4AF37}
+.bd-badge{position:absolute;top:-11px;left:22px;background:#1A1A1A;color:#D4AF37;font-family:var(--display);font-size:.66rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.bd .tag{font-family:var(--display);font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#8A6D12}
+.bd-price strong{font-family:var(--display);font-size:1.6rem}
+.bd-price s{color:var(--muted);font-size:.95rem;margin-left:6px}
+.bd p{font-size:.9rem;color:var(--muted)}
+.bd .bk-buy{justify-self:stretch;text-align:center}
+.credit{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+@media (max-width:760px){.credit{grid-template-columns:1fr}}
+.credit div{padding:22px;border-radius:var(--r);background:#1A1A1A;color:#F7F6F2;display:grid;gap:6px}
+.credit strong{font-family:var(--display);color:#D4AF37;font-size:1.5rem}
+.credit p{color:#D9D6CC;font-size:.92rem}
+.how{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;counter-reset:s}
+@media (max-width:760px){.how{grid-template-columns:1fr}}
+.how div{display:grid;gap:6px}
+.how div::before{counter-increment:s;content:counter(s);font-family:var(--display);font-weight:700;color:#8A6D12;font-size:1.1rem}
+.how h3{font-size:1rem}.how p{font-size:.9rem;color:var(--muted)}
+.bk-msg{margin-top:14px;font-size:.85rem;color:var(--muted)}
+</style>
 <section class="page show" id="p-books" data-page="books">
   <div class="sub-hero lite"><div class="wrap">
     <span class="eyebrow">Books by Odis D. James III</span>
     <h1>Seven books.<br><span class="gold">One system.</span></h1>
-    <p class="lead">Four on real estate, three on entrepreneurship, two translated into Spanish.</p>
+    <p class="lead">Four on real estate, three on entrepreneurship. Every book is a digital edition you can read today: buy it, log in to the 4DPA student portal and download the PDF.</p>
+    <p class="muted" style="margin-top:10px">From an investor and broker who has overseen a $650M portfolio and 2,700 units.</p>
   </div></div>
   <section class="band white"><div class="wrap">
     <div class="head"><span class="eyebrow">Real estate</span><h2>The Field Manuals and No Shortcuts</h2></div>
-    <div class="bookgrid">
-      <div class="book"><img src="/assets/img/c-res.jpg" alt="The Real Estate Investor's Field Manual, Residential Edition cover" loading="lazy"><span class="tag">Print · $97</span><h3>Field Manual: Residential Edition</h3><p>The complete residential curriculum. 225 pages, 5 modules, 32 lessons.</p><a class="go" style="color:#8A6D12;font-weight:600;text-decoration:none" href="https://forms.4datapoints.com/book-sales-funnel" target="_blank" rel="noopener">Get the book →</a></div>
-      <div class="book"><img src="/assets/img/c-mf.jpg" alt="Field Manual, Multifamily Commercial Edition cover" loading="lazy"><span class="tag">Digital · with the course</span><h3>Field Manual: Multifamily Commercial Edition</h3><p>Evaluating, buying, rehabbing and operating 5+ unit buildings.</p><a class="go" style="color:#8A6D12;font-weight:600;text-decoration:none" href="/multifamily/">See the course →</a></div>
-      <div class="book"><img src="/assets/img/c-ns.jpg" alt="No Shortcuts cover" loading="lazy"><span class="tag">English · Spanish</span><h3>No Shortcuts</h3><p>The first-time landlord's guide to building wealth through rental real estate. In Spanish as Sin Atajos.</p></div>
-      <div class="book"><img src="/assets/img/c-teen.jpg" alt="Field Manual, Teen Edition cover" loading="lazy"><span class="tag">Teen Edition</span><h3>Field Manual: Teen Edition</h3><p>The Field Manual system, written for young investors.</p></div>
-    </div>
+    <div class="bkgrid"><article class="bk">
+  <img src="/assets/img/c-res.jpg" alt="The Real Estate Investor&#x27;s Field Manual: Residential Edition cover" loading="lazy" width="320" height="480">
+  <div class="bk-body">
+    <span class="tag">Digital edition · Real estate</span>
+    <h3>Field Manual: Residential Edition</h3>
+    <p class="bk-lead">The complete residential curriculum for new and growing investors. 225 pages, 5 modules, 32 lessons.</p>
+    <ul class="bk-outs"><li>Find and analyze single-family deals</li><li>Finance, rehab and close with confidence</li></ul>
+    <div class="bk-price"><strong>$29.99</strong><span>PDF · instant access</span></div>
+    <a class="btn btn-gold bk-buy" data-book="res" href="#">Buy the digital edition · $29.99</a>
+  </div>
+</article><article class="bk">
+  <img src="/assets/img/c-mf.jpg" alt="The Real Estate Investor&#x27;s Field Manual: Multifamily Commercial Edition cover" loading="lazy" width="320" height="480">
+  <div class="bk-body">
+    <span class="tag">Digital edition · Real estate</span>
+    <h3>Field Manual: Multifamily Commercial Edition</h3>
+    <p class="bk-lead">For investors ready to move into 5+ unit buildings: evaluate, buy, rehab and operate.</p>
+    <ul class="bk-outs"><li>Value a building by its income</li><li>Includes $30 off the Multifamily course</li></ul>
+    <div class="bk-price"><strong>$29.99</strong><span>PDF · instant access</span></div>
+    <a class="btn btn-gold bk-buy" data-book="mf" href="#">Buy the digital edition · $29.99</a>
+  </div>
+</article><article class="bk">
+  <img src="/assets/img/c-ns.jpg" alt="No Shortcuts cover" loading="lazy" width="320" height="480">
+  <div class="bk-body">
+    <span class="tag">Digital edition · Real estate</span>
+    <h3>No Shortcuts</h3>
+    <p class="bk-lead">The first-time landlord&#x27;s guide to building wealth through rental real estate.</p>
+    <ul class="bk-outs"><li>Screen tenants and avoid costly mistakes</li><li>Know your numbers every month</li></ul>
+    <div class="bk-price"><strong>$19.99</strong><span>PDF · instant access</span></div>
+    <a class="btn btn-gold bk-buy" data-book="ns" href="#">Buy the digital edition · $19.99</a>
+  </div>
+</article><article class="bk">
+  <img src="/assets/img/c-teen.jpg" alt="The Real Estate Investor&#x27;s Field Manual: Teen Edition cover" loading="lazy" width="320" height="480">
+  <div class="bk-body">
+    <span class="tag">Digital edition · Real estate</span>
+    <h3>Field Manual: Teen Edition</h3>
+    <p class="bk-lead">The Field Manual system written for young investors, made to read together with a parent.</p>
+    <ul class="bk-outs"><li>Money and investing basics in plain language</li><li>Conversation starters for families</li></ul>
+    <div class="bk-price"><strong>$14.99</strong><span>PDF · instant access</span></div>
+    <a class="btn btn-gold bk-buy" data-book="teen" href="#">Buy the digital edition · $14.99</a>
+  </div>
+</article></div>
     <div class="head" style="margin:64px 0 24px"><span class="eyebrow">Entrepreneurship</span><h2>For the builder in you</h2></div>
-    <div class="bookgrid">
-      <div class="book"><img src="/assets/img/c-ng.jpg" alt="No Guardrails cover" loading="lazy"><span class="tag">Included with VentureU Virtual</span><h3>No Guardrails</h3><p>The eight areas every aspiring entrepreneur has to master, with diagnostics and a 90-day blueprint.</p></div>
-      <div class="book"><img src="/assets/img/c-sfz.jpg" alt="Starting From Zero cover" loading="lazy"><span class="tag">Entrepreneurship</span><h3>Starting From Zero</h3><p>Own the journey or somebody else will. How to start with no money and no network.</p></div>
-      <div class="book"><img src="/assets/img/c-glory.jpg" alt="One Decision From Glory cover" loading="lazy"><span class="tag">Faith · Business · Entrepreneurship</span><h3>One Decision From Glory</h3><p>A choice today, a legacy forever.</p></div>
-    </div>
+    <div class="bkgrid"><article class="bk">
+  <img src="/assets/img/c-ng.jpg" alt="No Guardrails cover" loading="lazy" width="320" height="480">
+  <div class="bk-body">
+    <span class="tag">Digital edition · Entrepreneurship</span>
+    <h3>No Guardrails</h3>
+    <p class="bk-lead">The eight areas every aspiring entrepreneur has to master, with diagnostics and a 90-day blueprint.</p>
+    <ul class="bk-outs"><li>Find your weakest area in 10 minutes</li><li>Includes $20 off Entrepreneur Foundations</li></ul>
+    <div class="bk-price"><strong>$19.99</strong><span>PDF · instant access</span></div>
+    <a class="btn btn-gold bk-buy" data-book="ng" href="#">Buy the digital edition · $19.99</a>
+  </div>
+</article><article class="bk">
+  <img src="/assets/img/c-sfz.jpg" alt="Starting From Zero cover" loading="lazy" width="320" height="480">
+  <div class="bk-body">
+    <span class="tag">Digital edition · Entrepreneurship</span>
+    <h3>Starting From Zero</h3>
+    <p class="bk-lead">Own the journey or somebody else will. How to start with no money and no network.</p>
+    <ul class="bk-outs"><li>Take stock of where you really are</li><li>Build your first plan from the ground up</li></ul>
+    <div class="bk-price"><strong>$14.99</strong><span>PDF · instant access</span></div>
+    <a class="btn btn-gold bk-buy" data-book="sfz" href="#">Buy the digital edition · $14.99</a>
+  </div>
+</article><article class="bk">
+  <img src="/assets/img/c-glory.jpg" alt="One Decision From Glory cover" loading="lazy" width="320" height="480">
+  <div class="bk-body">
+    <span class="tag">Digital edition · Faith · Business</span>
+    <h3>One Decision From Glory</h3>
+    <p class="bk-lead">A choice today, a legacy forever. Faith, business and the decisions that shape a life.</p>
+    <ul class="bk-outs"><li>One decision you can make this week</li><li>Build something that lasts</li></ul>
+    <div class="bk-price"><strong>$14.99</strong><span>PDF · instant access</span></div>
+    <a class="btn btn-gold bk-buy" data-book="odfg" href="#">Buy the digital edition · $14.99</a>
+  </div>
+</article></div>
   </div></section>
-  
+  <section class="band"><div class="wrap">
+    <div class="head"><span class="eyebrow">Bundles</span><h2>Save when you buy together</h2></div>
+    <div class="bd-row"><div class="bd">
+  <span class="tag">Entrepreneur Pair</span>
+  <div class="bd-price"><strong>$27.99</strong> <s>$34.98</s></div>
+  <p>Starting From Zero + No Guardrails</p>
+  <a class="btn btn-gold bk-buy" data-book="b_ent" href="#">Buy the bundle · $27.99</a>
+</div><div class="bd">
+  <span class="tag">Landlord &amp; Investor Pack</span>
+  <div class="bd-price"><strong>$39.99</strong> <s>$49.98</s></div>
+  <p>Field Manual: Residential + No Shortcuts</p>
+  <a class="btn btn-gold bk-buy" data-book="b_land" href="#">Buy the bundle · $39.99</a>
+</div><div class="bd">
+  <span class="tag">Field Manual Collection</span>
+  <div class="bd-price"><strong>$59.99</strong> <s>$74.97</s></div>
+  <p>Residential, Multifamily and Teen Editions</p>
+  <a class="btn btn-gold bk-buy" data-book="b_fm" href="#">Buy the bundle · $59.99</a>
+</div><div class="bd bd-best"><span class="bd-badge">Best value</span>
+  <span class="tag">Complete 4DPA Library</span>
+  <div class="bd-price"><strong>$79.99</strong> <s>$144.93</s></div>
+  <p>All seven books</p>
+  <a class="btn btn-gold bk-buy" data-book="b_all" href="#">Buy the bundle · $79.99</a>
+</div></div>
+  </div></section>
+  <section class="band white"><div class="wrap">
+    <div class="head"><span class="eyebrow">Read the book, save on the course</span><h2>Your book purchase counts toward the next step</h2></div>
+    <div class="credit">
+      <div><strong>$30 off</strong><p>Buy the Multifamily Field Manual and get a personal code for $30 off the Multifamily Commercial Real Estate Course.</p></div>
+      <div><strong>$20 off</strong><p>Buy No Guardrails and get a personal code for $20 off Entrepreneur Foundations.</p></div>
+    </div>
+    <p class="muted" style="margin-top:12px">Your code arrives by email after purchase. One use per buyer, for a limited time.</p>
+  </div></section>
+  <section class="band"><div class="wrap">
+    <div class="head"><span class="eyebrow">How it works</span><h2>From checkout to reading in minutes</h2></div>
+    <div class="how">
+      <div><h3>Check out securely</h3><p>Pay once. No subscription.</p></div>
+      <div><h3>Get your portal login</h3><p>We email your receipt and your 4DPA student portal access right away.</p></div>
+      <div><h3>Download the PDF</h3><p>Open your book in the portal and download it. It's yours to keep.</p></div>
+    </div>
+    <p class="bk-msg">Digital books are delivered immediately and are final after delivery, subject to applicable law. If a file is defective or you can't get in, write to info@4datapoints.com and we'll fix it. Spanish editions are coming soon.</p>
+  </div></section>
 </section>
+<script>
+/* Checkout links. Fill each one when its GoHighLevel checkout goes live. */
+var BOOK_CHECKOUT={res:"",mf:"",ns:"",teen:"",ng:"",sfz:"",odfg:"",b_ent:"",b_land:"",b_fm:"",b_all:""};
+document.querySelectorAll('.bk-buy').forEach(function(a){
+  var u=BOOK_CHECKOUT[a.dataset.book];
+  if(u){a.href=u;}else{a.addEventListener('click',function(e){e.preventDefault();
+    var n=a.parentNode.querySelector('.bk-note');
+    if(!n){n=document.createElement('p');n.className='bk-note';n.textContent='Checkout opens at launch.';a.after(n);}});}
+});
+</script>
 </main>
 
 <footer><div class="wrap cols">

@@ -19,6 +19,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/re3d/re3d.css">
+<link rel="preload" href="/assets/re3d/app.min.js" as="script" crossorigin>
 </head>
 <body>
 <div class="topbar"><div class="wrap"><span class="sched">Live mentorship classes Monday to Thursday, 5:00 PM Pacific</span><span><a href="https://portal.4datapoints.com/" target="_blank" rel="noopener">Student Portal</a> &nbsp;·&nbsp; <a href="tel:+17027108030">702-710-8030</a> (call or text)</span></div></div>
@@ -36,6 +38,39 @@
   </nav>
   <a class="btn btn-gold lp-call" href="tel:+17027108030">Call 702-710-8030</a>
 </div></header>
+
+<!-- 4DPA Real Estate 3D hero: the Four Data Points told through one Detroit two-flat. Existing page content follows unchanged. -->
+<section id="track" aria-label="The Four Data Points: one property from purchase to income">
+  <div class="re3d-stage">
+    <canvas id="scene" aria-hidden="true"></canvas>
+    <div id="poster" role="img" aria-label="Renovated Detroit two-flat at dusk"></div>
+    <div class="loading">Loading the property…</div>
+    <div id="ui">
+      <div class="scrim"></div>
+      <div class="copy">
+        <div class="eyebrow">The Four Data Points</div>
+        <h2 class="re3d-h">Every property has a story. The numbers tell you whether it's a deal.</h2>
+        <div class="chapter" id="chapter" aria-live="polite">
+          <span class="num" id="ch-num">01 / 04</span><span class="key" id="ch-key">COST</span>
+          <h3 id="ch-title"></h3>
+          <p id="ch-body"></p>
+          <div class="phase" id="phase"></div>
+        </div>
+        <div class="rail" role="list" aria-label="Four Data Points progress">
+          <span id="rail-fill"></span>
+          <span class="step" role="listitem" data-k="COST">Cost</span><span class="step" role="listitem" data-k="REHAB">Rehab</span><span class="step" role="listitem" data-k="ARV">ARV</span><span class="step" role="listitem" data-k="INCOME">Income</span>
+        </div>
+      </div>
+      <div class="scroll-cue">Scroll to renovate</div>
+      <div class="cta">
+        <h3>Stop guessing. Start analyzing deals.</h3>
+        <a class="btn" href="https://forms.4datapoints.com/mentorship-application">Apply for Real Estate Mentorship</a>
+      </div>
+    </div>
+  </div>
+</section>
+<script>(function(){var h=document.querySelector('header.nav'),t=document.getElementById('track');function s(){t.style.setProperty('--hdr',(h?h.offsetHeight:0)+'px')}s();addEventListener('resize',s)})();</script>
+<script type="module" src="/assets/re3d/app.min.js"></script>
 
 <main>
 <section class="page show" id="p-realestate" data-page="realestate" data-title="Real Estate Investing Mentorship &amp; Courses | 4 Data Points Academy">

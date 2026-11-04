@@ -1,0 +1,86 @@
+/* 4DPA Real Estate 3D hero, scoped to #track so it cannot affect the rest of the page */
+@keyframes re3dIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+#track {--black: #0d0c0b;
+    --cream: #f3ecdf;
+    --cream-body: rgba(243, 236, 223, 0.9);
+    --cream-dim: rgba(243, 236, 223, 0.62);
+    --gold: #c9a45c;
+    --gold-soft: rgba(201, 164, 92, 0.55);}
+#track #scene {position: fixed; left: 0; top: 0; width: 100vw; height: 100vh; height: 100lvh; display: block;}
+#track #poster {position: fixed; inset: 0; background: url(/assets/re3d/poster.jpg) 70% center / cover no-repeat; display: none;}
+body.no-webgl #track #scene {display: none;}
+body.no-webgl #track #poster {display: block;}
+body.no-webgl #track {height: 100vh;}
+body.no-webgl #track .chapter, body.no-webgl #track .rail, body.no-webgl #track .scroll-cue, body.no-webgl #track .loading {display: none;}
+#track {position: relative; height: 560vh;}
+body[data-view="mobile"] #track {height: 620vh;}
+#track #ui {position: fixed; inset: 0; pointer-events: none;}
+#track #ui[hidden] {display: none;}
+#track .scrim {position: absolute; inset: 0; background: linear-gradient(180deg, rgba(13,12,11,0.62) 0, rgba(13,12,11,0) 140px), linear-gradient(90deg, rgba(13,12,11,0.94) 0%, rgba(13,12,11,0.9) 32%, rgba(13,12,11,0.55) 46%, rgba(13,12,11,0) 61%);}
+#track .copy {position: absolute; left: max(16px, 5.5vw); top: 50%; transform: translateY(-44%); width: min(41vw, 640px);}
+#track .eyebrow {font-size: 12px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold); font-weight: 600; display: flex; align-items: center; gap: 14px;}
+#track .eyebrow::before {content: ''; width: 34px; height: 1px; background: var(--gold);}
+#track h1 {font-family: Poppins, Inter, sans-serif; font-weight: 600; font-size: clamp(30px, 2.65vw, 44px); line-height: 1.14; margin: 18px 0 32px; letter-spacing: -0.015em; text-wrap: balance;}
+#track .chapter {border-left: 1px solid var(--gold-soft); padding: 4px 0 4px 22px; max-width: 520px; min-height: 172px;}
+#track .chapter.in {animation: re3dIn 0.5s ease both;}
+#track from {opacity: 0; transform: translateY(8px);}
+#track to {opacity: 1; transform: none;}
+#track .chapter .num {font-size: 12px; letter-spacing: 0.2em; color: var(--cream-dim);}
+#track .chapter .key {font-family: Poppins, Inter, sans-serif; font-size: 13px; letter-spacing: 0.32em; color: var(--gold); font-weight: 600; margin-left: 10px;}
+#track .chapter h3 {font-family: Poppins, Inter, sans-serif; font-size: clamp(18px, 1.45vw, 23px); font-weight: 500; line-height: 1.35; margin: 12px 0 10px; text-wrap: balance;}
+#track .chapter p {font-size: 16px; line-height: 1.62; color: var(--cream-body); margin: 0; max-width: 50ch; text-shadow: 0 1px 2px rgba(0,0,0,0.45);}
+#track .phase {margin-top: 14px; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); opacity: 0; transition: opacity 0.3s; display: flex; align-items: center; gap: 10px; min-height: 16px;}
+#track .phase::before {content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 4px rgba(201,164,92,0.22);}
+#track .phase.on {opacity: 1;}
+#track .rail {margin: 30px 0 0; display: flex; max-width: 460px; position: relative;}
+#track .rail::before {content: ''; position: absolute; left: 0; right: 0; top: 0; height: 2px; background: rgba(243,236,223,0.18);}
+#track #rail-fill {position: absolute; left: 0; right: 0; top: 0; height: 2px; background: var(--gold); transform-origin: left; transform: scaleX(0);}
+#track .rail .step {flex: 1; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(243,236,223,0.5); padding-top: 12px; font-weight: 600;}
+#track .rail .step.on {color: var(--gold);}
+#track .scroll-cue {position: absolute; left: max(16px, 5.5vw); bottom: 34px; font-size: 11px; letter-spacing: 0.24em; color: var(--cream-dim); text-transform: uppercase; display: flex; align-items: center; gap: 12px;}
+#track .scroll-cue::before {content: ''; width: 1px; height: 34px; background: linear-gradient(var(--gold), transparent);}
+#track .cta {position: absolute; left: max(16px, 5.5vw); bottom: 7vh; display: flex; align-items: center; gap: 26px; pointer-events: none; opacity: 0; transform: translateY(10px); transition: opacity 0.5s, transform 0.5s;}
+#track .cta h3 {font-family: Poppins, Inter, sans-serif; font-weight: 500; font-size: 18px; margin: 0; color: var(--cream);}
+#track .cta .btn {background: var(--gold); color: var(--black); text-decoration: none; font-weight: 600; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; padding: 16px 24px;}
+#track .cta .btn:hover {background: #d8b571;}
+body.final #track .cta {opacity: 1; transform: none; pointer-events: auto;}
+body.final #track .scroll-cue {opacity: 0;}
+#track .loading {position: fixed; inset: 0; display: grid; place-items: center; background: var(--black); color: var(--cream-dim); font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; transition: opacity 0.6s; z-index: 10;}
+body.ready #track .loading {opacity: 0; pointer-events: none;}
+body.capture #track .loading {display: none;}
+body[data-view="mobile"] #track .scrim {background: linear-gradient(180deg, rgba(13,12,11,0.95) 0%, rgba(13,12,11,0.9) 40%, rgba(13,12,11,0.4) 54%, rgba(13,12,11,0) 62%, rgba(13,12,11,0) 82%, rgba(13,12,11,0.75) 100%);}
+body[data-view="mobile"] #track .copy {top: 88px; transform: none; left: 20px; right: 20px; width: auto;}
+body[data-view="mobile"] #track .eyebrow {font-size: 10.5px; letter-spacing: 0.22em;}
+body[data-view="mobile"] #track h1 {font-size: 24px; line-height: 1.16; margin: 10px 0 14px;}
+body[data-view="mobile"] #track .chapter {padding-left: 16px; min-height: 0;}
+body[data-view="mobile"] #track .chapter h3 {font-size: 17px; margin: 8px 0 6px;}
+body[data-view="mobile"] #track .chapter p {font-size: 14px; line-height: 1.5;}
+body[data-view="mobile"] #track .chapter .key {font-size: 12px;}
+body[data-view="mobile"] #track .phase {margin-top: 8px; font-size: 10.5px;}
+body[data-view="mobile"] #track .rail {margin-top: 12px; height: 2px;}
+body[data-view="mobile"] #track .rail .step {font-size: 0; padding: 0;}
+body[data-view="mobile"] #track .phase {text-shadow: 0 1px 3px rgba(0,0,0,0.8);}
+body[data-view="mobile"] #track .scroll-cue {left: 50%; transform: translateX(-50%); bottom: 18px;}
+body[data-view="mobile"] #track .cta {left: 16px; right: 16px; bottom: max(16px, env(safe-area-inset-bottom)); flex-direction: column; align-items: stretch; gap: 10px;}
+body[data-view="mobile"] #track .cta h3 {font-size: 15px; text-align: center;}
+body[data-view="mobile"] #track .cta .btn {text-align: center; padding: 16px;}
+@media (prefers-reduced-motion: reduce) {
+  #track .chapter.in {animation: none;}
+  #track .cta, #track .phase, #track .loading {transition: none;}
+}
+
+/* embedded in the site page */
+#track { --hdr: 0px; background: var(--black); color: var(--cream); font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+#track .re3d-stage { position: sticky; top: var(--hdr); height: calc(100vh - var(--hdr)); height: calc(100lvh - var(--hdr)); overflow: hidden; }
+#track #scene, #track #poster, #track #ui, #track .loading { position: absolute; inset: 0; width: 100%; height: 100%; }
+#track .copy { top: 50%; }
+#track .scrim { background: linear-gradient(90deg, rgba(13,12,11,0.94) 0%, rgba(13,12,11,0.9) 32%, rgba(13,12,11,0.55) 46%, rgba(13,12,11,0) 61%); }
+#track .re3d-h { font-family: Poppins, Inter, sans-serif; font-weight: 600; font-size: clamp(30px, 2.65vw, 44px); line-height: 1.14; margin: 18px 0 32px; letter-spacing: -0.015em; text-wrap: balance; color: var(--cream); }
+body[data-view="mobile"] #track .re3d-h { font-size: 24px; line-height: 1.16; margin: 10px 0 14px; }
+body[data-view="mobile"] #track .copy { top: 24px; }
+#track .cta .btn { border-radius: 0; margin: 0; }
+#track .eyebrow { font-family: Inter, system-ui, sans-serif; }
+body.no-webgl #track { height: auto; }
+body.no-webgl #track .re3d-stage { position: relative; }
+#track h2, #track h3 { color: var(--cream); }
+#track a.btn:hover { background: #d8b571; }

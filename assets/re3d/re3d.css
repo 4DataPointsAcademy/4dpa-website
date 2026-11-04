@@ -37,8 +37,11 @@ body[data-view="mobile"] #track {height: 620vh;}
 #track #rail-fill {position: absolute; left: 0; right: 0; top: 0; height: 2px; background: var(--gold); transform-origin: left; transform: scaleX(0);}
 #track .rail .step {flex: 1; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(243,236,223,0.5); padding-top: 12px; font-weight: 600;}
 #track .rail .step.on {color: var(--gold);}
-#track .scroll-cue {position: absolute; left: max(16px, 5.5vw); bottom: 34px; font-size: 11px; letter-spacing: 0.24em; color: var(--cream-dim); text-transform: uppercase; display: flex; align-items: center; gap: 12px;}
-#track .scroll-cue::before {content: ''; width: 1px; height: 34px; background: linear-gradient(var(--gold), transparent);}
+#track .scroll-cue { position: fixed; z-index: 15; background: rgba(13,12,11,0.6); padding: 9px 16px; border-radius: 999px; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); left: max(16px, 5.5vw); bottom: max(24px, env(safe-area-inset-bottom, 0px)); font-size: 13px; font-weight: 600; letter-spacing: 0.22em; color: var(--gold); text-transform: uppercase; display: flex; align-items: center; gap: 14px; text-shadow: 0 1px 3px rgba(0,0,0,0.7); transition: opacity 0.4s; }
+#track .scroll-cue::before { content: ''; width: 11px; height: 11px; background: none; border-right: 2px solid var(--gold); border-bottom: 2px solid var(--gold); transform: translateY(-3px) rotate(45deg); animation: cueBounce 1.6s ease-in-out infinite; }
+@keyframes cueBounce { 0%, 100% { transform: translateY(-4px) rotate(45deg); } 50% { transform: translateY(4px) rotate(45deg); } }
+body.scrolled #track .scroll-cue { opacity: 0; pointer-events: none; }
+@media (prefers-reduced-motion: reduce) { #track .scroll-cue::before { animation: none; } }
 #track .cta {position: absolute; left: max(16px, 5.5vw); bottom: 7vh; display: flex; align-items: center; gap: 26px; pointer-events: none; opacity: 0; transform: translateY(10px); transition: opacity 0.5s, transform 0.5s;}
 #track .cta h3 {font-family: Poppins, Inter, sans-serif; font-weight: 500; font-size: 18px; margin: 0; color: var(--cream);}
 #track .cta .btn {background: var(--gold); color: var(--black); text-decoration: none; font-weight: 600; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; padding: 16px 24px;}
@@ -60,7 +63,7 @@ body[data-view="mobile"] #track .phase {margin-top: 8px; font-size: 10.5px;}
 body[data-view="mobile"] #track .rail {margin-top: 12px; height: 2px;}
 body[data-view="mobile"] #track .rail .step {font-size: 0; padding: 0;}
 body[data-view="mobile"] #track .phase {text-shadow: 0 1px 3px rgba(0,0,0,0.8);}
-body[data-view="mobile"] #track .scroll-cue {left: 50%; transform: translateX(-50%); bottom: 18px;}
+body[data-view="mobile"] #track .scroll-cue {left: 50%; transform: translateX(-50%); bottom: max(22px, env(safe-area-inset-bottom, 0px)); font-size: 11.5px; letter-spacing: 0.18em; white-space: nowrap;}
 body[data-view="mobile"] #track .cta {left: 16px; right: 16px; bottom: max(16px, env(safe-area-inset-bottom)); flex-direction: column; align-items: stretch; gap: 10px;}
 body[data-view="mobile"] #track .cta h3 {font-size: 15px; text-align: center;}
 body[data-view="mobile"] #track .cta .btn {text-align: center; padding: 16px;}

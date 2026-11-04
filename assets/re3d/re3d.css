@@ -73,7 +73,8 @@ body[data-view="mobile"] #track .cta .btn {text-align: center; padding: 16px;}
 #track { --hdr: 0px; background: var(--black); color: var(--cream); font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
 #track .re3d-stage { position: sticky; top: var(--hdr); height: calc(100vh - var(--hdr)); height: calc(100lvh - var(--hdr)); overflow: hidden; }
 #track #scene, #track #poster, #track #ui, #track .loading { position: absolute; inset: 0; width: 100%; height: 100%; }
-#track .copy { top: 50%; }
+#track .copy { top: 45%; transform: translateY(-50%); }
+#track .cta { bottom: max(24px, 5vh); }
 #track .scrim { background: linear-gradient(90deg, rgba(13,12,11,0.94) 0%, rgba(13,12,11,0.9) 32%, rgba(13,12,11,0.55) 46%, rgba(13,12,11,0) 61%); }
 #track .re3d-h { font-family: Poppins, Inter, sans-serif; font-weight: 600; font-size: clamp(30px, 2.65vw, 44px); line-height: 1.14; margin: 18px 0 32px; letter-spacing: -0.015em; text-wrap: balance; color: var(--cream); }
 body[data-view="mobile"] #track .re3d-h { font-size: 24px; line-height: 1.16; margin: 10px 0 14px; }
@@ -84,3 +85,9 @@ body.no-webgl #track { height: auto; }
 body.no-webgl #track .re3d-stage { position: relative; }
 #track h2, #track h3 { color: var(--cream); }
 #track a.btn:hover { background: #d8b571; }
+/* short phones (e.g. iPhone SE): tighter type and, at the final CTA, drop the chapter paragraph so the button never covers the copy */
+@media (max-height: 620px) {
+  body[data-view="mobile"] #track .re3d-h { font-size: 20px; margin: 6px 0 10px; }
+  body[data-view="mobile"] #track .chapter p { font-size: 13px; }
+  body.final[data-view="mobile"] #track .chapter p { display: none; }
+}

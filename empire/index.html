@@ -19,6 +19,121 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap">
+<style>
+  #track { --obsidian: #16140F; --gold: #C9A84C; --gold-soft: rgba(201,168,76,0.55); --cream: #F7F2E4; --cream-body: rgba(247,242,228,0.9); --cream-dim: rgba(247,242,228,0.62); --graphite: #4A4540; }
+  #track { position: relative; height: 640vh; background: var(--obsidian); color: var(--cream); }
+  body[data-view="mobile"] #track { height: 680vh; }
+  #track .stage { position: sticky; top: var(--hdr, 0px); height: calc(100vh - var(--hdr, 0px)); height: calc(100lvh - var(--hdr, 0px)); overflow: hidden; }
+  #track #scene, #track #poster, #track #ui, #track .loading { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  #track #poster { background: url(poster.jpg) 68% center / cover no-repeat; display: none; }
+  body.no-webgl #track #scene { display: none; }
+  body.no-webgl #track #poster { display: block; }
+  body.no-webgl #track { height: auto; }
+  body.no-webgl #track .stage { position: relative; }
+  body.no-webgl #track .chapter, body.no-webgl #track .rail, body.no-webgl #track .scroll-cue, body.no-webgl #track .loading { display: none; }
+  #track #ui { pointer-events: none; }
+  #track #ui[hidden] { display: none; }
+  #track .scrim { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(22,20,15,0.93) 0%, rgba(22,20,15,0.86) 30%, rgba(22,20,15,0.45) 45%, rgba(22,20,15,0) 60%); }
+  #track .brand { position: absolute; top: 26px; left: max(16px, 5.5vw); display: flex; align-items: baseline; gap: 14px; }
+  #track .brand b { font-family: Cinzel, Georgia, serif; font-weight: 600; font-size: 22px; letter-spacing: 0.22em; color: var(--gold); }
+  #track .brand { align-items: center; }
+  #track .brand i { font-style: normal; color: var(--cream-dim); }
+  #track .brand img { height: 30px; width: auto; display: block; }
+  #track .brand span { font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--cream-dim); }
+  #track .copy { position: absolute; left: max(16px, 5.5vw); top: 47%; transform: translateY(-50%); width: min(40vw, 600px); }
+  #track .eyebrow { font-size: 12px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold); font-weight: 600; display: flex; align-items: center; gap: 14px; }
+  #track .eyebrow::before { content: ''; width: 34px; height: 1px; background: var(--gold); }
+  #track .chapter { margin-top: 22px; min-height: 260px; }
+  #track .chapter.in { animation: emIn 0.55s ease both; }
+  @keyframes emIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  #track .num { font-size: 12px; letter-spacing: 0.2em; color: var(--cream-dim); }
+  #track .key { font-size: 13px; letter-spacing: 0.32em; color: var(--gold); font-weight: 600; margin-left: 10px; }
+  #track h2 { font-family: Cinzel, Georgia, serif; font-weight: 600; font-size: clamp(30px, 2.9vw, 50px); line-height: 1.12; margin: 14px 0 18px; letter-spacing: 0.005em; text-wrap: balance; color: var(--cream); }
+  #track .chapter p { font-size: 17px; line-height: 1.6; color: var(--cream-body); margin: 0; max-width: 46ch; text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
+  #track .phase { margin-top: 18px; font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); opacity: 0; transition: opacity 0.3s; display: flex; align-items: center; gap: 10px; min-height: 18px; }
+  #track .phase::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 4px rgba(201,168,76,0.22); flex: none; }
+  #track .phase.on { opacity: 1; }
+  #track .rail { margin-top: 30px; display: flex; max-width: 460px; position: relative; }
+  #track .rail::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 2px; background: rgba(247,242,228,0.16); }
+  #track #rail-fill { position: absolute; left: 0; right: 0; top: 0; height: 2px; background: var(--gold); transform-origin: left; transform: scaleX(0); }
+  #track .rail .step { flex: 1; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(247,242,228,0.5); padding-top: 12px; font-weight: 600; }
+  #track .rail .step.on { color: var(--gold); }
+  #track .scroll-cue { position: fixed; z-index: 15; left: max(16px, 5.5vw); bottom: max(24px, env(safe-area-inset-bottom, 0px)); font-size: 13px; font-weight: 600; letter-spacing: 0.22em; color: var(--gold); text-transform: uppercase; display: flex; align-items: center; gap: 14px; background: rgba(22,20,15,0.6); padding: 9px 16px; border-radius: 999px; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); transition: opacity 0.4s; }
+  #track .scroll-cue::before { content: ''; width: 11px; height: 11px; border-right: 2px solid var(--gold); border-bottom: 2px solid var(--gold); transform: translateY(-3px) rotate(45deg); animation: emBounce 1.6s ease-in-out infinite; }
+  @keyframes emBounce { 0%, 100% { transform: translateY(-4px) rotate(45deg); } 50% { transform: translateY(4px) rotate(45deg); } }
+  body.scrolled #track .scroll-cue { opacity: 0; pointer-events: none; }
+  #track .cta { position: absolute; left: max(16px, 5.5vw); bottom: max(28px, 6vh); display: flex; flex-direction: column; gap: 16px; pointer-events: none; opacity: 0; transform: translateY(10px); transition: opacity 0.5s, transform 0.5s; }
+  #track .cta .row { display: flex; gap: 14px; flex-wrap: wrap; }
+  #track .cta a { text-decoration: none; font-weight: 600; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; padding: 17px 26px; }
+  #track .cta .primary { background: var(--gold); color: var(--obsidian); }
+  #track .cta .primary:hover { background: #dcbd66; }
+  #track .cta .secondary { border: 1px solid var(--gold); color: var(--cream); }
+  #track .cta .secondary:hover { background: rgba(201,168,76,0.14); }
+  #track .cta small { font-size: 13px; color: var(--cream-dim); letter-spacing: 0.02em; }
+  body.final #track .cta { opacity: 1; transform: none; pointer-events: auto; }
+  body.final #track .scroll-cue { opacity: 0; }
+  body.final #track .chapter { min-height: 0; }
+  #track .loading { display: grid; place-items: center; background: var(--obsidian); color: var(--cream-dim); font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; transition: opacity 0.6s; z-index: 10; }
+  body.ready #track .loading { opacity: 0; pointer-events: none; }
+  body.capture #track .loading { display: none; }
+
+  body[data-view="mobile"] #track .scrim { background: linear-gradient(180deg, rgba(22,20,15,0.95) 0%, rgba(22,20,15,0.9) 40%, rgba(22,20,15,0.4) 54%, rgba(22,20,15,0) 62%, rgba(22,20,15,0) 80%, rgba(22,20,15,0.8) 100%); }
+  body[data-view="mobile"] #track .brand { top: max(16px, env(safe-area-inset-top)); left: 20px; }
+  body[data-view="mobile"] #track .brand b { font-size: 17px; }
+  body[data-view="mobile"] #track .brand { gap: 9px; }
+  body[data-view="mobile"] #track .brand img { height: 24px; }
+  body[data-view="mobile"] #track .brand span { font-size: 9px; letter-spacing: 0.18em; }
+  body[data-view="mobile"] #track .copy { top: 60px; transform: none; left: 20px; right: 20px; width: auto; }
+  body[data-view="mobile"] #track .eyebrow { font-size: 10.5px; letter-spacing: 0.2em; }
+  body[data-view="mobile"] #track .chapter { margin-top: 12px; min-height: 0; }
+  body[data-view="mobile"] #track h2 { font-size: 25px; margin: 8px 0 10px; }
+  body[data-view="mobile"] #track .chapter p { font-size: 14.5px; line-height: 1.5; }
+  body[data-view="mobile"] #track .phase { font-size: 10.5px; margin-top: 10px; text-shadow: 0 1px 3px rgba(0,0,0,0.8); }
+  body[data-view="mobile"] #track .rail { margin-top: 12px; height: 2px; }
+  body[data-view="mobile"] #track .rail .step { font-size: 0; padding: 0; }
+  body[data-view="mobile"] #track .scroll-cue { left: 50%; transform: translateX(-50%); bottom: max(22px, env(safe-area-inset-bottom, 0px)); font-size: 11.5px; letter-spacing: 0.18em; white-space: nowrap; }
+  body[data-view="mobile"] #track .cta { left: 16px; right: 16px; bottom: max(16px, env(safe-area-inset-bottom)); gap: 10px; }
+  body[data-view="mobile"] #track .cta .row { flex-direction: column; gap: 10px; }
+  body[data-view="mobile"] #track .cta a { text-align: center; padding: 15px; }
+  body[data-view="mobile"] #track .cta small { text-align: center; font-size: 12px; }
+  @media (max-height: 620px) { body.final[data-view="mobile"] #track .chapter p { display: none; } }
+  body.final[data-view="mobile"] #track h2 { font-size: 21px; margin-bottom: 6px; }
+  body.final[data-view="mobile"] #track .eyebrow { display: none; }
+  body.final[data-view="mobile"] #track .chapter { margin-top: 0; }
+  body.final[data-view="mobile"] #track .chapter p { font-size: 13px; }
+  body.final[data-view="mobile"] #track .rail { display: none; }
+  body[data-view="mobile"] #track .cta .row { flex-direction: row; gap: 8px; }
+  body[data-view="mobile"] #track .cta .row a { flex: 1; padding: 14px 6px; font-size: 11.5px; letter-spacing: 0.1em; }
+  @media (prefers-reduced-motion: reduce) { #track .chapter.in { animation: none; } #track .scroll-cue::before { animation: none; } }
+
+
+  /* ---- video edition ---- */
+  #track #film { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% 50%; background: var(--obsidian); display: block; }
+  body[data-view="mobile"] #track #film { top: 32%; height: 68%; object-position: 58% 100%; }
+  #track .sys { position: absolute; right: max(16px, 4vw); top: 50%; transform: translateY(-50%); width: 230px; opacity: 0; transition: opacity .6s; pointer-events: none; }
+  body.sys-on #track .sys { opacity: 1; }
+  #track .sys-h { display: block; font-size: 11px; letter-spacing: .26em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 12px; text-shadow: 0 1px 6px rgba(0,0,0,.8); }
+  #track .sys ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  #track .sys li { font-size: 14px; font-weight: 600; letter-spacing: .02em; color: rgba(247,242,228,.35); background: rgba(22,20,15,.55); border: 1px solid rgba(201,168,76,.18); padding: 9px 14px 9px 34px; position: relative; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); transition: color .4s, border-color .4s, background .4s, box-shadow .4s; }
+  #track .sys li::before { content: ""; position: absolute; left: 13px; top: 50%; width: 8px; height: 8px; margin-top: -4px; border-radius: 50%; background: rgba(201,168,76,.25); transition: background .4s, box-shadow .4s; }
+  #track .sys li.lit { color: var(--cream); border-color: rgba(201,168,76,.7); background: rgba(22,20,15,.72); box-shadow: 0 0 22px -6px rgba(201,168,76,.55); }
+  #track .sys li.lit::before { background: var(--gold); box-shadow: 0 0 0 4px rgba(201,168,76,.22); }
+  body.final #track .sys { opacity: 0; }
+  #track .cta .tertiary { color: var(--gold); border: 0; padding-left: 6px; padding-right: 6px; text-decoration: underline; text-underline-offset: 5px; text-decoration-color: rgba(201,168,76,.6); }
+  #track .cta .tertiary:hover { color: #dcbd66; }
+  body[data-view="mobile"] #track .sys { right: auto; left: 16px; top: auto; bottom: max(70px, 10vh); transform: none; width: calc(100% - 32px); }
+  body[data-view="mobile"] #track .sys-h { margin-bottom: 8px; }
+  body[data-view="mobile"] #track .sys ul { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+  body[data-view="mobile"] #track .sys li { font-size: 12.5px; padding: 7px 10px 7px 28px; }
+  body[data-view="mobile"] #track .sys li::before { left: 10px; }
+  #track .hqlink { position: absolute; top: 26px; right: max(16px, 4vw); z-index: 5; pointer-events: auto; font-size: 13px; font-weight: 600; letter-spacing: .04em; color: var(--gold); text-decoration: none; background: rgba(22,20,15,.55); border: 1px solid rgba(201,168,76,.35); padding: 8px 14px; border-radius: 999px; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+  #track .hqlink:hover { border-color: var(--gold); }
+  body[data-view="mobile"] #track .hqlink { top: 16px; right: 16px; font-size: 11.5px; padding: 6px 11px; }
+  body[data-view="mobile"] #track .brand span, body[data-view="mobile"] #track .brand i { display: none; }
+
+  #track { font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+</style>
 </head>
 <body>
 <div class="topbar"><div class="wrap"><span class="sched">Live mentorship classes Monday to Thursday, 5:00 PM Pacific</span><span><a href="https://portal.4datapoints.com/" target="_blank" rel="noopener">Student Portal</a> &nbsp;·&nbsp; <a href="tel:+17027108030">702-710-8030</a> (call or text)</span></div></div>
@@ -26,6 +141,7 @@
   <a class="logo" href="/" aria-label="4 Data Points Academy home"><img src="/assets/img/logo.png" alt="4 Data Points Academy" width="83" height="54"></a>
   <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">Menu</button>
   <nav class="menu" id="menu">
+    <a class="hq" href="/#empire" style="color:var(--gold);font-weight:600;white-space:nowrap"><span aria-hidden="true">←</span> 4DPA Headquarters</a>
     <div class="dd"><a href="/real-estate-investing/">Real Estate</a><div class="sub"><a href="/mentorship/">Mentorship</a><a href="/multifamily/">Multifamily Course</a><a href="/land-trust/">Land Trusts</a></div></div>
     <div class="dd"><a href="/entrepreneurship/">Entrepreneurship</a><div class="sub"><a href="/empire/">Empire</a><a href="/entrepreneurship/">Entrepreneur Course</a><a href="/ventureu/">VentureU Retreat</a></div></div>
     <a href="/ascendu/">Personal Development</a>
@@ -36,6 +152,47 @@
   </nav>
   <a class="btn btn-gold lp-call" href="tel:+17027108030">Call 702-710-8030</a>
 </div></header>
+
+<!-- Empire hero (realistic video): a storefront grows into a connected operation. Existing page content follows unchanged. -->
+<section id="track" aria-label="Empire: how a basic business becomes a connected operation">
+  <div class="stage">
+    <video id="film" src="/assets/empire/empire.mp4" poster="/assets/empire/empire-poster.jpg" muted playsinline preload="auto" aria-label="A small storefront grows into a lit corporate tower over the city skyline"></video>
+    <div id="ui">
+      <div class="scrim"></div>
+      <div class="brand"><b>EMPIRE</b><i aria-hidden="true">—</i><span>By 4 Data Points Academy</span><img src="/assets/empire/logo.png" alt="4 Data Points Academy logo"></div>
+      <div class="copy">
+        <div class="eyebrow">Done-for-you business systems</div>
+        <div class="chapter" id="chapter" aria-live="polite">
+          <span class="num" id="ch-num"></span><span class="key" id="ch-key"></span>
+          <h2 id="ch-title">You've Got a Website. But Do You Have a Business?</h2>
+          <p id="ch-body"></p>
+          <div class="phase" id="phase"></div>
+        </div>
+        <div class="rail" role="list" aria-label="Empire build progress">
+          <span id="rail-fill"></span>
+          <span class="step" role="listitem" data-k="BLUEPRINT">Blueprint</span><span class="step" role="listitem" data-k="BUILD">Build</span><span class="step" role="listitem" data-k="LAUNCH">Launch</span><span class="step" role="listitem" data-k="SCALE">Scale</span>
+        </div>
+      </div>
+      <div class="sys" id="sys" aria-label="What Empire connects">
+        <span class="sys-h">Your Empire runs on</span>
+        <ul>
+          <li>Website &amp; funnels</li><li>CRM</li><li>Booking</li><li>Email &amp; SMS</li><li>Payments</li><li>Pipelines</li><li>Onboarding</li><li>AI agents</li>
+        </ul>
+      </div>
+      <div class="scroll-cue">Scroll to build the Empire</div>
+      <div class="cta">
+        <div class="row">
+          <a class="primary" href="https://go.4datapoints.com/empire-funnel#pricing">Build My Empire</a>
+          <a class="secondary" href="https://go.4datapoints.com/empire-funnel#emp-addons">See What's Included</a>
+        </div>
+        <small>Built by entrepreneurs who understand how businesses actually operate.</small>
+      </div>
+    </div>
+  </div>
+</section>
+<script>(function(){var h=document.querySelector('header.nav'),t=document.getElementById('track');function s(){t.style.setProperty('--hdr',(h?h.offsetHeight:0)+'px')}s();addEventListener('resize',s)})();</script>
+<script src="/assets/empire/film.js" defer></script>
+
 
 <main>
 <section class="page show" id="p-empire" data-page="empire">

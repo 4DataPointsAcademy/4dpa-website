@@ -184,9 +184,6 @@
   body.needs-tap #track #tapplay { background: var(--gold); color: var(--obsidian); font-size: 14px; padding: 16px 22px; }
   body[data-view="mobile"] #track .ctrls { top: 14px; bottom: auto; right: 16px; }
   body[data-view="mobile"] #track #film { top: 38%; height: 62%; }
-  /* shorter scroll track: each scroll moves more of the film */
-  #track { height: 430vh; }
-  body[data-view="mobile"] #track { height: 450vh; }
 </style>
 </head>
 <body>
@@ -209,7 +206,7 @@
 <!-- Referral Partner hero (self-playing video): one shared link spreads across the city to 4DPA headquarters. -->
 <section id="track" aria-label="How the 4DPA Referral Partner program works">
   <div class="stage">
-    <video id="film" src="/assets/partner/partner-play.mp4" poster="/assets/partner/partner-poster.jpg" muted playsinline autoplay preload="auto" aria-label="A man shares a link from a rooftop at dusk; golden threads spread across the city to people's phones and converge on a glowing headquarters"></video>
+    <video id="film" data-src="/assets/partner/partner-play.mp4" data-src-m="/assets/partner/partner-play-m.mp4" poster="/assets/partner/partner-poster.jpg" muted playsinline autoplay preload="auto" aria-label="A man shares a link from a rooftop at dusk; golden threads spread across the city to people's phones and converge on a glowing headquarters"></video><script>(function(){var v=document.getElementById("film");if(!v||v.getAttribute("src"))return;var m=matchMedia("(max-width: 760px), (max-aspect-ratio: 4/5)").matches;v.src=m?v.dataset.srcM:v.dataset.src;})();</script>
     <div id="ui">
       <div class="scrim"></div>
       <div class="brand"><b>4DPA</b><i aria-hidden="true">—</i><span>Referral Partner Program</span><img src="/assets/empire/logo.png" alt="4 Data Points Academy logo"></div>

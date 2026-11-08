@@ -19,6 +19,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/re3d/re3d.css">
+<link rel="preload" href="/assets/re3d/rehab-poster.jpg" as="image">
 </head>
 <body>
 <div class="topbar"><div class="wrap"><span class="sched">Live mentorship classes Monday to Thursday, 5:00 PM Pacific</span><span><a href="https://portal.4datapoints.com/" target="_blank" rel="noopener">Student Portal</a> &nbsp;·&nbsp; <a href="tel:+17027108030">702-710-8030</a> (call or text)</span></div></div>
@@ -26,6 +28,7 @@
   <a class="logo" href="/" aria-label="4 Data Points Academy home"><img src="/assets/img/logo.png" alt="4 Data Points Academy" width="83" height="54"></a>
   <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">Menu</button>
   <nav class="menu" id="menu">
+    <a class="hq" href="/" style="color:var(--gold);font-weight:600;white-space:nowrap"><span aria-hidden="true">←</span> 4DPA Headquarters</a>
     <div class="dd"><a href="/real-estate-investing/">Real Estate</a><div class="sub"><a href="/mentorship/">Mentorship</a><a href="/multifamily/">Multifamily Course</a><a href="/land-trust/">Land Trusts</a></div></div>
     <div class="dd"><a href="/entrepreneurship/">Entrepreneurship</a><div class="sub"><a href="/empire/">Empire</a><a href="/entrepreneurship/">Entrepreneur Course</a><a href="/ventureu/">VentureU Retreat</a></div></div>
     <a href="/ascendu/">Personal Development</a>
@@ -36,6 +39,37 @@
   </nav>
   <a class="btn btn-gold lp-call" href="tel:+17027108030">Call 702-710-8030</a>
 </div></header>
+
+<!-- 4DPA Real Estate hero (realistic video): the Four Data Points told through one Detroit two-flat. Existing page content follows unchanged. -->
+<section id="track" aria-label="The Four Data Points: one property from purchase to income">
+  <div class="re3d-stage">
+    <video id="rehab" src="/assets/re3d/rehab.mp4" poster="/assets/re3d/rehab-poster.jpg" muted playsinline preload="auto" aria-label="A distressed Detroit two-flat is renovated and rented: before, rehab, finished and lit at night"></video>
+    <div id="ui">
+      <div class="scrim"></div>
+      <div class="copy">
+        <div class="eyebrow">The Four Data Points</div>
+        <h2 class="re3d-h">Every property has a story. The numbers tell you whether it's a deal.</h2>
+        <div class="chapter" id="chapter" aria-live="polite">
+          <span class="num" id="ch-num">01 / 04</span><span class="key" id="ch-key">COST</span>
+          <h3 id="ch-title"></h3>
+          <p id="ch-body"></p>
+          <div class="phase" id="phase"></div>
+        </div>
+        <div class="rail" role="list" aria-label="Four Data Points progress">
+          <span id="rail-fill"></span>
+          <span class="step" role="listitem" data-k="COST">Cost</span><span class="step" role="listitem" data-k="REHAB">Rehab</span><span class="step" role="listitem" data-k="ARV">ARV</span><span class="step" role="listitem" data-k="INCOME">Income</span>
+        </div>
+      </div>
+      <div class="scroll-cue">Scroll to watch the rehab</div>
+      <div class="cta">
+        <h3>Stop guessing. Start analyzing deals.</h3>
+        <a class="btn" href="/mentorship/">See Mentorship Options</a>
+      </div>
+    </div>
+  </div>
+</section>
+<script>(function(){var h=document.querySelector('header.nav'),t=document.getElementById('track');function s(){t.style.setProperty('--hdr',(h?h.offsetHeight:0)+'px')}s();addEventListener('resize',s)})();</script>
+<script src="/assets/re3d/video.js" defer></script>
 
 <main>
 <section class="page show" id="p-realestate" data-page="realestate" data-title="Real Estate Investing Mentorship &amp; Courses | 4 Data Points Academy">

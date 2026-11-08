@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Talk to Odis | 4 Data Points Academy</title>
+<meta name="description" content="Tell Odis what you want to talk about: real estate investing mentorship, Empire business systems, AscendU, VentureU retreats or a paid deal consultation. Then pick a time.">
+<link rel="canonical" href="https://4datapoints.com/talk/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="4 Data Points Academy">
+<meta property="og:title" content="Talk to Odis | 4 Data Points Academy">
+<meta property="og:description" content="Tell Odis what you want to talk about: real estate investing mentorship, Empire business systems, AscendU, VentureU retreats or a paid deal consultation. Then pick a time.">
+<meta property="og:url" content="https://4datapoints.com/talk/">
+<meta property="og:image" content="https://4datapoints.com/assets/img/og-site.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://4datapoints.com/assets/img/og-site.jpg">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap">
+<style>
+  .ea { --obsidian:#16140F; --gold:#C9A84C; --cream:#F7F2E4; --cream-dim:rgba(247,242,228,.68); background:var(--obsidian); color:var(--cream); }
+  .ea-hero { padding-block: clamp(48px,8vw,96px) 32px; background: radial-gradient(120% 90% at 85% 0%, rgba(201,168,76,.16), transparent 60%), var(--obsidian); }
+  .ea-hero .wrap, .ea-body .wrap { max-width: 1080px; }
+  .ea .kicker { font-family: Cinzel, Georgia, serif; letter-spacing: .22em; color: var(--gold); font-size: 15px; display:flex; gap:12px; align-items:center; }
+  .ea .kicker i { font-style: normal; opacity:.6 }
+  .ea h1 { font-family: Poppins, system-ui, sans-serif; font-weight: 700; font-size: clamp(2rem, 4.6vw, 3.2rem); line-height: 1.1; margin: 18px 0 16px; color: var(--cream); text-wrap: balance; max-width: 18ch; }
+  .ea .lede { font-size: 1.08rem; line-height: 1.6; color: var(--cream-dim); max-width: 60ch; margin:0 }
+  .ea-body { padding-block: clamp(48px,7vw,88px) clamp(56px,8vw,96px); }
+  .ea-grid { display:grid; grid-template-columns: minmax(0,1fr) minmax(0,1.5fr); gap: clamp(24px,4vw,56px); align-items:start; }
+  @media (max-width: 860px) { .ea-grid { grid-template-columns: 1fr; } }
+  .ea-side { display:grid; gap:20px; }
+  .ea-side ol { margin:0; padding:0; list-style:none; display:grid; gap:18px; counter-reset: s; }
+  .ea-side li { counter-increment: s; display:grid; grid-template-columns: 40px 1fr; gap: 14px; line-height:1.5; color: var(--cream-dim); }
+  .ea-side li::before { content: counter(s, decimal-leading-zero); font-family: Cinzel, Georgia, serif; color: var(--gold); font-size: 18px; padding-top: 2px; }
+  .ea-side li b { display:block; color: var(--cream); font-weight:600; font-family: Poppins, system-ui, sans-serif; }
+  .ea-side .fine { font-size:.85rem; color: rgba(247,242,228,.5); line-height:1.5; border-top:1px solid rgba(201,168,76,.25); padding-top:16px; margin:0 }
+  .ea .lead-form { border-color: rgba(201,168,76,.4); box-shadow: 0 30px 80px rgba(0,0,0,.35); }
+  .ea .lead-form fieldset { border:0; margin:0; padding:0; display:grid; gap:12px; min-width:0 }
+  .ea .lead-form legend { font-family: Poppins, system-ui, sans-serif; font-weight:600; font-size:.78rem; letter-spacing:.12em; text-transform:uppercase; color:#8A6D12; padding:0; margin-bottom:4px }
+  .ea .lead-form .sep { height:1px; background: var(--line); margin: 6px 0 }
+  .ea .req { color:#8A6D12 }
+  .ea .chips { display:flex; flex-wrap:wrap; gap:8px }
+  .ea .lead-form label.chip { display:inline-flex; gap:0; font-weight:500; font-size:.86rem; cursor:pointer }
+  .ea .chip input { position:absolute; opacity:0; width:1px; height:1px }
+  .ea .chip span { border:1px solid #CFCBBF; border-radius:999px; padding:.45em .9em; background:#fff; transition: background .15s, border-color .15s }
+  .ea .chip input:checked + span { background:#16140F; color:#F7F2E4; border-color:#16140F }
+  .ea .chip input:focus-visible + span { outline: 2px solid #C9A84C; outline-offset: 2px }
+  .ea .hint { font-weight:400; font-size:.8rem; color: var(--muted) }
+  .ea .form-err { display:none; color:#9B2C1F; font-size:.92rem }
+  .ea .done { display:none; text-align:left }
+  .ea .done h3 { font-size:1.4rem; margin:0 0 8px }
+  .ea .done p { margin:0 0 10px; line-height:1.55 }
+  .ea .hpf { position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden }
+</style>
+<style>
+  #track { --obsidian: #16140F; --gold: #C9A84C; --gold-soft: rgba(201,168,76,0.55); --cream: #F7F2E4; --cream-body: rgba(247,242,228,0.9); --cream-dim: rgba(247,242,228,0.62); --graphite: #4A4540; }
+  #track { position: relative; height: 640vh; background: var(--obsidian); color: var(--cream); }
+  body[data-view="mobile"] #track { height: 680vh; }
+  #track .stage { position: sticky; top: var(--hdr, 0px); height: calc(100vh - var(--hdr, 0px)); height: calc(100lvh - var(--hdr, 0px)); overflow: hidden; }
+  #track #scene, #track #poster, #track #ui, #track .loading { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  #track #poster { background: url(/assets/partner/partner-poster.jpg) 68% center / cover no-repeat; display: none; }
+  body.no-webgl #track #scene { display: none; }
+  body.no-webgl #track #poster { display: block; }
+  body.no-webgl #track { height: auto; }
+  body.no-webgl #track .stage { position: relative; }
+  body.no-webgl #track .chapter, body.no-webgl #track .rail, body.no-webgl #track .scroll-cue, body.no-webgl #track .loading { display: none; }
+  #track #ui { pointer-events: none; }
+  #track #ui[hidden] { display: none; }
+  #track .scrim { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(22,20,15,0.93) 0%, rgba(22,20,15,0.86) 30%, rgba(22,20,15,0.45) 45%, rgba(22,20,15,0) 60%); }
+  #track .brand { position: absolute; top: 26px; left: max(16px, 5.5vw); display: flex; align-items: baseline; gap: 14px; }
+  #track .brand b { font-family: Cinzel, Georgia, serif; font-weight: 600; font-size: 22px; letter-spacing: 0.22em; color: var(--gold); }
+  #track .brand { align-items: center; }
+  #track .brand i { font-style: normal; color: var(--cream-dim); }
+  #track .brand img { height: 30px; width: auto; display: block; }
+  #track .brand span { font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--cream-dim); }
+  #track .copy { position: absolute; left: max(16px, 5.5vw); top: 47%; transform: translateY(-50%); width: min(40vw, 600px); }
+  #track .eyebrow { font-size: 12px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold); font-weight: 600; display: flex; align-items: center; gap: 14px; }
+  #track .eyebrow::before { content: ''; width: 34px; height: 1px; background: var(--gold); }
+  #track .chapter { margin-top: 22px; min-height: 260px; }
+  #track .chapter.in { animation: emIn 0.55s ease both; }
+  @keyframes emIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  #track .num { font-size: 12px; letter-spacing: 0.2em; color: var(--cream-dim); }
+  #track .key { font-size: 13px; letter-spacing: 0.32em; color: var(--gold); font-weight: 600; margin-left: 10px; }
+  #track h2 { font-family: Cinzel, Georgia, serif; font-weight: 600; font-size: clamp(30px, 2.9vw, 50px); line-height: 1.12; margin: 14px 0 18px; letter-spacing: 0.005em; text-wrap: balance; color: var(--cream); }
+  #track .chapter p { font-size: 17px; line-height: 1.6; color: var(--cream-body); margin: 0; max-width: 46ch; text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
+  #track .phase { margin-top: 18px; font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); opacity: 0; transition: opacity 0.3s; display: flex; align-items: center; gap: 10px; min-height: 18px; }
+  #track .phase::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 4px rgba(201,168,76,0.22); flex: none; }
+  #track .phase.on { opacity: 1; }
+  #track .rail { margin-top: 30px; display: flex; max-width: 460px; position: relative; }
+  #track .rail::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 2px; background: rgba(247,242,228,0.16); }
+  #track #rail-fill { position: absolute; left: 0; right: 0; top: 0; height: 2px; background: var(--gold); transform-origin: left; transform: scaleX(0); }
+  #track .rail .step { flex: 1; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(247,242,228,0.5); padding-top: 12px; font-weight: 600; }
+  #track .rail .step.on { color: var(--gold); }
+  #track .scroll-cue { position: fixed; z-index: 15; left: max(16px, 5.5vw); bottom: max(24px, env(safe-area-inset-bottom, 0px)); font-size: 13px; font-weight: 600; letter-spacing: 0.22em; color: var(--gold); text-transform: uppercase; display: flex; align-items: center; gap: 14px; background: rgba(22,20,15,0.6); padding: 9px 16px; border-radius: 999px; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); transition: opacity 0.4s; }
+  #track .scroll-cue::before { content: ''; width: 11px; height: 11px; border-right: 2px solid var(--gold); border-bottom: 2px solid var(--gold); transform: translateY(-3px) rotate(45deg); animation: emBounce 1.6s ease-in-out infinite; }
+  @keyframes emBounce { 0%, 100% { transform: translateY(-4px) rotate(45deg); } 50% { transform: translateY(4px) rotate(45deg); } }
+  body.scrolled #track .scroll-cue { opacity: 0; pointer-events: none; }
+  #track .cta { position: absolute; left: max(16px, 5.5vw); bottom: max(28px, 6vh); display: flex; flex-direction: column; gap: 16px; pointer-events: none; opacity: 0; transform: translateY(10px); transition: opacity 0.5s, transform 0.5s; }
+  #track .cta .row { display: flex; gap: 14px; flex-wrap: wrap; }
+  #track .cta a { text-decoration: none; font-weight: 600; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; padding: 17px 26px; }
+  #track .cta .primary { background: var(--gold); color: var(--obsidian); }
+  #track .cta .primary:hover { background: #dcbd66; }
+  #track .cta .secondary { border: 1px solid var(--gold); color: var(--cream); }
+  #track .cta .secondary:hover { background: rgba(201,168,76,0.14); }
+  #track .cta small { font-size: 13px; color: var(--cream-dim); letter-spacing: 0.02em; }
+  body.final #track .cta { opacity: 1; transform: none; pointer-events: auto; }
+  body.final #track .scroll-cue { opacity: 0; }
+  body.final #track .chapter { min-height: 0; }
+  #track .loading { display: grid; place-items: center; background: var(--obsidian); color: var(--cream-dim); font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; transition: opacity 0.6s; z-index: 10; }
+  body.ready #track .loading { opacity: 0; pointer-events: none; }
+  body.capture #track .loading { display: none; }
+
+  body[data-view="mobile"] #track .scrim { background: linear-gradient(180deg, rgba(22,20,15,0.95) 0%, rgba(22,20,15,0.9) 40%, rgba(22,20,15,0.4) 54%, rgba(22,20,15,0) 62%, rgba(22,20,15,0) 80%, rgba(22,20,15,0.8) 100%); }
+  body[data-view="mobile"] #track .brand { top: max(16px, env(safe-area-inset-top)); left: 20px; }
+  body[data-view="mobile"] #track .brand b { font-size: 17px; }
+  body[data-view="mobile"] #track .brand { gap: 9px; }
+  body[data-view="mobile"] #track .brand img { height: 24px; }
+  body[data-view="mobile"] #track .brand span { font-size: 9px; letter-spacing: 0.18em; }
+  body[data-view="mobile"] #track .copy { top: 60px; transform: none; left: 20px; right: 20px; width: auto; }
+  body[data-view="mobile"] #track .eyebrow { font-size: 10.5px; letter-spacing: 0.2em; }
+  body[data-view="mobile"] #track .chapter { margin-top: 12px; min-height: 0; }
+  body[data-view="mobile"] #track h2 { font-size: 25px; margin: 8px 0 10px; }
+  body[data-view="mobile"] #track .chapter p { font-size: 14.5px; line-height: 1.5; }
+  body[data-view="mobile"] #track .phase { font-size: 10.5px; margin-top: 10px; text-shadow: 0 1px 3px rgba(0,0,0,0.8); }
+  body[data-view="mobile"] #track .rail { margin-top: 12px; height: 2px; }
+  body[data-view="mobile"] #track .rail .step { font-size: 0; padding: 0; }
+  body[data-view="mobile"] #track .scroll-cue { left: 50%; transform: translateX(-50%); bottom: max(22px, env(safe-area-inset-bottom, 0px)); font-size: 11.5px; letter-spacing: 0.18em; white-space: nowrap; }
+  body[data-view="mobile"] #track .cta { left: 16px; right: 16px; bottom: max(16px, env(safe-area-inset-bottom)); gap: 10px; }
+  body[data-view="mobile"] #track .cta .row { flex-direction: column; gap: 10px; }
+  body[data-view="mobile"] #track .cta a { text-align: center; padding: 15px; }
+  body[data-view="mobile"] #track .cta small { text-align: center; font-size: 12px; }
+  @media (max-height: 620px) { body.final[data-view="mobile"] #track .chapter p { display: none; } }
+  body.final[data-view="mobile"] #track h2 { font-size: 21px; margin-bottom: 6px; }
+  body.final[data-view="mobile"] #track .eyebrow { display: none; }
+  body.final[data-view="mobile"] #track .chapter { margin-top: 0; }
+  body.final[data-view="mobile"] #track .chapter p { font-size: 13px; }
+  body.final[data-view="mobile"] #track .rail { display: none; }
+  body[data-view="mobile"] #track .cta .row { flex-direction: row; gap: 8px; }
+  body[data-view="mobile"] #track .cta .row a { flex: 1; padding: 14px 6px; font-size: 11.5px; letter-spacing: 0.1em; }
+  @media (prefers-reduced-motion: reduce) { #track .chapter.in { animation: none; } #track .scroll-cue::before { animation: none; } }
+
+
+  /* ---- video edition ---- */
+  #track #film { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% 50%; background: var(--obsidian); display: block; }
+  body[data-view="mobile"] #track #film { top: 32%; height: 68%; object-position: 58% 100%; }
+  #track .sys { position: absolute; right: max(16px, 4vw); top: 50%; transform: translateY(-50%); width: 230px; opacity: 0; transition: opacity .6s; pointer-events: none; }
+  body.sys-on #track .sys { opacity: 1; }
+  #track .sys-h { display: block; font-size: 11px; letter-spacing: .26em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 12px; text-shadow: 0 1px 6px rgba(0,0,0,.8); }
+  #track .sys ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  #track .sys li { font-size: 14px; font-weight: 600; letter-spacing: .02em; color: rgba(247,242,228,.35); background: rgba(22,20,15,.55); border: 1px solid rgba(201,168,76,.18); padding: 9px 14px 9px 34px; position: relative; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); transition: color .4s, border-color .4s, background .4s, box-shadow .4s; }
+  #track .sys li::before { content: ""; position: absolute; left: 13px; top: 50%; width: 8px; height: 8px; margin-top: -4px; border-radius: 50%; background: rgba(201,168,76,.25); transition: background .4s, box-shadow .4s; }
+  #track .sys li.lit { color: var(--cream); border-color: rgba(201,168,76,.7); background: rgba(22,20,15,.72); box-shadow: 0 0 22px -6px rgba(201,168,76,.55); }
+  #track .sys li.lit::before { background: var(--gold); box-shadow: 0 0 0 4px rgba(201,168,76,.22); }
+  body.final #track .sys { opacity: 0; }
+  #track .cta .tertiary { color: var(--gold); border: 0; padding-left: 6px; padding-right: 6px; text-decoration: underline; text-underline-offset: 5px; text-decoration-color: rgba(201,168,76,.6); }
+  #track .cta .tertiary:hover { color: #dcbd66; }
+  body[data-view="mobile"] #track .sys { right: auto; left: 16px; top: auto; bottom: max(70px, 10vh); transform: none; width: calc(100% - 32px); }
+  body[data-view="mobile"] #track .sys-h { margin-bottom: 8px; }
+  body[data-view="mobile"] #track .sys ul { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+  body[data-view="mobile"] #track .sys li { font-size: 12.5px; padding: 7px 10px 7px 28px; }
+  body[data-view="mobile"] #track .sys li::before { left: 10px; }
+  #track .hqlink { position: absolute; top: 26px; right: max(16px, 4vw); z-index: 5; pointer-events: auto; font-size: 13px; font-weight: 600; letter-spacing: .04em; color: var(--gold); text-decoration: none; background: rgba(22,20,15,.55); border: 1px solid rgba(201,168,76,.35); padding: 8px 14px; border-radius: 999px; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+  #track .hqlink:hover { border-color: var(--gold); }
+  body[data-view="mobile"] #track .hqlink { top: 16px; right: 16px; font-size: 11.5px; padding: 6px 11px; }
+  body[data-view="mobile"] #track .brand span, body[data-view="mobile"] #track .brand i { display: none; }
+
+  #track { font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  #track .brand b { font-size: 18px; }
+  #signup { scroll-margin-top: 90px; }
+  /* self-playing edition: one screen tall, no scroll scrubbing */
+  #track, body[data-view="mobile"] #track { height: auto; }
+  #track .stage { position: relative; top: 0; height: calc(100svh - var(--hdr, 0px)); min-height: 560px; }
+  #track .scroll-cue { display: none; }
+  #track .ctrls { position: absolute; right: max(16px, 4vw); bottom: max(28px, 6vh); z-index: 6; display: flex; gap: 10px; pointer-events: auto; }
+  #track .ctrls button { font: 600 12px/1 Inter, system-ui, sans-serif; letter-spacing: .16em; text-transform: uppercase; color: var(--cream); background: rgba(22,20,15,.6); border: 1px solid rgba(201,168,76,.55); padding: 12px 16px; cursor: pointer; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); display: none; }
+  #track .ctrls button:hover { border-color: var(--gold); color: var(--gold); }
+  body.ended #track #replay, body.needs-tap #track #tapplay { display: inline-flex; }
+  body.needs-tap #track #tapplay { background: var(--gold); color: var(--obsidian); font-size: 14px; padding: 16px 22px; }
+  body[data-view="mobile"] #track .ctrls { top: 14px; bottom: auto; right: 16px; }
+  body[data-view="mobile"] #track #film { top: 38%; height: 62%; }
+</style>
+<style>
+  .tk { --o:#16140F; --g:#C9A84C; --c:#F7F2E4; --cd:rgba(247,242,228,.74); position: relative; background: var(--o); color: var(--c); }
+  .tk-bg { position: sticky; top: 0; height: 100svh; margin-bottom: -100svh; overflow: hidden; z-index: 0; }
+  .tk-bg div { position: absolute; inset: 0; background: center/cover no-repeat; opacity: 0; transform: scale(1.06); transition: opacity 1.1s ease, transform 6s ease; }
+  .tk-bg div.on { opacity: 1; transform: scale(1); }
+  .tk-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(22,20,15,.55) 0%, rgba(22,20,15,.72) 60%, rgba(22,20,15,.92) 100%); }
+  .tk section { position: relative; z-index: 1; }
+  .tk .wrap { max-width: 1080px; }
+  .tk-hero { min-height: calc(100svh - 120px); display: grid; align-items: center; padding-block: 64px; }
+  .tk-hero .inner { display: grid; grid-template-columns: minmax(0,1.3fr) minmax(0,.7fr); gap: clamp(24px,5vw,64px); align-items: center; }
+  @media (max-width: 820px) { .tk-hero .inner { grid-template-columns: 1fr; } .tk-hero .me { display: none; } }
+  .tk .kick { font-family: Cinzel, Georgia, serif; letter-spacing: .22em; color: var(--g); font-size: 14px; }
+  .tk h1 { font-family: Cinzel, Georgia, serif; font-weight: 600; font-size: clamp(2rem,4.4vw,3.3rem); line-height: 1.12; margin: 14px 0 16px; text-wrap: balance; }
+  .tk h2 { font-family: Cinzel, Georgia, serif; font-weight: 600; font-size: clamp(1.6rem,3vw,2.3rem); line-height: 1.15; margin: 10px 0 10px; text-wrap: balance; }
+  .tk .lede { color: var(--cd); font-size: 1.08rem; line-height: 1.6; max-width: 56ch; margin: 0 0 24px; }
+  .tk .me { border-radius: 14px; overflow: hidden; aspect-ratio: 4/5; box-shadow: 0 30px 70px -30px rgba(0,0,0,.9); border: 1px solid rgba(201,168,76,.35); }
+  .tk .me img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; display: block; }
+  .tk .down { display: inline-flex; gap: 10px; align-items: center; color: var(--o); background: var(--g); padding: 14px 22px; border-radius: 8px; font-weight: 700; text-decoration: none; letter-spacing: .04em; }
+  .tk-step { padding-block: clamp(56px,9vw,110px); }
+  .tk .num { font-size: 12px; letter-spacing: .24em; color: var(--g); font-weight: 600; text-transform: uppercase; }
+  .topics { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; margin-top: 22px; }
+  @media (max-width: 640px) { .topics { grid-template-columns: 1fr; } }
+  .grp { grid-column: 1 / -1; margin: 14px 0 2px; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--cd); display: flex; gap: 10px; align-items: center; }
+  .grp b { color: var(--g); font-weight: 700; }
+  .topic { position: relative; display: flex; gap: 14px; align-items: flex-start; background: rgba(22,20,15,.72); border: 1px solid rgba(201,168,76,.25); border-radius: 12px; padding: 16px 16px; cursor: pointer; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); transition: border-color .2s, background .2s; }
+  .topic:hover { border-color: rgba(201,168,76,.6); }
+  .topic input { appearance: none; -webkit-appearance: none; width: 22px; height: 22px; flex: 0 0 22px; border: 2px solid rgba(201,168,76,.7); border-radius: 6px; margin: 2px 0 0; display: grid; place-items: center; background: transparent; }
+  .topic input:checked { background: var(--g); border-color: var(--g); }
+  .topic input:checked::after { content: ""; width: 10px; height: 6px; border-left: 2.5px solid var(--o); border-bottom: 2.5px solid var(--o); transform: rotate(-45deg) translate(1px,-1px); }
+  .topic input:focus-visible { outline: 2px solid var(--g); outline-offset: 3px; }
+  .topic:has(input:checked) { border-color: var(--g); background: rgba(40,34,22,.85); }
+  .topic b { display: block; font-size: 1rem; color: var(--c); }
+  .topic span { display: block; color: var(--cd); font-size: .9rem; line-height: 1.45; margin-top: 3px; }
+  .topic .pill { display: inline-block; margin-top: 8px; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; color: var(--g); }
+  a.topic { text-decoration: none; }
+  .verdict { margin-top: 18px; padding: 16px 18px; border-radius: 12px; border: 1px dashed rgba(201,168,76,.5); color: var(--c); background: rgba(22,20,15,.7); min-height: 24px; }
+  .verdict b { color: var(--g); }
+  .tk .lead-form { max-width: 720px; }
+  .tk .hpf { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .tk .form-err { display: none; color: #9B2C1F; font-size: .92rem; }
+  .tk .req { color: #8A6D12 }
+  .tk .hint { font-weight: 400; font-size: .8rem; color: #6b6458 }
+  #book { display: none; }
+  #book.show { display: block; }
+  .cal { background: #fff; border-radius: 14px; overflow: hidden; margin-top: 18px; min-height: 720px; }
+  .cal iframe { width: 100%; min-height: 720px; border: 0; display: block; }
+  .tk .alt { margin-top: 14px; color: var(--cd); font-size: .95rem; }
+  .tk .alt a { color: var(--g); font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span class="sched">Live mentorship classes Monday to Thursday, 5:00 PM Pacific</span><span><a href="https://portal.4datapoints.com/" target="_blank" rel="noopener">Student Portal</a> &nbsp;·&nbsp; <a href="tel:+17027108030">702-710-8030</a> (call or text)</span></div></div>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="/" aria-label="4 Data Points Academy home"><img src="/assets/img/logo.png" alt="4 Data Points Academy" width="83" height="54"></a>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">Menu</button>
+  <nav class="menu" id="menu">
+    <a class="hq" href="/" style="color:var(--gold);font-weight:600;white-space:nowrap"><span aria-hidden="true">←</span> 4DPA Headquarters</a>
+    <div class="dd"><a href="/real-estate-investing/">Real Estate</a><div class="sub"><a href="/mentorship/">Mentorship</a><a href="/multifamily/">Multifamily Course</a><a href="/land-trust/">Land Trusts</a></div></div>
+    <div class="dd"><a href="/entrepreneurship/">Entrepreneurship</a><div class="sub"><a href="/empire/">Empire</a><a href="/entrepreneurship/">Entrepreneur Course</a><a href="/ventureu/">VentureU Retreat</a></div></div>
+    <a href="/ascendu/">Personal Development</a>
+    <a href="/events/">Events</a>
+    <a href="/books/">Books</a>
+    <a href="/about/">About Odis</a>
+    <a class="btn btn-gold" href="/talk/">Talk to Odis</a>
+  </nav>
+  <a class="btn btn-gold lp-call" href="tel:+17027108030">Call 702-710-8030</a>
+</div></header>
+<main class="tk">
+  <div class="tk-bg" aria-hidden="true"><div class="on" data-bg="1" style="background-image:url(/assets/talk/bg-entrance.jpg)"></div><div data-bg="2" style="background-image:url(/assets/talk/bg-lobby.jpg)"></div><div data-bg="3" style="background-image:url(/assets/talk/bg-doors.jpg)"></div></div>
+
+  <section class="tk-hero" data-scene="1"><div class="wrap inner">
+    <div>
+      <div class="kick">TALK TO ODIS</div>
+      <h1>Let's talk about what you're building.</h1>
+      <p class="lede">Tell me what's on your mind, and I'll point you to the right conversation. Program questions get a free 30-minute call. Deal reviews and strategy sessions are paid consultations.</p>
+      <a class="down" href="#topics">Get started <span aria-hidden="true">↓</span></a>
+    </div>
+    <div class="me"><img src="/assets/img/odis-empire.jpg" alt="Odis D. James III, founder of 4 Data Points Academy" width="800" height="1000"></div>
+  </div></section>
+
+  <section class="tk-step" id="topics" data-scene="2"><div class="wrap">
+    <div class="num">Step 1 of 3</div>
+    <h2>What do you want to talk about?</h2>
+    <p class="lede" style="margin:0">Check everything that applies.</p>
+    <div class="topics" id="topic-list"><div class="grp"><b>Free</b> 30-minute call with Odis</div><label class="topic"><input type="checkbox" name="topics" value="mentorship"><div><b>Real estate investing mentorship</b><span>Group, One-on-One or Jumpstart. Find the right fit to start investing.</span><em class="pill">Free call</em></div></label><label class="topic"><input type="checkbox" name="topics" value="empire"><div><b>Empire business systems</b><span>Done-for-you website, CRM, booking, payments and automation.</span><em class="pill">Free call</em></div></label><label class="topic"><input type="checkbox" name="topics" value="ascendu"><div><b>AscendU</b><span>The Self-Image Workshop and the two-week Intensive.</span><em class="pill">Free call</em></div></label><label class="topic"><input type="checkbox" name="topics" value="ventureu"><div><b>VentureU retreats</b><span>International business retreats with workshops and networking.</span><em class="pill">Free call</em></div></label><div class="grp"><b>Paid</b> consultations, paid when you book</div><label class="topic"><input type="checkbox" name="topics" value="deal"><div><b>Real estate deal review (1–4 units)</b><span>Odis reviews your residential deal: numbers, strategy and funding.</span><em class="pill">Paid consultation</em></div></label><label class="topic"><input type="checkbox" name="topics" value="multifamily"><div><b>Multifamily commercial deal (5+ units)</b><span>A focused review of your apartment or commercial multifamily deal.</span><em class="pill">Paid consultation</em></div></label><label class="topic"><input type="checkbox" name="topics" value="strategy"><div><b>Business or real estate strategy session</b><span>One-on-one advice on your specific plan or situation.</span><em class="pill">Paid consultation</em></div></label><div class="grp"><b>No call needed</b></div><a class="topic" href="/partner/"><input type="checkbox" disabled aria-hidden="true" tabindex="-1" style="opacity:.35"><div><b>Become a Referral Partner →</b><span>Sign up online in about a minute. We send your agreement and personal link automatically.</span><em class="pill">Sign up online</em></div></a></div>
+    <div class="verdict" id="verdict" aria-live="polite">Choose at least one topic.</div>
+  </div></section>
+
+  <section class="tk-step" id="details" data-scene="3"><div class="wrap">
+    <div class="num">Step 2 of 3</div>
+    <h2>Tell me a little about you.</h2>
+    <form class="lead-form" id="tk-form" novalidate>
+      <div class="row2"><label><span>First name <span class="req">*</span></span><input name="first_name" autocomplete="given-name" required></label><label><span>Last name</span><input name="last_name" autocomplete="family-name"></label></div>
+      <div class="row2"><label><span>Email <span class="req">*</span></span><input type="email" name="email" autocomplete="email" required></label><label><span>Mobile phone <span class="req">*</span></span><input type="tel" name="phone" autocomplete="tel" required></label></div>
+      <label><span>What would you like to cover? <span class="hint">(optional)</span></span><textarea name="details" rows="3" placeholder="e.g. I have a duplex under contract and want a second opinion on the numbers."></textarea></label>
+      <div class="hpf" aria-hidden="true"><label>Leave this field empty<input name="hp" tabindex="-1" autocomplete="off"></label></div>
+      <label class="consent"><input type="checkbox" name="sms_customer_care"><span>I agree to receive customer care text messages from 4 Data Points Academy, Inc. about my inquiry, appointments, purchases and account. Message frequency varies. Message and data rates may apply. Reply HELP for help or STOP to opt out.</span></label>
+      <label class="consent"><input type="checkbox" name="sms_marketing"><span>I agree to receive marketing text messages from 4 Data Points Academy, Inc. about programs, events and offers. Message frequency varies. Message and data rates may apply. Reply HELP for help or STOP to opt out. Consent is not a condition of purchase.</span></label>
+      <p class="hint" style="margin:0">Texting is optional. See our <a href="/sms-terms/" style="color:#8A6D12">Text Messaging Terms</a> and <a href="/privacy-policy/" style="color:#8A6D12">Privacy Policy</a>.</p>
+      <button class="btn btn-gold" type="submit">Continue to Scheduling</button>
+      <div class="form-err" role="alert"></div>
+    </form>
+  </div></section>
+
+  <section class="tk-step" id="book" data-scene="3"><div class="wrap">
+    <div class="num">Step 3 of 3</div>
+    <h2 id="book-title">Pick a time.</h2>
+    <p class="lede" id="book-sub" style="margin:0"></p>
+    <div class="cal"><iframe id="cal" title="Booking calendar" loading="lazy" scrolling="yes"></iframe></div>
+    <p class="alt" id="book-alt"></p>
+  </div></section>
+</main>
+<footer><div class="wrap cols">
+  <div class="fcol-brand" style="display:grid;gap:12px;align-content:start"><img src="/assets/img/logo.png" alt="4 Data Points Academy" width="92" height="60" style="height:60px;width:auto"><p>Real estate investing and entrepreneurship education.</p><p>4 Data Points Academy, Inc.<br>3225 McLeod Drive, Suite 100<br>Las Vegas, NV 89121<br><a href="tel:+17027108030">702-710-8030</a> · <a href="mailto:info@4datapoints.com">info@4datapoints.com</a></p></div>
+  <div class="fcol"><h4>Real Estate</h4><ul><li><a href="/mentorship/">Mentorship</a></li><li><a href="/multifamily/">Multifamily Course</a></li><li><a href="/land-trust/">Land Trusts</a></li><li><a href="/books/">Books</a></li><li><a href="/app/">The App</a></li></ul></div>
+  <div class="fcol"><h4>Entrepreneurship</h4><ul><li><a href="/empire/">Empire</a></li><li><a href="/entrepreneurship/">Entrepreneur Course</a></li><li><a href="/ventureu/">VentureU Retreat</a></li><li><a href="/ascendu/">Self-Image Workshop</a></li><li><a href="/events/">Events</a></li></ul></div>
+  <div class="fcol"><h4>Company</h4><ul><li><a href="/about/">About Odis</a></li><li><a href="/contact/">Contact</a></li><li><a href="/partner/">Referral Partners</a></li><li><a href="https://portal.4datapoints.com/" target="_blank" rel="noopener">Student Portal</a></li></ul></div>
+</div><div class="wrap disclaim">4 Data Points Academy provides education. Nothing on this site is investment, legal, tax or financial advice. Real estate investing and starting a business involve risk, including loss of money. Student results and examples shown are not typical and are not a promise or guarantee of income or results; your results depend on your effort, experience, market and decisions. Odis D. James III is a licensed real estate broker in California and Georgia; 4DPA programs are educational and do not create a broker-client relationship.</div><div class="wrap legal"><span>© 2026 4 Data Points Academy, Inc.</span><span><a href="/privacy-policy/">Privacy Policy</a> · <a href="/terms-of-service/">Terms of Service</a> · <a href="/sms-terms/">Text Messaging Terms</a> · <a href="/refund-policy/">Refund Policy</a></span></div></footer>
+<script src="/assets/site.js" defer></script>
+<script>
+(function () {
+  var URL = 'https://qqiqvxtbeswxnzqxcrye.supabase.co/functions/v1/talk-request';
+  var CAL = { free: 'axcHrS3Nh5Avk0tybOLv', residential: 'M9BCcQ7kIWQG6Rm2Wxmh', multifamily: 'NuYNrQBOedefCf7TTG49' };
+  var PAID = { deal: 1, multifamily: 1, strategy: 1 };
+  var list = document.getElementById('topic-list'), verdict = document.getElementById('verdict');
+  function chosen() { return [].slice.call(list.querySelectorAll('input[name=topics]:checked')).map(function (i) { return i.value; }); }
+  function plan(t) {
+    if (!t.length) return null;
+    var paid = t.some(function (x) { return PAID[x]; });
+    var cal = !paid ? CAL.free : (t.indexOf('multifamily') > -1 ? CAL.multifamily : CAL.residential);
+    return { paid: paid, cal: cal, alsoFree: paid && t.some(function (x) { return !PAID[x]; }) };
+  }
+  function update() {
+    var p = plan(chosen());
+    if (!p) { verdict.innerHTML = 'Choose at least one topic.'; return; }
+    verdict.innerHTML = p.paid
+      ? '<b>Paid consultation.</b> You will pay securely when you book your time.' + (p.alsoFree ? ' Your program questions can be covered on the same call.' : '')
+      : '<b>Free 30-minute call with Odis.</b> No cost, no obligation.';
+  }
+  list.addEventListener('change', update);
+
+  // Background changes as you scroll through the steps
+  var bgs = [].slice.call(document.querySelectorAll('.tk-bg [data-bg]'));
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { var n = e.target.getAttribute('data-scene'); bgs.forEach(function (b) { b.classList.toggle('on', b.getAttribute('data-bg') === n); }); } });
+    }, { rootMargin: '-45% 0px -45% 0px' });
+    [].slice.call(document.querySelectorAll('[data-scene]')).forEach(function (s) { io.observe(s); });
+  }
+
+  var f = document.getElementById('tk-form'), err = f.querySelector('.form-err'), btn = f.querySelector('button[type=submit]');
+  function v(n) { return String((f.elements[n] && f.elements[n].value) || '').trim(); }
+  function fail(m, el) { err.textContent = m; err.style.display = 'block'; if (el) el.focus(); }
+  f.addEventListener('submit', function (e) {
+    e.preventDefault(); err.style.display = 'none';
+    var t = chosen(), p = plan(t), E = f.elements;
+    if (!p) { document.getElementById('topics').scrollIntoView({ behavior: 'smooth' }); verdict.innerHTML = '<b>Please choose at least one topic first.</b>'; return; }
+    if (!v('first_name')) return fail('Please enter your first name.', E.first_name);
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v('email'))) return fail('Please enter a valid email.', E.email);
+    if (v('phone').replace(/\D/g, '').length < 10) return fail('Please enter your mobile phone number.', E.phone);
+    btn.disabled = true; btn.textContent = 'One moment...';
+    var payload = { first_name: v('first_name'), last_name: v('last_name'), email: v('email'), phone: v('phone'), topics: t, details: v('details'),
+      sms_customer_care: E.sms_customer_care.checked, sms_marketing: E.sms_marketing.checked, page: location.pathname, hp: v('hp') };
+    function showCal() {
+      var q = new URLSearchParams({ first_name: payload.first_name, last_name: payload.last_name, email: payload.email, phone: payload.phone });
+      document.getElementById('cal').src = 'https://link.4datapoints.com/widget/booking/' + p.cal + '?' + q.toString();
+      document.getElementById('book-title').textContent = p.paid ? 'Pick a time for your consultation.' : 'Pick a time for your free call.';
+      document.getElementById('book-sub').textContent = p.paid ? 'Choose a time below. Payment is collected securely when you book.' : 'Choose a 30-minute time that works for you. I look forward to talking with you.';
+      document.getElementById('book-alt').innerHTML = 'Prefer to talk now? Call or text <span style="white-space:nowrap">702-710-8030</span>.';
+      var b = document.getElementById('book'); b.classList.add('show'); b.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      btn.disabled = false; btn.textContent = 'Update and Show Calendar';
+    }
+    fetch(URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
+      .then(function (r) { return r.json().catch(function () { return {}; }).then(function (d) {
+        if (r.status === 400 || r.status === 429) { btn.disabled = false; btn.textContent = 'Continue to Scheduling'; return fail(d.message || 'Please check your details.'); }
+        showCal();
+      }); })
+      .catch(function () { showCal(); }); // never block booking if saving the request fails
+  });
+})();
+</script>
+</body>
+</html>

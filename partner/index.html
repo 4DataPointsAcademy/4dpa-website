@@ -173,6 +173,17 @@
   #track { font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
   #track .brand b { font-size: 18px; }
   #signup { scroll-margin-top: 90px; }
+  /* self-playing edition: one screen tall, no scroll scrubbing */
+  #track, body[data-view="mobile"] #track { height: auto; }
+  #track .stage { position: relative; top: 0; height: calc(100svh - var(--hdr, 0px)); min-height: 560px; }
+  #track .scroll-cue { display: none; }
+  #track .ctrls { position: absolute; right: max(16px, 4vw); bottom: max(28px, 6vh); z-index: 6; display: flex; gap: 10px; pointer-events: auto; }
+  #track .ctrls button { font: 600 12px/1 Inter, system-ui, sans-serif; letter-spacing: .16em; text-transform: uppercase; color: var(--cream); background: rgba(22,20,15,.6); border: 1px solid rgba(201,168,76,.55); padding: 12px 16px; cursor: pointer; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); display: none; }
+  #track .ctrls button:hover { border-color: var(--gold); color: var(--gold); }
+  body.ended #track #replay, body.needs-tap #track #tapplay { display: inline-flex; }
+  body.needs-tap #track #tapplay { background: var(--gold); color: var(--obsidian); font-size: 14px; padding: 16px 22px; }
+  body[data-view="mobile"] #track .ctrls { top: 14px; bottom: auto; right: 16px; }
+  body[data-view="mobile"] #track #film { top: 38%; height: 62%; }
   /* shorter scroll track: each scroll moves more of the film */
   #track { height: 430vh; }
   body[data-view="mobile"] #track { height: 450vh; }
@@ -195,10 +206,10 @@
   </nav>
   <a class="btn btn-gold lp-call" href="tel:+17027108030">Call 702-710-8030</a>
 </div></header>
-<!-- Referral Partner hero (realistic video): one shared link spreads across the city to 4DPA headquarters. -->
+<!-- Referral Partner hero (self-playing video): one shared link spreads across the city to 4DPA headquarters. -->
 <section id="track" aria-label="How the 4DPA Referral Partner program works">
   <div class="stage">
-    <video id="film" src="/assets/partner/partner.mp4?v=2" poster="/assets/partner/partner-poster.jpg" muted playsinline preload="auto" aria-label="A man shares a link from a rooftop at dusk; golden threads spread across the city to people's phones and converge on a glowing headquarters"></video>
+    <video id="film" src="/assets/partner/partner-play.mp4" poster="/assets/partner/partner-poster.jpg" muted playsinline autoplay preload="auto" aria-label="A man shares a link from a rooftop at dusk; golden threads spread across the city to people's phones and converge on a glowing headquarters"></video>
     <div id="ui">
       <div class="scrim"></div>
       <div class="brand"><b>4DPA</b><i aria-hidden="true">—</i><span>Referral Partner Program</span><img src="/assets/empire/logo.png" alt="4 Data Points Academy logo"></div>
@@ -215,7 +226,7 @@
           <span class="step" role="listitem" data-k="SHARE">Share</span><span class="step" role="listitem" data-k="CONNECT">Connect</span><span class="step" role="listitem" data-k="ENROLL">Enroll</span><span class="step" role="listitem" data-k="EARN">Earn</span>
         </div>
       </div>
-      <div class="scroll-cue">Scroll to see how it works</div>
+      <div class="ctrls"><button type="button" id="tapplay">▶ Play the story</button><button type="button" id="replay">↻ Replay</button></div>
       <div class="cta">
         <div class="row">
           <a class="primary" href="#signup">Become a Partner</a>
@@ -227,7 +238,7 @@
   </div>
 </section>
 <script>(function(){var h=document.querySelector('header.nav'),t=document.getElementById('track');function s(){t.style.setProperty('--hdr',(h?h.offsetHeight:0)+'px')}s();addEventListener('resize',s)})();</script>
-<script src="/assets/partner/film.js?v=2" defer></script>
+<script src="/assets/partner/play.js" defer></script>
 
 <main class="ea">
 
@@ -305,6 +316,5 @@
   });
 })();
 </script>
-<script src="/assets/scroll-hint.js" defer></script>
 </body>
 </html>

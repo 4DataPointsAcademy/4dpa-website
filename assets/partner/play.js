@@ -34,6 +34,7 @@
     if (!vid.paused && !vid.ended) requestAnimationFrame(loop);
   }
   vid.addEventListener('play', () => { document.body.classList.remove('ended', 'needs-tap'); requestAnimationFrame(loop); });
+  ['timeupdate', 'seeked'].forEach((e) => vid.addEventListener(e, () => { if (vid.duration && !vid.ended) render(vid.currentTime / vid.duration); }));
   vid.addEventListener('ended', () => { render(1); document.body.classList.add('ended'); });
   el('replay').addEventListener('click', () => { lastKey = null; vid.currentTime = 0; vid.play(); });
   el('tapplay').addEventListener('click', () => vid.play());

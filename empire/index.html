@@ -137,6 +137,15 @@
 
   #track { font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
 </style>
+<style>
+  .odis-quote{margin:0;position:relative;border-radius:var(--r);overflow:hidden;background:#16140F;aspect-ratio:4/5;max-width:460px;width:100%;justify-self:center;box-shadow:0 24px 60px -20px rgba(22,20,15,.45)}
+  .odis-quote .oq-photo,.odis-quote .oq-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+  .odis-quote blockquote{position:absolute;left:0;right:0;bottom:0;margin:0;padding:64px 24px 22px;background:linear-gradient(180deg,rgba(22,20,15,0) 0%,rgba(22,20,15,.86) 34%,rgba(22,20,15,.96) 100%);color:#F7F2E4}
+  .odis-quote blockquote p{font-family:Cinzel,Georgia,serif;font-size:clamp(17px,1.5vw,20px);line-height:1.45;margin:0 0 14px;text-wrap:balance}
+  .odis-quote figcaption{display:flex;flex-direction:column;gap:2px;border-left:2px solid #C9A84C;padding-left:12px;font-size:13px}
+  .odis-quote figcaption b{color:#C9A84C;font-weight:600;letter-spacing:.04em}
+  .odis-quote figcaption span{color:rgba(247,242,228,.7)}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="wrap"><span class="sched">Live mentorship classes Monday to Thursday, 5:00 PM Pacific</span><span><a href="https://portal.4datapoints.com/" target="_blank" rel="noopener">Student Portal</a> &nbsp;·&nbsp; <a href="tel:+17027108030">702-710-8030</a> (call or text)</span></div></div>
@@ -207,7 +216,13 @@
       <p class="lead">A real business runs on lead capture, follow-up, booking, payments and email, all talking to each other. Empire sets up that whole system for you: branded, connected and tested.</p>
       <div class="btn-row"><a class="btn btn-gold" href="https://forms.4datapoints.com/empire-funnel" target="_blank" rel="noopener">Start Your Empire Intake</a><a class="btn btn-line" href="/empire/#empire-pk">See Packages</a></div>
     </div>
-    <div class="photo" style="aspect-ratio:4/3"><img src="/assets/img/team.jpg" alt="Odis meeting with business owners" style="object-position:50% 45%"></div>
+    <figure class="odis-quote">
+      <div class="oq-photo"><img src="/assets/img/odis-empire.jpg" alt="Odis James, founder of 4 Data Points Academy" width="800" height="1000" loading="lazy"></div>
+      <blockquote>
+        <p>“A website is useless without the systems, workflows and automations to support it. A business needs a command center. A website is just a piece of it.”</p>
+        <figcaption><b>Odis James</b><span>Founder, 4 Data Points Academy</span></figcaption>
+      </blockquote>
+    </figure>
   </div></div>
   <section class="band white"><div class="wrap">
     <div class="head"><span class="eyebrow">What we build for you</span><h2>Everything your business runs on, in one place.</h2><p class="muted">No more stitching together a website builder, a calendar app, a payment app and a spreadsheet of leads.</p></div>

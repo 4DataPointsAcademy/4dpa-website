@@ -173,6 +173,9 @@
   #track { font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
   #track .brand b { font-size: 18px; }
   #signup { scroll-margin-top: 90px; }
+  /* shorter scroll track: each scroll moves more of the film */
+  #track { height: 430vh; }
+  body[data-view="mobile"] #track { height: 450vh; }
 </style>
 </head>
 <body>
@@ -195,7 +198,7 @@
 <!-- Referral Partner hero (realistic video): one shared link spreads across the city to 4DPA headquarters. -->
 <section id="track" aria-label="How the 4DPA Referral Partner program works">
   <div class="stage">
-    <video id="film" src="/assets/partner/partner.mp4" poster="/assets/partner/partner-poster.jpg" muted playsinline preload="auto" aria-label="A man shares a link from a rooftop at dusk; golden threads spread across the city to people's phones and converge on a glowing headquarters"></video>
+    <video id="film" src="/assets/partner/partner.mp4?v=2" poster="/assets/partner/partner-poster.jpg" muted playsinline preload="auto" aria-label="A man shares a link from a rooftop at dusk; golden threads spread across the city to people's phones and converge on a glowing headquarters"></video>
     <div id="ui">
       <div class="scrim"></div>
       <div class="brand"><b>4DPA</b><i aria-hidden="true">—</i><span>Referral Partner Program</span><img src="/assets/empire/logo.png" alt="4 Data Points Academy logo"></div>
@@ -224,7 +227,7 @@
   </div>
 </section>
 <script>(function(){var h=document.querySelector('header.nav'),t=document.getElementById('track');function s(){t.style.setProperty('--hdr',(h?h.offsetHeight:0)+'px')}s();addEventListener('resize',s)})();</script>
-<script src="/assets/partner/film.js" defer></script>
+<script src="/assets/partner/film.js?v=2" defer></script>
 
 <main class="ea">
 

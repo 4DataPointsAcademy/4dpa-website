@@ -56,7 +56,7 @@
     document.body.classList.toggle('scrolled', scrollY > 60);
     if (!state.frozen) state.target = targetFromScroll();
     const d = state.target - state.t;
-    if (d !== 0) { state.t = REDUCED || Math.abs(d) < 4e-4 ? state.target : state.t + d * (1 - Math.exp(-dt * 7)); renderUI(state.t); }
+    if (d !== 0) { state.t = REDUCED || Math.abs(d) < 4e-4 ? state.target : state.t + d * (1 - Math.exp(-dt * 10)); renderUI(state.t); }
     seek(state.t);
     requestAnimationFrame(tick);
   }

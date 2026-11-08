@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="stylesheet" href="/assets/re3d/re3d.css">
-<link rel="preload" href="/assets/re3d/app.min.js" as="script" crossorigin>
+<link rel="preload" href="/assets/re3d/rehab-poster.jpg" as="image">
 </head>
 <body>
 <div class="topbar"><div class="wrap"><span class="sched">Live mentorship classes Monday to Thursday, 5:00 PM Pacific</span><span><a href="https://portal.4datapoints.com/" target="_blank" rel="noopener">Student Portal</a> &nbsp;·&nbsp; <a href="tel:+17027108030">702-710-8030</a> (call or text)</span></div></div>
@@ -40,12 +40,10 @@
   <a class="btn btn-gold lp-call" href="tel:+17027108030">Call 702-710-8030</a>
 </div></header>
 
-<!-- 4DPA Real Estate 3D hero: the Four Data Points told through one Detroit two-flat. Existing page content follows unchanged. -->
+<!-- 4DPA Real Estate hero (realistic video): the Four Data Points told through one Detroit two-flat. Existing page content follows unchanged. -->
 <section id="track" aria-label="The Four Data Points: one property from purchase to income">
   <div class="re3d-stage">
-    <canvas id="scene" aria-hidden="true"></canvas>
-    <div id="poster" role="img" aria-label="Renovated Detroit two-flat at dusk"></div>
-    <div class="loading">Loading the property…</div>
+    <video id="rehab" src="/assets/re3d/rehab.mp4" poster="/assets/re3d/rehab-poster.jpg" muted playsinline preload="auto" aria-label="A distressed Detroit two-flat is renovated and rented: before, rehab, finished and lit at night"></video>
     <div id="ui">
       <div class="scrim"></div>
       <div class="copy">
@@ -71,7 +69,7 @@
   </div>
 </section>
 <script>(function(){var h=document.querySelector('header.nav'),t=document.getElementById('track');function s(){t.style.setProperty('--hdr',(h?h.offsetHeight:0)+'px')}s();addEventListener('resize',s)})();</script>
-<script type="module" src="/assets/re3d/app.min.js"></script>
+<script src="/assets/re3d/video.js" defer></script>
 
 <main>
 <section class="page show" id="p-realestate" data-page="realestate" data-title="Real Estate Investing Mentorship &amp; Courses | 4 Data Points Academy">

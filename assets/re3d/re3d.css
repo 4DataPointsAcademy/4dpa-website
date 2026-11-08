@@ -94,3 +94,7 @@ body.no-webgl #track .re3d-stage { position: relative; }
   body[data-view="mobile"] #track .chapter p { font-size: 13px; }
   body.final[data-view="mobile"] #track .chapter p { display: none; }
 }
+
+/* video edition */
+#track #rehab {position: fixed; left: 0; top: 0; width: 100vw; height: 100vh; height: 100lvh; object-fit: cover; object-position: 62% 50%; background: #0d0c0b; display: block;}
+body[data-view="mobile"] #track #rehab {top: 30vh; height: 70vh; height: 70lvh; object-position: 64% 100%;}

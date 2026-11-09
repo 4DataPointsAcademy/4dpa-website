@@ -77,6 +77,9 @@
   body.final #track .cta { opacity: 1; transform: none; pointer-events: auto; }
   body.final #track .scroll-cue { opacity: 0; }
   body.final #track .chapter { min-height: 0; }
+  #track .rail { transition: opacity 0.5s; }
+  body.final #track .rail { opacity: 0; }
+  @media (max-height: 700px) { body.final #track .chapter p { display: none; } }
   #track .loading { display: grid; place-items: center; background: var(--obsidian); color: var(--cream-dim); font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; transition: opacity 0.6s; z-index: 10; }
   body.ready #track .loading { opacity: 0; pointer-events: none; }
   body.capture #track .loading { display: none; }

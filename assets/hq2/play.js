@@ -8,7 +8,7 @@
   const STAGES = [
     { key: '', n: '', at: 0, title: "Whatever You're Building, Start Here.", body: 'Real estate investing mentorship, done-for-you business systems, personal development and international retreats, led by Odis D. James III.' },
     { key: '', n: '', at: 0.34, title: 'Welcome to 4DPA Headquarters.', body: 'A licensed real estate broker, investor and seven-time published author, with a team that builds businesses.' },
-    { key: 'FINAL', n: '', at: 0.8, title: 'Six Ways In. Choose Your Path.', body: 'Real estate, Empire, personal development, retreats, books and land trusts. Pick the door that fits where you are.' },
+    { key: 'FINAL', n: '', at: 0.8, title: 'Six Ways In. Choose Your Path.', body: 'Real estate investing mentorship, entrepreneurship (Empire), personal development, retreats, books and land trusts. Pick the door that fits where you are.' },
   ];
   let lastKey = null;
   function render(p) {

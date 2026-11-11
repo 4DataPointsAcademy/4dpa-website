@@ -36,7 +36,7 @@
   el('tapplay').addEventListener('click', () => vid.play());
   // Reduced motion: show the final frame and buttons without playing.
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    vid.removeAttribute('autoplay'); vid.poster = '/assets/hq2/hq-end.jpg';
+    vid.removeAttribute('autoplay'); vid.poster = '/assets/hq2/hq-end.jpg?v=2';
     render(1); document.body.classList.add('ended');
   } else {
     render(0);

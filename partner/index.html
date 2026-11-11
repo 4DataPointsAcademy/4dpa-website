@@ -245,7 +245,7 @@
     <aside class="ea-side">
       <ol>
         <li><span><b>Sign up here</b>Name, email and phone. About one minute.</span></li>
-        <li><span><b>Get your agreement</b>We email you the Referral Partner Agreement and a W-9 request, which we need before paying referral fees.</span></li>
+        <li><span><b>Get your agreement</b>We email you your personal code and the Referral Partner Agreement. We'll ask for a W-9 when you earn your first referral fee.</span></li>
         <li><span><b>Share your personal link</b>When someone you refer enrolls in a 4DPA mentorship program, you earn a referral fee as set out in your agreement.</span></li>
       </ol>
       <p class="fine">Referral fees apply to 4DPA real estate investing mentorship enrollments only. Full terms are in the Referral Partner Agreement. Questions? Call or text <span style="white-space:nowrap">702-710-8030</span>.</p>
@@ -266,7 +266,7 @@
       <p class="hint" style="margin:0">Texting is optional. See our <a href="/sms-terms/" style="color:#8A6D12">Text Messaging Terms</a> and <a href="/privacy-policy/" style="color:#8A6D12">Privacy Policy</a>. Referral Partners are independent and are not employees or agents of 4DPA.</p>
       <button class="btn btn-gold" type="submit">Become a Referral Partner</button>
       <div class="form-err" role="alert"></div>
-      <div class="done" role="status"><h3>You're signed up. Thank you!</h3><p>Check your email: we just sent your personal $500 code, your referral link, the Referral Partner Agreement and a W-9 request. Reply with the signed agreement and completed W-9, and you're all set.</p><p><a href="/" style="color:#8A6D12;font-weight:600">Back to 4DPA Headquarters</a></p></div>
+      <div class="done" role="status"><h3>You're signed up. Thank you!</h3><p>Check your email: we just sent your personal $500 code, your referral link, and the Referral Partner Agreement. Reply with the signed agreement and you're all set. We'll ask for a W-9 when you earn your first referral fee.</p><p><a href="/" style="color:#8A6D12;font-weight:600">Back to 4DPA Headquarters</a></p></div>
     </form>
   </div></section>
 </main>
@@ -303,7 +303,7 @@
       })
     }).then(function (r) { return r.json().catch(function () { return {}; }).then(function (d) { if (!r.ok || !d.ok) throw new Error(d.message || 'failed'); return d; }); })
       .then(function (d) {
-        if (d && d.partner_type === 'student') done.innerHTML = '<h3>You\u2019re in as a Student Partner!</h3><p>We matched you to your 4DPA student account, so you\u2019re approved automatically and earn 10% on all three mentorship programs. Check your email: we just sent your personal $500 code, your referral link, the Referral Partner Agreement and a W-9 request.</p><p><a href="https://portal.4datapoints.com/" style="color:#8A6D12;font-weight:600">Go to the Student Portal</a></p>';
+        if (d && d.partner_type === 'student') done.innerHTML = '<h3>You\u2019re in as a Student Partner!</h3><p>We matched you to your 4DPA student account, so you\u2019re approved automatically and earn 10% on all three mentorship programs. Check your email: we just sent your personal $500 code, your referral link, and the Referral Partner Agreement. We\u2019ll ask for a W-9 when you earn your first referral fee.</p><p><a href="https://portal.4datapoints.com/" style="color:#8A6D12;font-weight:600">Go to the Student Portal</a></p>';
         [].slice.call(f.children).forEach(function (el) { if (el !== done) el.style.display = 'none'; });
         done.style.display = 'block';
         f.scrollIntoView({ behavior: 'smooth', block: 'start' });

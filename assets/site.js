@@ -42,6 +42,7 @@ var WEBSITE_LEAD_URL = "https://qqiqvxtbeswxnzqxcrye.supabase.co/functions/v1/we
       '<p class="note">By submitting, you agree to our <a href="/privacy-policy/">Privacy Policy</a>, <a href="/terms-of-service/">Terms of Service</a> and <a href="/sms-terms/">Text Messaging Terms</a>. We never share your mobile number for marketing.</p>' +
       '<button class="btn btn-gold" type="submit">' + esc(s.dataset.button) + '</button>' +
       '<div class="form-err" role="alert"></div></form>';
+    if (s.dataset.next) s.querySelector('form').dataset.next = s.dataset.next;
   });
 
   function showErr(f, msg) { var e = f.querySelector('.form-err'); e.textContent = msg; e.style.display = 'block'; }
@@ -69,7 +70,7 @@ var WEBSITE_LEAD_URL = "https://qqiqvxtbeswxnzqxcrye.supabase.co/functions/v1/we
         page: location.pathname, hp: v('hp')
       })
     }).then(function (r) { return r.json().catch(function () { return {}; }).then(function (d) { if (!r.ok || !d.ok) throw new Error(d.message || 'failed'); }); })
-      .then(function () { location.href = '/thank-you/'; })
+      .then(function () { location.href = f.dataset.next || '/thank-you/'; })
       .catch(function () {
         btn.disabled = false; btn.textContent = label;
         showErr(f, 'Sorry, your message didn’t go through. Please call or text 702-710-8030 or email info@4datapoints.com.');

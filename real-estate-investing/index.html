@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css">
-<link rel="stylesheet" href="/assets/re3d/re3d.css">
+<link rel="stylesheet" href="/assets/re3d/re3d.css?v=2">
 <link rel="preload" href="/assets/re3d/rehab-poster.jpg" as="image">
 </head>
 <body>
@@ -47,7 +47,7 @@
 <!-- 4DPA Real Estate hero (realistic video): the Four Data Points told through one Detroit two-flat. Existing page content follows unchanged. -->
 <section id="track" aria-label="The Four Data Points: one property from purchase to income">
   <div class="re3d-stage">
-    <video id="rehab" src="/assets/re3d/rehab.mp4" poster="/assets/re3d/rehab-poster.jpg" muted playsinline preload="auto" aria-label="A distressed Detroit two-flat is renovated and rented: before, rehab, finished and lit at night"></video>
+    <video id="rehab" src="/assets/re3d/rehab.mp4" poster="/assets/re3d/rehab-poster.jpg" muted playsinline autoplay preload="auto" aria-label="A distressed Detroit two-flat is renovated and rented: before, rehab, finished and lit at night"></video>
     <div id="ui">
       <div class="scrim"></div>
       <div class="copy">
@@ -64,7 +64,7 @@
           <span class="step" role="listitem" data-k="COST">Cost</span><span class="step" role="listitem" data-k="REHAB">Rehab</span><span class="step" role="listitem" data-k="ARV">ARV</span><span class="step" role="listitem" data-k="INCOME">Income</span>
         </div>
       </div>
-      <div class="scroll-cue">Scroll to watch the rehab</div>
+      <button class="re-play" id="re-play" type="button">Pause</button>
       <div class="cta">
         <h3>Stop guessing. Start analyzing deals.</h3>
         <a class="btn" href="/mentorship/">See Mentorship Options</a>
@@ -73,7 +73,7 @@
   </div>
 </section>
 <script>(function(){var h=document.querySelector('header.nav'),t=document.getElementById('track');function s(){t.style.setProperty('--hdr',(h?h.offsetHeight:0)+'px')}s();addEventListener('resize',s)})();</script>
-<script src="/assets/re3d/video.js" defer></script>
+<script src="/assets/re3d/play.js" defer></script>
 
 <main>
 <section class="page show" id="p-realestate" data-page="realestate" data-title="Real Estate Investing Mentorship &amp; Courses | 4 Data Points Academy">
@@ -110,6 +110,5 @@
   <div class="fcol"><h4>Company</h4><ul><li><a href="/about/">About Odis</a></li><li><a href="/contact/">Contact</a></li><li><a href="/partner/">Referral Partners</a></li><li><a href="https://portal.4datapoints.com/" target="_blank" rel="noopener">Student Portal</a></li></ul></div>
 </div><div class="wrap disclaim">4 Data Points Academy provides education. Nothing on this site is investment, legal, tax or financial advice. Real estate investing and starting a business involve risk, including loss of money. Student results and examples shown are not typical and are not a promise or guarantee of income or results; your results depend on your effort, experience, market and decisions. Odis D. James III is a licensed real estate broker in California and Georgia; 4DPA programs are educational and do not create a broker-client relationship.</div><div class="wrap legal"><span>© 2026 4 Data Points Academy, Inc.</span><span><a href="/privacy-policy/">Privacy Policy</a> · <a href="/terms-of-service/">Terms of Service</a> · <a href="/sms-terms/">Text Messaging Terms</a> · <a href="/refund-policy/">Refund Policy</a></span></div></footer>
 <script src="/assets/site.js" defer></script>
-<script src="/assets/scroll-hint.js" defer></script>
 </body>
 </html>

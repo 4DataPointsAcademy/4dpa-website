@@ -2,5 +2,6 @@ User-agent: *
 Disallow: /lp/
 Disallow: /thank-you/
 Disallow: /account-deletion/confirm/
+Disallow: /demo/
 
 Sitemap: https://4datapoints.com/sitemap.xml

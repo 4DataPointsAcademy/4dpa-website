@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Events | Lumen Valley Church (Sample Website)</title><meta name="robots" content="noindex, nofollow"><meta name="description" content="Sample church website built by 4 Data Points Academy. Lumen Valley Church is fictional.">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css"><script>window.TOUR=[{"sel": "#ef", "t": "One calendar, filtered by ministry", "d": "Every event in one place, with one-tap RSVP and a reminder text the day before."}];</script></head><body class="dark"><div class="demo">Sample website built by 4 Data Points Academy. Lumen Valley Church is fictional. <a href="/talk/">Want one for your church?</a></div>
+<header class="solid"><div class="wrap nav">
+ <a class="logo" href="../index.html"><i></i>Lumen Valley</a>
+ <nav class="links">
+  <a href="../visit/index.html" data-es="Visítanos">Plan a Visit</a><a href="../watch/index.html" data-es="Ver">Watch</a>
+  <div class="dd"><button data-es="Ministerios ▾">Ministries ▾</button><div class="menu"><a href="../ministries/kids/index.html">Kids</a><a href="../ministries/students/index.html">Students</a><a href="../ministries/groups/index.html">Life Groups</a><a href="../ministries/women/index.html">Women</a><a href="../ministries/men/index.html">Men</a><a href="../ministries/serve/index.html">Serve</a></div></div>
+  <a href="../events/index.html" data-es="Eventos">Events</a><a href="../about/index.html" data-es="Nosotros">About</a><a href="../connect/index.html" data-es="Contacto">Connect</a>
+ </nav>
+ <div class="tools"><button id="langBtn" aria-label="Español">ES</button><button id="a11yBtn" aria-label="Accessibility options">Aa</button><a class="btn p" href="../give/index.html" data-es="Ofrendar">Give</a><button class="burger" id="burger" aria-label="Menu">☰</button></div>
+</div></header>
+<div class="a11y" id="a11y"><div class="lbl" style="margin-bottom:6px">Accessibility</div>
+ <label>Larger text <input type="checkbox" id="a_big" style="width:auto"></label>
+ <label>Higher contrast <input type="checkbox" id="a_contrast" style="width:auto"></label>
+ <label>Reduce motion <input type="checkbox" id="a_calm" style="width:auto"></label>
+ <p style="font-size:13px;color:var(--soft);margin:10px 0 0">Wheelchair access, hearing loop and large-print bulletins at every service.</p></div>
+<div class="mnav" id="mnav"><button class="x" id="mnavX" aria-label="Close">×</button>
+ <a href="../visit/index.html">Plan a Visit</a><a href="../watch/index.html">Watch</a><a href="../events/index.html">Events</a><a href="../give/index.html">Give</a><a href="../about/index.html">About</a><a href="../connect/index.html">Connect</a>
+ <small>Ministries</small><a href="../ministries/kids/index.html">Kids</a><a href="../ministries/students/index.html">Students</a><a href="../ministries/groups/index.html">Life Groups</a><a href="../ministries/women/index.html">Women</a><a href="../ministries/men/index.html">Men</a><a href="../ministries/serve/index.html">Serve</a></div><div class="phead"><div class="wrap"><div class="lbl">Events</div><h1 class="words">What's happening at Lumen Valley</h1><p class="lead" style="max-width:620px">Register in seconds. You will get a reminder text the day before.</p></div></div>
+<section style="padding-top:50px"><div class="wrap"><div class="tabs" id="ef"><button class="on" data-f="all">All</button><button data-f="Groups">Groups</button><button data-f="Kids">Kids</button><button data-f="Men">Men</button><button data-f="Newcomers">Newcomers</button><button data-f="Serve">Serve</button><button data-f="Students">Students</button><button data-f="Women">Women</button><button data-f="Worship">Worship</button></div><div class="ev" id="evlist" data-events="all"></div></div></section><footer><div class="wrap">
+ <div class="fgrid">
+  <div><a class="logo" href="../index.html" style="color:#fff"><i></i>Lumen Valley</a><p style="margin-top:14px">We saved a seat for you.</p><p style="margin-top:14px">Text <b>VISIT</b> to (555) 555-0100</p></div>
+  <div><h4>Sundays</h4><p>9:00 AM</p><p>11:00 AM</p><p>Kids at both services</p></div>
+  <div><h4>Explore</h4><p><a href="../visit/index.html">Plan a Visit</a></p><p><a href="../watch/index.html">Watch</a></p><p><a href="../events/index.html">Events</a></p><p><a href="../give/index.html">Give</a></p></div>
+  <div><h4>Connect</h4><p><a href="../about/index.html">About &amp; beliefs</a></p><p><a href="../connect/index.html">Contact &amp; forms</a></p><p>(555) 555-0100</p><p>hello@example.com</p></div>
+ </div>
+ <div class="made"><span>Sample church website. All names, people and details are fictional.</span><span>Built by <a href="/empire/">4 Data Points Academy</a> · <a href="/talk/">Want this for your church?</a></span></div>
+</div></footer><div class="toast" id="toast"></div>
+<script src="../assets/events.js"></script><script src="../assets/es.js"></script><script src="../assets/site.js"></script><script>document.getElementById('ef').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;document.querySelectorAll('#ef button').forEach(x=>x.classList.toggle('on',x===b));document.querySelectorAll('#evlist .e').forEach(r=>{const t=r.querySelector('.tag');r.style.display=(b.dataset.f==='all'||(t&&t.textContent===b.dataset.f))?'':'none'})});</script></body></html>

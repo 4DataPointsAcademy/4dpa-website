@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plan a Visit | Lumen Valley Church (Sample Website)</title><meta name="robots" content="noindex, nofollow"><meta name="description" content="Sample church website built by 4 Data Points Academy. Lumen Valley Church is fictional.">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css"><script>window.TOUR=[{"sel": "#planner", "t": "A guided first visit", "d": "Three quick steps save a seat. Your team knows who is coming, with kids and accessibility needs, before Sunday."}, {"sel": "#msgs", "t": "Follow-up on autopilot", "d": "These texts go out automatically after someone saves a seat. Replies go to a real person."}, {"sel": ".faq", "t": "Answers before they ask", "d": "The questions first-time guests worry about, answered up front."}];</script></head><body class="dark"><div class="demo">Sample website built by 4 Data Points Academy. Lumen Valley Church is fictional. <a href="/talk/">Want one for your church?</a></div>
+<header class="solid"><div class="wrap nav">
+ <a class="logo" href="../index.html"><i></i>Lumen Valley</a>
+ <nav class="links">
+  <a href="../visit/index.html" data-es="Visítanos">Plan a Visit</a><a href="../watch/index.html" data-es="Ver">Watch</a>
+  <div class="dd"><button data-es="Ministerios ▾">Ministries ▾</button><div class="menu"><a href="../ministries/kids/index.html">Kids</a><a href="../ministries/students/index.html">Students</a><a href="../ministries/groups/index.html">Life Groups</a><a href="../ministries/women/index.html">Women</a><a href="../ministries/men/index.html">Men</a><a href="../ministries/serve/index.html">Serve</a></div></div>
+  <a href="../events/index.html" data-es="Eventos">Events</a><a href="../about/index.html" data-es="Nosotros">About</a><a href="../connect/index.html" data-es="Contacto">Connect</a>
+ </nav>
+ <div class="tools"><button id="langBtn" aria-label="Español">ES</button><button id="a11yBtn" aria-label="Accessibility options">Aa</button><a class="btn p" href="../give/index.html" data-es="Ofrendar">Give</a><button class="burger" id="burger" aria-label="Menu">☰</button></div>
+</div></header>
+<div class="a11y" id="a11y"><div class="lbl" style="margin-bottom:6px">Accessibility</div>
+ <label>Larger text <input type="checkbox" id="a_big" style="width:auto"></label>
+ <label>Higher contrast <input type="checkbox" id="a_contrast" style="width:auto"></label>
+ <label>Reduce motion <input type="checkbox" id="a_calm" style="width:auto"></label>
+ <p style="font-size:13px;color:var(--soft);margin:10px 0 0">Wheelchair access, hearing loop and large-print bulletins at every service.</p></div>
+<div class="mnav" id="mnav"><button class="x" id="mnavX" aria-label="Close">×</button>
+ <a href="../visit/index.html">Plan a Visit</a><a href="../watch/index.html">Watch</a><a href="../events/index.html">Events</a><a href="../give/index.html">Give</a><a href="../about/index.html">About</a><a href="../connect/index.html">Connect</a>
+ <small>Ministries</small><a href="../ministries/kids/index.html">Kids</a><a href="../ministries/students/index.html">Students</a><a href="../ministries/groups/index.html">Life Groups</a><a href="../ministries/women/index.html">Women</a><a href="../ministries/men/index.html">Men</a><a href="../ministries/serve/index.html">Serve</a></div><div class="phead img"><img src="../img/film-poster.jpg" alt=""><div class="wrap"><div class="lbl">Plan a visit</div><h1 class="words">Your first Sunday, made easy.</h1><p class="lead" style="max-width:620px">Tell us when you are coming. A host will meet you at the front doors, help check in your kids and save you a seat.</p></div></div>
+<section><div class="wrap grid2">
+ <div class="panel reveal" id="planner">
+  <div class="lbl">Step 1 · Pick your Sunday</div><div class="opts" data-pick="1" id="days"></div>
+  <div class="lbl">Step 2 · Pick a time</div><div class="opts" data-pick="1" id="times"><button class="opt on"><b>9:00 AM</b><span>Quieter, great with kids</span></button><button class="opt"><b>11:00 AM</b><span>Fuller band, more energy</span></button></div>
+  <div class="lbl">Step 3 · Tell us about you</div>
+  <form id="visitForm" style="margin-top:10px"><div class="row"><input required id="fname" placeholder="First name"><input required placeholder="Last name"></div><div class="row"><input type="email" required placeholder="Email"><input type="tel" placeholder="Mobile (for a welcome text)"></div>
+  <div class="chips"><label><input type="checkbox"><span>Bringing kids</span></label><label><input type="checkbox"><span>Need accessible seating</span></label><label><input type="checkbox"><span>Prefer Spanish</span></label></div>
+  <button class="btn p" type="submit">Save my seat</button></form>
+  <div id="visitOk" style="display:none"><div class="lbl">Your seat is saved</div><h3 id="okH">See you Sunday!</h3><p class="lead" style="font-size:16px">Marcus will meet you at the front doors. Watch your phone for a welcome text.</p></div>
+ </div>
+ <div class="reveal"><div class="lbl">What happens next</div><h2 style="font-size:34px">We follow up like family.</h2><p class="lead" style="font-size:17px">Save a seat and watch the texts a guest would get, sent automatically, with replies going straight to a real person.</p><div class="phone"><div class="screen" id="msgs"><div style="text-align:center;font-size:12px;color:#8c857a">Lumen Valley Church</div>
+<div class="bub"><small>Right after you save a seat</small>Hi there! It's Marcus from Lumen Valley. Your seat is saved for Sunday. I'll be at the front doors in a gold lanyard. Reply with any questions!</div>
+<div class="bub"><small>Saturday, 6:00 PM</small>See you tomorrow at 9:00 AM! Free parking up front for guests, and coffee's on us.</div>
+<div class="bub"><small>Sunday, 2:00 PM</small>It was great meeting you today! How was your first Sunday? Reply 1–5. ❤️</div>
+<div class="bub"><small>Wednesday</small>Thinking of you this week. Want me to save your seat again, or help you find a Life Group near you?</div></div></div></div>
+</div></section>
+<section class="alt"><div class="wrap grid2">
+ <div><div class="lbl">What to expect</div><h2>About 75 minutes. Come as you are.</h2></div>
+ <div class="steps">
+  <div class="step"><i>1</i><div><b>Park up front</b><p>Guest parking is right by the main doors. Our team will wave you in.</p></div></div>
+  <div class="step"><i>2</i><div><b>Meet your host</b><p>Look for the gold lanyard. We'll walk you in and show you around.</p></div></div>
+  <div class="step"><i>3</i><div><b>Kids check-in</b><p>Secure check-in for birth through 5th grade. Pre-register to save time.</p></div></div>
+  <div class="step"><i>4</i><div><b>Worship and a message</b><p>About 25 minutes of music and a 35-minute message from the Bible.</p></div></div>
+  <div class="step"><i>5</i><div><b>Coffee after</b><p>Stop by the welcome desk for a free gift and a coffee on us.</p></div></div>
+ </div></div></section>
+<section><div class="wrap faq"><h2 class="words">Questions first-time guests ask</h2>
+ <details><summary>What should I wear?</summary><p>Whatever you're comfortable in. You'll see jeans and you'll see suits.</p></details>
+ <details><summary>Will I be singled out?</summary><p>Never. No standing up, no name tags unless you want one.</p></details>
+ <details><summary>Is there something for my teenager?</summary><p>Students sit with their families on Sunday and have their own night on Wednesdays.</p></details>
+ <details><summary>Do you offer Spanish?</summary><p>Yes. Live Spanish translation through headsets at the 11:00 AM service.</p></details>
+</div></section><footer><div class="wrap">
+ <div class="fgrid">
+  <div><a class="logo" href="../index.html" style="color:#fff"><i></i>Lumen Valley</a><p style="margin-top:14px">We saved a seat for you.</p><p style="margin-top:14px">Text <b>VISIT</b> to (555) 555-0100</p></div>
+  <div><h4>Sundays</h4><p>9:00 AM</p><p>11:00 AM</p><p>Kids at both services</p></div>
+  <div><h4>Explore</h4><p><a href="../visit/index.html">Plan a Visit</a></p><p><a href="../watch/index.html">Watch</a></p><p><a href="../events/index.html">Events</a></p><p><a href="../give/index.html">Give</a></p></div>
+  <div><h4>Connect</h4><p><a href="../about/index.html">About &amp; beliefs</a></p><p><a href="../connect/index.html">Contact &amp; forms</a></p><p>(555) 555-0100</p><p>hello@example.com</p></div>
+ </div>
+ <div class="made"><span>Sample church website. All names, people and details are fictional.</span><span>Built by <a href="/empire/">4 Data Points Academy</a> · <a href="/talk/">Want this for your church?</a></span></div>
+</div></footer><div class="toast" id="toast"></div>
+<script src="../assets/events.js"></script><script src="../assets/es.js"></script><script src="../assets/site.js"></script><script>
+(function(){const S=[];const d=new Date();d.setHours(12,0,0,0);d.setDate(d.getDate()+((7-d.getDay())%7||7));for(let k=0;k<3;k++){S.push(new Date(d));d.setDate(d.getDate()+7)}
+document.getElementById('days').innerHTML=S.map((d,i)=>`<button class="opt${i?'':' on'}"><b>${d.toLocaleString('en-US',{month:'short',day:'numeric'})}</b><span>${['This Sunday','Next Sunday','In two weeks'][i]}</span></button>`).join('');
+document.getElementById('visitForm').addEventListener('submit',e=>{e.preventDefault();const n=document.getElementById('fname').value||'Friend';document.getElementById('okH').textContent='See you Sunday, '+n+'!';e.target.style.display='none';document.getElementById('visitOk').style.display='block';
+ document.querySelectorAll('#msgs .bub').forEach((b,i)=>{b.innerHTML=b.innerHTML.replace('Hi there','Hi '+n);setTimeout(()=>b.classList.add('in'),400+i*1100)});toast('Demo: these texts would send automatically. Nothing was sent.')});
+setTimeout(()=>document.querySelectorAll('#msgs .bub').forEach((b,i)=>setTimeout(()=>b.classList.add('in'),i*900)),800);})();
+</script></body></html>

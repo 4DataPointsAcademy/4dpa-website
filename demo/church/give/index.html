@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Give | Lumen Valley Church (Sample Website)</title><meta name="robots" content="noindex, nofollow"><meta name="description" content="Sample church website built by 4 Data Points Academy. Lumen Valley Church is fictional.">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css"><script>window.TOUR=[{"sel": "#amts", "t": "Giving in under a minute", "d": "Pick an amount, a fund and how often. Card, bank, Apple Pay and Google Pay."}, {"sel": "#impact", "t": "Show the impact", "d": "Givers see what their gift does, which grows generosity."}, {"sel": ".alt", "t": "Report back", "d": "Show your church where giving went this year."}];</script></head><body class="dark"><div class="demo">Sample website built by 4 Data Points Academy. Lumen Valley Church is fictional. <a href="/talk/">Want one for your church?</a></div>
+<header class="solid"><div class="wrap nav">
+ <a class="logo" href="../index.html"><i></i>Lumen Valley</a>
+ <nav class="links">
+  <a href="../visit/index.html" data-es="Visítanos">Plan a Visit</a><a href="../watch/index.html" data-es="Ver">Watch</a>
+  <div class="dd"><button data-es="Ministerios ▾">Ministries ▾</button><div class="menu"><a href="../ministries/kids/index.html">Kids</a><a href="../ministries/students/index.html">Students</a><a href="../ministries/groups/index.html">Life Groups</a><a href="../ministries/women/index.html">Women</a><a href="../ministries/men/index.html">Men</a><a href="../ministries/serve/index.html">Serve</a></div></div>
+  <a href="../events/index.html" data-es="Eventos">Events</a><a href="../about/index.html" data-es="Nosotros">About</a><a href="../connect/index.html" data-es="Contacto">Connect</a>
+ </nav>
+ <div class="tools"><button id="langBtn" aria-label="Español">ES</button><button id="a11yBtn" aria-label="Accessibility options">Aa</button><a class="btn p" href="../give/index.html" data-es="Ofrendar">Give</a><button class="burger" id="burger" aria-label="Menu">☰</button></div>
+</div></header>
+<div class="a11y" id="a11y"><div class="lbl" style="margin-bottom:6px">Accessibility</div>
+ <label>Larger text <input type="checkbox" id="a_big" style="width:auto"></label>
+ <label>Higher contrast <input type="checkbox" id="a_contrast" style="width:auto"></label>
+ <label>Reduce motion <input type="checkbox" id="a_calm" style="width:auto"></label>
+ <p style="font-size:13px;color:var(--soft);margin:10px 0 0">Wheelchair access, hearing loop and large-print bulletins at every service.</p></div>
+<div class="mnav" id="mnav"><button class="x" id="mnavX" aria-label="Close">×</button>
+ <a href="../visit/index.html">Plan a Visit</a><a href="../watch/index.html">Watch</a><a href="../events/index.html">Events</a><a href="../give/index.html">Give</a><a href="../about/index.html">About</a><a href="../connect/index.html">Connect</a>
+ <small>Ministries</small><a href="../ministries/kids/index.html">Kids</a><a href="../ministries/students/index.html">Students</a><a href="../ministries/groups/index.html">Life Groups</a><a href="../ministries/women/index.html">Women</a><a href="../ministries/men/index.html">Men</a><a href="../ministries/serve/index.html">Serve</a></div><div class="phead"><div class="wrap"><div class="lbl">Give</div><h1 class="words">Generosity changes lives here and around the world.</h1><p class="lead" style="max-width:620px">Secure online giving in under a minute. Set up recurring giving, choose where it goes and get your year-end statement automatically.</p></div></div>
+<section style="padding-top:50px"><div class="wrap grid2">
+ <div class="panel">
+  <div class="lbl">Amount</div><div class="opts" data-pick="1" id="amts"><button class="opt" data-v="25"><b>$25</b></button><button class="opt on" data-v="50"><b>$50</b></button><button class="opt" data-v="100"><b>$100</b></button><button class="opt" data-v="250"><b>$250</b></button><button class="opt" data-v="0"><b>Other</b></button></div>
+  <div class="lbl">Give to</div><div class="opts" data-pick="1" id="funds"><button class="opt on"><b>Tithes &amp; offerings</b><span>General fund</span></button><button class="opt"><b>Missions</b><span>Local and global</span></button><button class="opt"><b>Building</b><span>New Kids Wing</span></button><button class="opt"><b>Benevolence</b><span>Families in need</span></button></div>
+  <div class="lbl">How often</div><div class="opts" data-pick="1"><button class="opt on"><b>One time</b></button><button class="opt"><b>Weekly</b></button><button class="opt"><b>Every 2 weeks</b></button><button class="opt"><b>Monthly</b></button></div>
+  <label style="display:flex;gap:8px;align-items:center;font-size:15px;margin-bottom:14px"><input type="checkbox" style="width:auto" checked> Cover the processing fee so 100% goes to the church</label>
+  <button class="btn p" style="width:100%" id="giveBtn">Give $50</button>
+  <p style="font-size:13px;color:var(--soft);margin:12px 0 0">Card, bank (ACH), Apple Pay and Google Pay. 256-bit secure.</p>
+ </div>
+ <div>
+  <div class="panel" id="impact" style="margin-bottom:20px"></div>
+  <div class="panel"><div class="lbl">Other ways to give</div>
+   <div class="steps" style="margin-top:12px">
+    <div class="step"><i>✉</i><div><b>Text to give</b><p>Text an amount like <b>50</b> to (555) 555-0100.</p></div></div>
+    <div class="step"><i>📱</i><div><b>In the app</b><p>Give, track your history and change recurring gifts.</p></div></div>
+    <div class="step"><i>⛪</i><div><b>In person</b><p>Offering boxes are at every entrance on Sunday.</p></div></div>
+    <div class="step"><i>📈</i><div><b>Stock and planned gifts</b><p>Contact our finance team for stock, IRA or estate gifts.</p></div></div>
+   </div></div>
+ </div></div></section>
+<section class="alt"><div class="wrap"><div class="lbl">Giving at work this year</div><h2>Where your generosity went</h2>
+ <div class="grid3" style="margin-top:20px"><div class="panel"><h2 style="font-size:44px;color:var(--accent)">12,400</h2><p>meals served to neighbors</p></div><div class="panel"><h2 style="font-size:44px;color:var(--accent)">340</h2><p>kids at summer camp</p></div><div class="panel"><h2 style="font-size:44px;color:var(--accent)">6</h2><p>mission partners in 4 countries</p></div></div>
+ <p style="font-size:13px;color:var(--soft);margin-top:14px">Sample figures for this fictional church.</p></div></section><footer><div class="wrap">
+ <div class="fgrid">
+  <div><a class="logo" href="../index.html" style="color:#fff"><i></i>Lumen Valley</a><p style="margin-top:14px">We saved a seat for you.</p><p style="margin-top:14px">Text <b>VISIT</b> to (555) 555-0100</p></div>
+  <div><h4>Sundays</h4><p>9:00 AM</p><p>11:00 AM</p><p>Kids at both services</p></div>
+  <div><h4>Explore</h4><p><a href="../visit/index.html">Plan a Visit</a></p><p><a href="../watch/index.html">Watch</a></p><p><a href="../events/index.html">Events</a></p><p><a href="../give/index.html">Give</a></p></div>
+  <div><h4>Connect</h4><p><a href="../about/index.html">About &amp; beliefs</a></p><p><a href="../connect/index.html">Contact &amp; forms</a></p><p>(555) 555-0100</p><p>hello@example.com</p></div>
+ </div>
+ <div class="made"><span>Sample church website. All names, people and details are fictional.</span><span>Built by <a href="/empire/">4 Data Points Academy</a> · <a href="/talk/">Want this for your church?</a></span></div>
+</div></footer><div class="toast" id="toast"></div>
+<script src="../assets/events.js"></script><script src="../assets/es.js"></script><script src="../assets/site.js"></script><script>
+const IM={25:[['Meals for neighbors',10],['Kids Bibles',2],['Coffees for first-time guests',8]],50:[['Meals for neighbors',20],['Kids Bibles',4],['Coffees for first-time guests',16]],100:[['Meals for neighbors',40],['Kids Bibles',8],['Coffees for first-time guests',32]],250:[['Meals for neighbors',100],['Kids Bibles',20],['Coffees for first-time guests',80]]};
+function imp(v){const box=document.getElementById('impact');if(!IM[v]){box.innerHTML='<div class="lbl">Thank you</div><p>Every gift, any size, helps someone find their way home.</p>';return}box.innerHTML='<div class="lbl">Each month, your gift could provide</div>'+IM[v].map(([k,n])=>`<div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line)"><span>${k}</span><b style="font-family:Fraunces,serif;font-size:22px">${n}</b></div>`).join('')}
+imp(50);document.getElementById('amts').addEventListener('click',e=>{const b=e.target.closest('.opt');if(!b)return;const v=+b.dataset.v;document.getElementById('giveBtn').textContent=v?'Give $'+v:'Give';imp(v)});
+document.getElementById('giveBtn').onclick=()=>toast('Demo: secure checkout would open here. No payment is taken.');
+</script></body></html>

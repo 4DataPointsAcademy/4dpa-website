@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Welcome | Lumen Valley Church (Sample Website)</title><meta name="robots" content="noindex, nofollow"><meta name="description" content="Sample church website built by 4 Data Points Academy. Lumen Valley Church is fictional.">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css"><style>
+body.home{background:#0b1220;color:#f3ede3}
+body.home .lead{color:rgba(243,237,227,.78)}body.home .lbl{color:var(--gold)}
+body.home section{position:relative;z-index:2;background:transparent}
+#embers{position:fixed;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+body.home .glass{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:28px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+body.home input{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2);color:#fff}body.home input::placeholder{color:rgba(255,255,255,.55)}
+body.home .opt{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.18);color:#f3ede3}body.home .opt span{color:rgba(243,237,227,.65)}body.home .opt.on{border-color:var(--gold);background:rgba(233,180,106,.16)}
+body.home .btn.o{border-color:#f3ede3;color:#f3ede3}body.home .btn.o:hover{background:#f3ede3;color:var(--ink)}
+.film{position:relative;height:100svh;min-height:560px;max-height:1000px;background:#000;overflow:hidden;color:#fff;z-index:2}
+.film img.pst,.film video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.film video{opacity:0;transition:opacity .6s}.film.playing video{opacity:1}
+.film:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.5),rgba(0,0,0,0) 26%,rgba(0,0,0,0) 48%,rgba(11,18,32,.95));pointer-events:none}
+.cap{position:absolute;z-index:3;left:0;right:0;bottom:118px}
+.chap{opacity:0;transform:translateY(16px);transition:opacity .8s,transform .8s}.chap.in{opacity:1;transform:none}
+.chap .n{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.chap h1{font-size:clamp(36px,6vw,78px);max-width:15ch;margin:.25em 0 .2em;text-shadow:0 2px 30px rgba(0,0,0,.45)}.chap p{font-size:19px;max-width:520px;opacity:.92;margin:0}
+.rail{position:absolute;z-index:3;left:0;right:0;bottom:40px}.rail ol{list-style:none;display:flex;gap:10px;margin:0;padding:0}
+.rail li{flex:1;font-size:12px;letter-spacing:.06em;color:rgba(255,255,255,.55);cursor:pointer}.rail li i{display:block;height:3px;background:rgba(255,255,255,.22);border-radius:3px;margin-bottom:8px;overflow:hidden}.rail li i b{display:block;height:100%;width:0;background:var(--gold)}.rail li.on{color:#fff}
+.endcard{position:absolute;inset:0;z-index:4;display:grid;place-items:center;text-align:center;background:radial-gradient(ellipse at center,rgba(0,0,0,.25),rgba(0,0,0,.7));opacity:0;pointer-events:none;transition:opacity 1s}
+.ended .endcard{opacity:1;pointer-events:auto}.ended .cap,.ended .rail{opacity:0}
+.endcard h1{font-size:clamp(38px,6.4vw,84px);margin-bottom:.2em}.endcard em{font-style:italic;color:var(--gold)}.endcard p{font-size:20px;opacity:.9;margin:0 0 28px}.endcard .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.tap{position:absolute;z-index:5;inset:0;display:none;place-items:center}.needs-tap .tap{display:grid}
+.skip{position:absolute;z-index:5;right:4vw;bottom:44px;background:none;border:0;color:rgba(255,255,255,.75);font:500 13px Inter;cursor:pointer}.ended .skip{display:none}
+.scrollcue{position:absolute;z-index:5;left:50%;bottom:10px;transform:translateX(-50%);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.7);opacity:0;transition:.6s}.ended .scrollcue{opacity:1;animation:bob 2s infinite}@keyframes bob{50%{transform:translate(-50%,6px)}}
+/* word reveal */
+.words .w{display:inline-block;opacity:0;transform:translateY(.5em);filter:blur(6px);transition:opacity .7s,transform .7s,filter .7s}.words.in .w{opacity:1;transform:none;filter:none}
+/* seat zoom */
+.seatwrap{height:220vh;position:relative}.seatstick{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;align-items:center}
+.seatstick img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform-origin:62% 70%;will-change:transform}
+.seatstick:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,18,32,.92) 0%,rgba(11,18,32,.55) 50%,rgba(11,18,32,.15))}
+.seatstick .wrap{position:relative;z-index:2}.seatcopy{max-width:560px}
+.ticket{display:none;margin-top:18px;border-radius:18px;background:linear-gradient(135deg,#2b1d12,#6b3d18);color:#fff;padding:22px;position:relative;overflow:hidden;border:1px solid rgba(233,180,106,.4)}.ticket.on{display:block;animation:pop .6s ease}@keyframes pop{from{transform:scale(.94);opacity:0}}
+.ticket h3{color:#fff;margin:4px 0 6px}.ticket p{margin:0;opacity:.85;font-size:15px}.ticket .host{display:flex;gap:12px;align-items:center;margin-top:14px;font-size:15px}.ticket .host i{width:42px;height:42px;border-radius:50%;background:url(img/greeter.jpg) center/cover;border:2px solid var(--gold);flex-shrink:0}.ticket a{color:var(--gold);font-weight:600;font-size:14px}
+/* follow-up sticky phone */
+.followwrap{height:300vh;position:relative}.followstick{position:sticky;top:0;height:100svh;display:flex;align-items:center}
+.followstick .grid2{align-items:center}
+.fstep{opacity:.28;transition:opacity .5s}.fstep.on{opacity:1}.fstep.on i{background:var(--gold);color:#1d1b18}
+body.home .step i{background:rgba(255,255,255,.08);color:var(--gold)}body.home .step p{color:rgba(243,237,227,.7)}
+body.home .screen{background:#f4f1ec}
+/* horizontal ministries */
+.hwrap{height:240vh;position:relative}.hstick{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+.htrack{display:flex;gap:26px;padding:0 4vw;will-change:transform}
+.mcard{flex:0 0 min(420px,78vw);height:min(560px,62svh);border-radius:24px;overflow:hidden;position:relative;text-decoration:none;color:#fff;box-shadow:0 30px 60px rgba(0,0,0,.4)}
+.mcard img{position:absolute;inset:-6% 0;width:100%;height:112%;object-fit:cover;will-change:transform}
+.mcard:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 35%,rgba(0,0,0,.85))}
+.mcard div{position:absolute;z-index:2;left:26px;right:26px;bottom:24px}.mcard h3{font-size:32px;margin:0 0 6px;color:#fff}.mcard p{margin:0 0 10px;opacity:.85;font-size:15px}.mcard span{color:var(--gold);font-weight:600;font-size:15px}
+.mcard.intro{background:none;box-shadow:none;flex-basis:min(380px,80vw);display:flex;align-items:center}.mcard.intro:after{display:none}.mcard.intro div{position:static}.mcard.intro h2{font-size:clamp(32px,4.2vw,50px);color:#f3ede3}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;text-align:center}.stats b{display:block;font-family:Fraunces,serif;font-size:clamp(40px,5vw,64px);color:var(--gold);line-height:1}.stats span{font-size:15px;color:rgba(243,237,227,.7)}
+/* watch parallax */
+.watchimg{border-radius:24px;overflow:hidden;position:relative;aspect-ratio:16/10;cursor:pointer}.watchimg img{position:absolute;inset:-12% 0;height:124%;width:100%;object-fit:cover;will-change:transform}.watchimg span{position:absolute;inset:0;display:grid;place-items:center;z-index:2}
+.series div{display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,.15);padding:10px 0;font-size:15px}.series span{opacity:.6}
+/* lanterns */
+.lanterns{position:relative;overflow:hidden;z-index:2}.lanterns video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.6}.lanterns canvas{position:absolute;inset:0;width:100%;height:100%}
+.lanterns:before,.lanterns:after{content:"";position:absolute;left:0;right:0;height:160px;z-index:1;pointer-events:none}.lanterns:before{top:0;background:linear-gradient(#0b1220,transparent)}.lanterns:after{bottom:0;background:linear-gradient(transparent,var(--bgEnd,#1a1410))}
+.lan-in{position:relative;z-index:2;min-height:820px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:90px 0}.lan-in h2{max-width:16ch}
+.lan-in h2,.lan-in p,.lan-in .lbl,.lan-in .counter,.lan-in .priv{text-shadow:0 2px 16px rgba(5,8,18,.85),0 0 4px rgba(5,8,18,.6)}
+.lan-in:before{content:"";position:absolute;left:50%;top:50%;width:min(900px,120vw);height:70%;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(8,12,24,.55),rgba(8,12,24,0));z-index:-1;pointer-events:none}.lan-in p.l{font-size:19px;opacity:.85;max-width:560px;margin:0 auto 28px}
+.pray{display:flex;gap:10px;width:min(620px,92vw);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px;backdrop-filter:blur(8px)}.pray input{background:transparent;border:0;color:#fff;padding:12px 16px}.pray input:focus{outline:none}
+.priv{margin-top:14px;font-size:14px;opacity:.75;display:flex;gap:8px;align-items:center;justify-content:center}.counter{margin-top:30px;font-family:Fraunces,serif;font-size:22px}.counter b{color:var(--gold);font-size:30px}
+/* events slide */
+body.home .e{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14);color:#f3ede3}body.home .e p{color:rgba(243,237,227,.65)}body.home .d{border-color:rgba(255,255,255,.14)}body.home .tag{background:rgba(255,255,255,.1);color:rgba(243,237,227,.8)}body.home .rsvp{color:#f3ede3;border-color:rgba(255,255,255,.3)}
+.slide{opacity:0;transform:translateX(-60px);transition:.8s}.slide:nth-child(even){transform:translateX(60px)}.slide.in{opacity:1;transform:none}
+/* app */
+.phone3d{perspective:1200px}.phone3d .phone{transform:rotateY(-18deg) rotateX(6deg);transition:transform .1s linear;will-change:transform}
+.appscreen{padding:16px 14px}.appscreen .tile{background:#fff;border-radius:14px;padding:12px;margin:8px 0;font-size:13px;display:flex;justify-content:space-between;align-items:center}.appscreen .tile b{font-size:14px}
+.badges{display:flex;gap:10px;margin-top:20px}.badge{background:#000;color:#fff;border:1px solid rgba(255,255,255,.3);border-radius:10px;padding:8px 14px;font-size:12px;line-height:1.2;cursor:pointer}.badge b{display:block;font-size:15px}
+.dawn{text-align:center;padding:140px 0}
+@media(max-width:960px){.cap{bottom:96px}.rail li span{display:none}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.followwrap{height:auto}.followstick{position:static;height:auto;padding:80px 0}.fstep{opacity:1}
+ .hwrap{height:auto}.hstick{position:static;height:auto;overflow:visible;padding:70px 0}.htrack{flex-direction:column;padding:0 4vw;transform:none!important}.mcard{flex:none;width:100%;height:420px}.mcard.intro{height:auto}
+ .seatwrap{height:auto}.seatstick{position:relative;height:auto;padding:110px 0}.seatstick:after{background:linear-gradient(180deg,rgba(11,18,32,.6),rgba(11,18,32,.92))}}
+body.calm .seatstick img,body.calm .mcard img,body.calm .watchimg img{transform:none!important}
+</style><script>window.TOUR=[
+{sel:'.film',block:'start',t:'A first visit, before they ever come',d:'Your hero film walks a guest from the parking lot to a saved seat. It answers the biggest fear of a first-time visitor: what will it be like?'},
+{sel:'.seatstick .glass',t:'Save a seat in 10 seconds',d:'Guests pick a Sunday and a time. Your team sees who is coming, with kids and accessibility needs, before Sunday.'},
+{sel:'#msgs',t:'Automatic follow-up, personal replies',d:'A welcome text, a Saturday reminder, a Sunday check-in and a next step, sent automatically. Replies go to a real person on your staff.'},
+{sel:'#pastor',t:'Your pastor, front and center',d:'People decide where to visit based on the pastor. This puts your pastor’s welcome on the homepage.'},
+{sel:'#ministries',block:'start',t:'Every ministry gets its own page',d:'Kids, Students, Groups, Women, Men and Serve each have a video header, a leader and a one-minute sign-up that reaches that leader instantly.'},
+{sel:'#stories',t:'Stories that bring people in',d:'Short testimony videos show visitors people just like them. We help you capture and post them.'},
+{sel:'#pray',t:'A prayer wall people talk about',d:'Visitors post a prayer and watch it rise as a lantern. Your prayer team is notified the moment it is lifted.'},
+{sel:'[data-events]',t:'Events with RSVP and reminders',d:'Every event has one-tap registration and an automatic reminder text the day before.'},
+{sel:'#tilt',t:'Your church app',d:'Giving, live services, kids check-in, groups and prayer in one app with your church’s name on it.'},
+{sel:'#give',t:'Giving that grows',d:'One-time and recurring giving, fund choices, text-to-give and year-end statements. The whole site also switches to Spanish (ES) and has accessibility options (Aa).'}
+];</script></head><body class="home dark"><div class="demo">Sample website built by 4 Data Points Academy. Lumen Valley Church is fictional. <a href="/talk/">Want one for your church?</a></div>
+<header class="over"><div class="wrap nav">
+ <a class="logo" href="index.html"><i></i>Lumen Valley</a>
+ <nav class="links">
+  <a href="visit/index.html" data-es="Visítanos">Plan a Visit</a><a href="watch/index.html" data-es="Ver">Watch</a>
+  <div class="dd"><button data-es="Ministerios ▾">Ministries ▾</button><div class="menu"><a href="ministries/kids/index.html">Kids</a><a href="ministries/students/index.html">Students</a><a href="ministries/groups/index.html">Life Groups</a><a href="ministries/women/index.html">Women</a><a href="ministries/men/index.html">Men</a><a href="ministries/serve/index.html">Serve</a></div></div>
+  <a href="events/index.html" data-es="Eventos">Events</a><a href="about/index.html" data-es="Nosotros">About</a><a href="connect/index.html" data-es="Contacto">Connect</a>
+ </nav>
+ <div class="tools"><button id="langBtn" aria-label="Español">ES</button><button id="a11yBtn" aria-label="Accessibility options">Aa</button><a class="btn p" href="give/index.html" data-es="Ofrendar">Give</a><button class="burger" id="burger" aria-label="Menu">☰</button></div>
+</div></header>
+<div class="a11y" id="a11y"><div class="lbl" style="margin-bottom:6px">Accessibility</div>
+ <label>Larger text <input type="checkbox" id="a_big" style="width:auto"></label>
+ <label>Higher contrast <input type="checkbox" id="a_contrast" style="width:auto"></label>
+ <label>Reduce motion <input type="checkbox" id="a_calm" style="width:auto"></label>
+ <p style="font-size:13px;color:var(--soft);margin:10px 0 0">Wheelchair access, hearing loop and large-print bulletins at every service.</p></div>
+<div class="mnav" id="mnav"><button class="x" id="mnavX" aria-label="Close">×</button>
+ <a href="visit/index.html">Plan a Visit</a><a href="watch/index.html">Watch</a><a href="events/index.html">Events</a><a href="give/index.html">Give</a><a href="about/index.html">About</a><a href="connect/index.html">Connect</a>
+ <small>Ministries</small><a href="ministries/kids/index.html">Kids</a><a href="ministries/students/index.html">Students</a><a href="ministries/groups/index.html">Life Groups</a><a href="ministries/women/index.html">Women</a><a href="ministries/men/index.html">Men</a><a href="ministries/serve/index.html">Serve</a></div>
+<canvas id="embers"></canvas>
+<div class="film" id="top">
+  <img class="pst" id="pst" src="img/film-poster.jpg" alt="">
+  <video id="film" muted playsinline webkit-playsinline autoplay preload="auto"></video>
+  <div class="cap"><div class="wrap"><div class="chap" id="chap"><div class="n" id="ch-n"></div><h1 id="ch-t"></h1><p id="ch-b"></p></div></div></div>
+  <div class="rail"><div class="wrap"><ol id="rail"></ol></div></div>
+  <button class="skip" id="skip">Skip ›</button>
+  <div class="endcard"><div class="wrap">
+    <div class="lbl" style="color:var(--gold)">This Sunday · 9:00 &amp; 11:00 AM</div>
+    <h1 data-es="Te guardamos este <em>asiento.</em>">We saved this seat <em>for you.</em></h1>
+    <p data-es="Ven como eres. Alguien te estará esperando en la puerta.">Come as you are. Someone will be waiting at the door.</p>
+    <div class="cta"><a class="btn p" href="#seat" data-es="Reserva tu asiento">Claim your seat</a><button class="btn g" id="replay">↺ Replay</button></div>
+  </div></div>
+  <div class="scrollcue">Scroll ↓</div>
+  <div class="tap"><button class="btn p" id="tapplay">▶ Walk through the doors</button></div>
+</div>
+
+<div class="seatwrap" id="seat"><div class="seatstick"><img src="img/seat.jpg" alt="An usher showing an empty seat" id="seatimg"><div class="wrap"><div class="seatcopy">
+  <div class="lbl">Your first Sunday</div>
+  <h2 class="words" data-es="Todo lo que acabas de ver es real aquí.">Everything you just saw is real here.</h2>
+  <p class="lead">A host meets you at the door, walks your kids to check-in and saves you a seat. Pick a Sunday and it's yours.</p>
+  <div class="glass">
+    <div class="opts" data-pick="1" id="days" style="margin-top:0"></div>
+    <div class="opts" data-pick="1" id="times"><button class="opt on"><b>9:00 AM</b><span>Quieter, great with kids</span></button><button class="opt"><b>11:00 AM</b><span>Fuller band, Spanish headsets</span></button></div>
+    <form id="seatForm"><div class="row"><input required id="fname" placeholder="First name"><input type="tel" placeholder="Mobile (for a welcome text)"></div>
+    <button class="btn p" style="width:100%" type="submit" data-es="Guardar mi asiento">Save my seat</button></form>
+    <div class="ticket" id="ticket"><div class="lbl" style="color:var(--gold)">Your seat is saved</div><h3 id="tk-h"></h3><p id="tk-p"></p>
+      <div class="host"><i></i><div><b>Marcus</b> will meet you at the front doors.<br><a href="#follow">See the texts you'll get ↓</a></div></div></div>
+  </div>
+  <p style="margin-top:14px"><a href="visit/index.html" style="color:var(--gold);font-weight:600">What to expect on your first Sunday →</a></p>
+</div></div></div></div>
+
+<div class="followwrap" id="follow"><div class="followstick"><div class="wrap grid2">
+  <div><div class="lbl">Never a stranger twice</div><h2 class="words" data-es="Damos seguimiento como familia.">We follow up like family.</h2>
+  <p class="lead">Here's what a first-time guest receives, automatically. Every reply goes to a real person on the team.</p>
+  <div class="steps" style="margin-top:22px"><div class="step fstep"><i>1</i><div><b>Instant welcome text</b><p>The moment you save a seat.</p></div></div><div class="step fstep"><i>2</i><div><b>Saturday reminder</b><p>Parking, kids check-in and service time.</p></div></div><div class="step fstep"><i>3</i><div><b>Sunday afternoon check-in</b><p>"How was your first Sunday?"</p></div></div><div class="step fstep"><i>4</i><div><b>A next step that fits</b><p>A Life Group, a serve team or another Sunday.</p></div></div></div></div>
+  <div><div class="phone"><div class="screen" id="msgs"><div style="text-align:center;font-size:12px;color:#8c857a">Lumen Valley Church</div>
+<div class="bub"><small>Right after you save a seat</small>Hi there! It's Marcus from Lumen Valley. Your seat is saved for Sunday. I'll be at the front doors in a gold lanyard. Reply with any questions!</div>
+<div class="bub"><small>Saturday, 6:00 PM</small>See you tomorrow at 9:00 AM! Free parking up front for guests, and coffee's on us.</div>
+<div class="bub"><small>Sunday, 2:00 PM</small>It was great meeting you today! How was your first Sunday? Reply 1–5. ❤️</div>
+<div class="bub"><small>Wednesday</small>Thinking of you this week. Want me to save your seat again, or help you find a Life Group near you?</div></div></div></div>
+</div></div></div>
+
+<section><div class="wrap"><div class="stats">
+  <div class="reveal"><b data-count="2400">0</b><span>people call Lumen Valley home</span></div>
+  <div class="reveal"><b data-count="38">0</b><span>Life Groups across the valley</span></div>
+  <div class="reveal"><b data-count="12400">0</b><span>meals served to neighbors</span></div>
+  <div class="reveal"><b data-count="1284">0</b><span>prayers lifted this month</span></div>
+</div><p style="text-align:center;font-size:13px;opacity:.5;margin-top:20px">Sample figures for this fictional church.</p></div></section>
+
+
+<section id="pastor"><div class="wrap pastor">
+  <div class="ph parwrap reveal"><img class="par" src="img/pastor-welcome.jpg" alt="Pastor Marcus Reed"></div>
+  <div><div class="lbl">A welcome from our pastor</div><h2 class="words">"You don't have to have it all together to walk through our doors."</h2>
+   <p class="lead">I've been where you are: unsure if church was for me, wondering if anyone would notice I was there. At Lumen Valley, someone will. Come as you are this Sunday. I'd love to shake your hand.</p>
+   <div class="sig">Marcus Reed</div><p style="margin:2px 0 18px;opacity:.7">Senior Pastor</p>
+   <a class="btn o" href="about/index.html">Meet our pastors</a></div>
+</div></section>
+<section id="watch"><div class="wrap grid2" style="align-items:center">
+  <div class="watchimg reveal" id="player"><video class="loopv par" muted playsinline loop preload="none" poster="img/sermon1.jpg" data-src="film/sermon.mp4" style="position:absolute;inset:-12% 0;height:124%;width:100%;object-fit:cover"></video><span><b class="btn p">▶ Watch the latest message</b></span></div>
+  <div><div class="lbl">Live Sundays at 9 &amp; 11 AM</div><h2 class="words" data-es="Míranos donde estés">Watch from anywhere.</h2>
+   <div class="series reveal"><div>Rooted, Part 4: "Deep Water"<span>This week</span></div><div>Rooted, Part 3: "Seasons"<span>Last week</span></div><div>Rooted, Part 2: "Good Soil"<span>2 weeks ago</span></div></div>
+   <a class="btn o" href="watch/index.html" style="margin-top:16px">All messages &amp; series →</a></div>
+</div></section>
+
+<div class="hwrap" id="ministries"><div class="hstick">
+  <div class="htrack" id="htrack"><div class="mcard intro"><div><div class="lbl">Find your people</div><h2 class="words" data-es="Hay un lugar para ti" style="color:#f3ede3">There's a place for you.</h2><p class="lead">Every ministry has its own page, its own leader and a one-minute sign-up.</p></div></div><a class="mcard" href="ministries/kids/index.html"><img src="img/kids.jpg" alt="" loading="lazy"><div><h3 data-es="Ministerio de Niños">Kids</h3><p>A safe, joyful place where kids learn that God loves them, every single Sunday.</p><span>Explore Kids →</span></div></a><a class="mcard" href="ministries/students/index.html"><img src="img/students.jpg" alt="" loading="lazy"><div><h3 data-es="Jóvenes">Students</h3><p>A place for students to ask real questions, build real friendships and find real faith.</p><span>Explore Students →</span></div></a><a class="mcard" href="ministries/groups/index.html"><img src="img/groups.jpg" alt="" loading="lazy"><div><h3 data-es="Grupos de Vida">Life Groups</h3><p>Church happens on Sunday. Life change happens around a table, all week long.</p><span>Explore Life Groups →</span></div></a><a class="mcard" href="ministries/women/index.html"><img src="img/women.jpg" alt="" loading="lazy"><div><h3 data-es="Mujeres">Women</h3><p>Friendship, Bible study and encouragement for every season of life.</p><span>Explore Women →</span></div></a><a class="mcard" href="ministries/men/index.html"><img src="img/men.jpg" alt="" loading="lazy"><div><h3 data-es="Hombres">Men</h3><p>Brotherhood, accountability and a good breakfast.</p><span>Explore Men →</span></div></a><a class="mcard" href="ministries/serve/index.html"><img src="img/serve.jpg" alt="" loading="lazy"><div><h3 data-es="Servir">Serve</h3><p>Use your gifts to make Sunday great for someone else, and make a difference in our city.</p><span>Explore Serve →</span></div></a></div>
+</div></div>
+
+
+<section id="stories"><div class="wrap">
+  <div class="lbl">Real stories</div><h2 class="words">"I came alone. Now I lead a group."</h2>
+  <p class="lead" style="max-width:640px;margin-bottom:30px">Every seat we save has a story behind it.</p>
+  <div class="testi">
+   <div class="tcard reveal"><video class="loopv" muted playsinline loop preload="none" poster="img/t-keisha.jpg" data-src="film/t-keisha.mp4"></video><div><q>I walked in after the hardest year of my life. Someone remembered my name the second week. I've never left.</q><b>Keisha</b><span>Serves on the welcome team</span></div></div>
+   <div class="tcard reveal"><video class="loopv" muted playsinline loop preload="none" poster="img/t-carlos.jpg" data-src="film/t-carlos.mp4"></video><div><q>My daughter asked me to take her to church. Now we come together every Sunday, and I got baptized in June.</q><b>Carlos &amp; Sofia</b><span>Members since last spring</span></div></div>
+   <div class="tcard reveal"><video class="loopv" muted playsinline loop preload="none" poster="img/t-jess.jpg" data-src="film/t-jess.mp4"></video><div><q>I came alone and sat in the back. Two years later I lead a Life Group in my living room.</q><b>Jess</b><span>Life Group leader</span></div></div>
+  </div><p style="font-size:13px;opacity:.5;margin-top:14px">Fictional stories for this sample site.</p>
+</div></section>
+<section class="lanterns" id="pray">
+  <video id="night" muted playsinline loop autoplay preload="none" poster="img/night.jpg"></video>
+  <canvas id="sky"></canvas>
+  <div class="wrap lan-in">
+    <div class="lbl" style="color:var(--gold)">The prayer sky</div>
+    <h2 class="words" data-es="Cada luz es alguien que no lo carga solo.">Every light is someone who isn't carrying it alone.</h2>
+    <p class="l">Type a prayer and watch it rise. Our prayer team lifts every one by name this week.</p>
+    <form class="pray" id="prayForm"><input id="prayIn" maxlength="60" placeholder="What can we pray for?" required><button class="btn p" type="submit" data-es="Elevar">Lift it up</button></form>
+    <label class="priv"><input type="checkbox" id="priv" style="width:auto"> Keep my words private (only a light will show)</label>
+    <div class="counter"><b id="count">1,284</b> prayers lifted this month</div>
+  </div>
+</section>
+
+<section><div class="wrap grid2">
+  <div><div class="lbl">Coming up</div><h2 class="words" data-es="Próximos eventos">Something every week.</h2><p class="lead">Register in seconds. We'll text you a reminder.</p><a class="btn o" href="events/index.html">Full calendar</a></div>
+  <div class="ev" data-events="home"></div>
+</div></section>
+
+<section><div class="wrap grid2" style="align-items:center">
+  <div><div class="lbl">The Lumen Valley app</div><h2 class="words" data-es="La iglesia en tu bolsillo">Church in your pocket.</h2>
+   <div class="steps reveal" style="margin-top:12px"><div class="step"><i>$</i><div><b>Give in seconds</b><p>Track your giving and get your year-end statement.</p></div></div><div class="step"><i>▶</i><div><b>Watch live</b><p>Take sermon notes and share a message.</p></div></div><div class="step"><i>✓</i><div><b>Check kids in before you park</b><p>Skip the line on Sunday.</p></div></div><div class="step"><i>❤</i><div><b>Prayer, events and group chat</b><p>Notifications when it matters, never spam.</p></div></div></div>
+   <div class="badges"><div class="badge" data-app>Download on the<b>App Store</b></div><div class="badge" data-app>Get it on<b>Google Play</b></div></div></div>
+  <div class="phone3d"><div class="phone" id="tilt"><div class="screen appscreen"><div style="font-family:Fraunces,serif;font-size:20px;margin:6px 4px 10px">Good morning, Sarah</div>
+   <div class="tile"><span><b>Live in 2 hours</b><br>Rooted, Part 5</span><span>▶</span></div><div class="tile"><span><b>Kids check-in</b><br>Mia · Room 3</span><span>✓</span></div><div class="tile"><span><b>Give</b><br>Tithes &amp; offerings</span><span>›</span></div><div class="tile"><span><b>Your Life Group</b><br>Thursday 7 PM · 3 new messages</span><span>›</span></div><div class="tile"><span><b>Prayer</b><br>12 people prayed for you</span><span>❤</span></div></div></div></div>
+</div></section>
+
+<section class="dawn" id="give"><div class="wrap">
+  <div class="lbl">Generosity</div><h2 class="words" style="max-width:16ch;margin:0 auto .5em" data-es="Tu generosidad trae a otros a casa.">Your generosity helps someone find their way home.</h2>
+  <p class="lead" style="max-width:600px;margin:0 auto 28px">Tithes, offerings, missions or the building fund. One-time or recurring, card or bank, or text to give.</p>
+  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><a class="btn p" href="give/index.html" data-es="Ofrendar ahora">Give now</a><a class="btn o" href="visit/index.html">Plan a visit</a></div>
+</div></section>
+<footer><div class="wrap">
+ <div class="fgrid">
+  <div><a class="logo" href="index.html" style="color:#fff"><i></i>Lumen Valley</a><p style="margin-top:14px">We saved a seat for you.</p><p style="margin-top:14px">Text <b>VISIT</b> to (555) 555-0100</p></div>
+  <div><h4>Sundays</h4><p>9:00 AM</p><p>11:00 AM</p><p>Kids at both services</p></div>
+  <div><h4>Explore</h4><p><a href="visit/index.html">Plan a Visit</a></p><p><a href="watch/index.html">Watch</a></p><p><a href="events/index.html">Events</a></p><p><a href="give/index.html">Give</a></p></div>
+  <div><h4>Connect</h4><p><a href="about/index.html">About &amp; beliefs</a></p><p><a href="connect/index.html">Contact &amp; forms</a></p><p>(555) 555-0100</p><p>hello@example.com</p></div>
+ </div>
+ <div class="made"><span>Sample church website. All names, people and details are fictional.</span><span>Built by <a href="/empire/">4 Data Points Academy</a> · <a href="/talk/">Want this for your church?</a></span></div>
+</div></footer><div class="toast" id="toast"></div>
+<script src="assets/events.js"></script><script src="assets/es.js"></script><script src="assets/site.js"></script><script>(function(){
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const calm=()=>document.body.classList.contains('calm')||matchMedia('(prefers-reduced-motion: reduce)').matches;
+const R=Math.min(devicePixelRatio||1,2);
+// ---------- film: portrait phones get the vertical cut
+const film=$('.film'),vid=$('#film'),pst=$('#pst');
+const portrait=matchMedia('(orientation: portrait) and (max-width: 900px)');
+let cur='';async function pick(){const v=portrait.matches;const src=v?'film/welcome-v.mp4':'film/welcome.mp4';pst.src=v?'img/film-poster-v.jpg':'img/film-poster.jpg';if(cur===src)return;cur=src;const t=vid.currentTime||0;vid.src=await srcFor(src);vid.load();if(!document.body.classList.contains('ended')){try{vid.currentTime=t}catch(e){}tryPlay()}}
+function tryPlay(){vid.muted=true;const pr=vid.play();if(pr&&pr.catch)pr.catch(()=>document.body.classList.add('needs-tap'))}
+portrait.addEventListener?portrait.addEventListener('change',pick):portrait.addListener(pick);
+const EN=[{k:'Arrive',at:0,t:"Someone's already watching for you.",b:'Our parking team waves you in. No guessing where to go.'},{k:'Welcome',at:.2,t:'Greeted like family.',b:'A real handshake at the door, and a friend to walk you in.'},{k:'Settle in',at:.4,t:"Coffee's on us. Kids are in good hands.",b:'Fast, secure check-in and a warm lobby to land in.'},{k:'Worship',at:.6,t:'Come exactly as you are.',b:'Honest worship. Real teaching. No one expects you to have it all together.'},{k:'Belong',at:.8,t:'And a seat with your name on it.',b:'Tell us you are coming, and we will save it.'}];
+const ES=[{k:'Llega',t:'Alguien ya te está esperando.',b:'Nuestro equipo te recibe en el estacionamiento.'},{k:'Bienvenida',t:'Recibido como familia.',b:'Un saludo de verdad en la puerta.'},{k:'Acomódate',t:'El café es cortesía. Tus niños están en buenas manos.',b:'Registro rápido y seguro para niños.'},{k:'Adoración',t:'Ven tal como eres.',b:'Adoración honesta. Enseñanza real.'},{k:'Pertenece',t:'Y un asiento con tu nombre.',b:'Avísanos que vienes y te lo guardamos.'}];
+let CH=EN,last=-1;
+function render(p){let i=CH.length-1;while(i>0&&p<CH[i].at)i--;if(i!==last){last=i;const c=$('#chap');c.classList.remove('in');setTimeout(()=>{$('#ch-n').textContent=`0${i+1} / 05 · ${CH[i].k}`;$('#ch-t').textContent=CH[i].t;$('#ch-b').textContent=CH[i].b;c.classList.add('in')},250)}
+ $$('#rail li').forEach((li,j)=>{const s=CH[j].at,e=j<CH.length-1?CH[j+1].at:1;li.querySelector('b').style.width=Math.max(0,Math.min(1,(p-s)/(e-s)))*100+'%';li.classList.toggle('on',j===i)})}
+function setL(es){CH=EN.map((c,i)=>es?Object.assign({},c,ES[i]):c);$('#rail').innerHTML=CH.map((c,i)=>`<li data-i="${i}"><i><b></b></i><span>${c.k}</span></li>`).join('');last=-1;render(vid.duration?vid.currentTime/vid.duration:0)}
+setL(window.isES&&isES());document.addEventListener('lang',e=>setL(e.detail));
+function loop(){if(vid.duration)render(vid.currentTime/vid.duration);if(!vid.paused&&!vid.ended)requestAnimationFrame(loop)}
+vid.addEventListener('playing',()=>{film.classList.add('playing');document.body.classList.remove('ended','needs-tap');requestAnimationFrame(loop)});
+vid.addEventListener('ended',()=>{render(1);document.body.classList.add('ended')});
+$('#rail').onclick=e=>{const li=e.target.closest('li');if(li&&vid.duration){vid.currentTime=CH[li.dataset.i].at*vid.duration;tryPlay()}};
+$('#replay').onclick=()=>{last=-1;vid.currentTime=0;tryPlay()};$('#skip').onclick=()=>{vid.pause();document.body.classList.add('ended')};$('#tapplay').onclick=()=>tryPlay();
+if(calm()){document.body.classList.add('ended');pick();vid.removeAttribute('autoplay')}else{pick();tryPlay()}
+// ---------- seat planner
+const S=[];const d=new Date();d.setHours(12,0,0,0);d.setDate(d.getDate()+((7-d.getDay())%7||7));for(let k=0;k<3;k++){S.push(new Date(d));d.setDate(d.getDate()+7)}
+$('#days').innerHTML=S.map((d,i)=>`<button class="opt${i?'':' on'}" data-i="${i}"><b>${d.toLocaleString('en-US',{month:'short',day:'numeric'})}</b><span>${['This Sunday','Next Sunday','In two weeks'][i]}</span></button>`).join('');
+let guest='there',gtime='9:00 AM';
+$('#seatForm').onsubmit=e=>{e.preventDefault();guest=$('#fname').value.trim()||'Friend';const di=+($('#days .opt.on').dataset.i);gtime=$('#times .opt.on b').textContent;
+ $('#tk-h').textContent=`See you ${S[di].toLocaleString('en-US',{weekday:'long',month:'long',day:'numeric'})}, ${guest}!`;$('#tk-p').textContent=`${gtime} service · Look for the gold lanyard at the main doors.`;$('#ticket').classList.add('on');e.target.style.display='none';
+ $$('#msgs .bub').forEach(b=>{b.innerHTML=b.innerHTML.replace(/Hi [^!]+!/,'Hi '+guest+'!').replace(/tomorrow at [^!]+!/,'tomorrow at '+gtime+'!')});
+ toast(T('Demo: in a live site, a welcome text would go out now. Nothing was sent.'))};
+$('#player').onclick=()=>toast(T('Demo: the latest message would play here, streamed from your channel.'));
+$$('[data-app]').forEach(b=>b.onclick=()=>toast(T('Demo: this would open the church app in the store.')));
+// ---------- page-specific scroll effects (site.js calls this)
+const desk=()=>innerWidth>960;const bub=$$('#msgs .bub'),fsteps=$$('.fstep');
+window.onPageScroll=function(y,vh){
+ const sw=$('.seatwrap'),si=$('#seatimg');if(desk()){const r=sw.getBoundingClientRect(),k=Math.max(0,Math.min(1,-r.top/(r.height-vh)));si.style.transform=`scale(${1.35-.35*k})`}else si.style.transform='';
+ const fw=$('.followwrap');if(desk()){const r=fw.getBoundingClientRect(),k=Math.max(0,Math.min(1,(-r.top+vh*.2)/(r.height-vh)));const n=Math.floor(k*5);bub.forEach((b,i)=>b.classList.toggle('in',i<n));fsteps.forEach((st,i)=>st.classList.toggle('on',i<n))}
+ const hw=$('.hwrap'),tr=$('#htrack');if(desk()){const r=hw.getBoundingClientRect(),k=Math.max(0,Math.min(1,-r.top/(r.height-vh)));const max=tr.scrollWidth-innerWidth+innerWidth*.08;tr.style.transform=`translateX(${-k*max}px)`;$$('.mcard img').forEach((im,i)=>im.style.transform=`translateX(${(k*max-(i*440))*-.06}px) scale(1.08)`)}else tr.style.transform='';
+ const ph=$('#tilt');if(ph){const r=ph.getBoundingClientRect(),k=Math.max(-1,Math.min(1,(r.top+r.height/2-vh/2)/vh));ph.style.transform=`rotateY(${-18*k}deg) rotateX(${6*k}deg) translateY(${k*30}px)`}
+};
+// mobile: follow-up bubbles play when the phone is seen
+if(!desk()){new IntersectionObserver((es,o)=>es.forEach(x=>{if(x.isIntersecting){bub.forEach((b,i)=>setTimeout(()=>b.classList.add('in'),i*900));o.disconnect()}}),{threshold:.4}).observe($('#msgs'))}
+
+// ---------- prayer sky
+const cv=$('#sky'),cx=cv.getContext('2d');let W,H,L=[];
+function size(){const r=cv.getBoundingClientRect();W=cv.width=r.width*R;H=cv.height=r.height*R}size();addEventListener('resize',size);
+const seeds=["For my mom's surgery",'A new job','Peace in our home','My son coming home','Healing','Strength this week','For my marriage','Thank you, God','Clarity','For my friend Ana'];
+function add(text,mine){L.push({x:(mine?.5:.08+Math.random()*.84)*W,y:H+30*R,v:(.25+Math.random()*.25)*R*(mine?1.3:1),s:(mine?1.5:.7+Math.random()*.6)*R,ph:Math.random()*6,t:text,mine,a:0})}
+for(let i=0;i<14;i++){add(seeds[i%seeds.length]);L[L.length-1].y=Math.random()*H}
+let tick=0,run=false;
+function draw(){if(!run)return;cx.clearRect(0,0,W,H);tick++;if(tick%90===0&&L.length<60)add(seeds[Math.floor(Math.random()*seeds.length)]);
+ L=L.filter(l=>l.y>-80);for(const l of L){l.y-=l.v;l.ph+=.02;l.a=Math.min(1,l.a+.01);const x=l.x+Math.sin(l.ph)*8*R,y=l.y,s=l.s;const fade=Math.min(1,l.y/(H*.35));
+  cx.globalAlpha=Math.max(0,l.a*fade);const g=cx.createRadialGradient(x,y,0,x,y,26*s);g.addColorStop(0,'rgba(255,200,120,.55)');g.addColorStop(1,'rgba(255,170,80,0)');cx.fillStyle=g;cx.beginPath();cx.arc(x,y,26*s,0,7);cx.fill();
+  cx.fillStyle=l.mine?'#ffd9a0':'#f4b56a';cx.beginPath();cx.moveTo(x-7*s,y-9*s);cx.lineTo(x+7*s,y-9*s);cx.lineTo(x+6*s,y+8*s);cx.lineTo(x-6*s,y+8*s);cx.closePath();cx.fill();cx.fillStyle='rgba(255,250,235,.9)';cx.fillRect(x-3*s,y+2*s,6*s,4*s);
+  if(l.t&&(l.mine||s>1.05*R)){cx.font=`${(l.mine?15:12)*R}px Inter`;cx.textAlign='center';cx.fillStyle=`rgba(255,240,220,${l.mine?.95:.55})`;cx.fillText(l.t,x,y+28*s)}}
+ cx.globalAlpha=1;requestAnimationFrame(draw)}
+let count=1284;
+$('#prayForm').onsubmit=e=>{e.preventDefault();const t=$('#prayIn').value.trim();add($('#priv').checked?'':t,true);$('#prayIn').value='';count++;$('#count').textContent=count.toLocaleString();toast(T('Your prayer is rising. Demo: a live site would notify the prayer team right away.'))};
+const night=$('#night');new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){size();if(!night.dataset.set){night.dataset.set=1;srcFor(portrait.matches?'film/night-v.mp4':'film/night.mp4').then(u=>{night.src=u;night.play().catch(()=>{})})}else night.play().catch(()=>{});if(!run){run=true;draw()}}else{night.pause();run=false}}),{threshold:.15}).observe($('#pray'));
+})();
+</script></body></html>

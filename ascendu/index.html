@@ -275,7 +275,7 @@ body.ready .ds-loader { opacity: 0; pointer-events: none; }
 <main id="top">
 <section id="track" aria-label="AscendU: from a limited self-image to an expanded perspective">
   <div class="stage">
-    <video id="film" data-src="/assets/ascendu/ascendu.mp4" data-src-m="/assets/ascendu/ascendu-m.mp4" poster="/assets/ascendu/ascendu-poster.jpg" muted playsinline autoplay preload="auto" aria-label="A woman doubts herself at the mirror before dawn, climbs a stairwell toward the light and stands confident on a rooftop at sunrise"></video><script>(function(){var v=document.getElementById("film");var m=matchMedia("(max-width: 760px), (max-aspect-ratio: 4/5)").matches;v.src=m?v.dataset.srcM:v.dataset.src;})();</script>
+    <video id="film" data-src="/assets/ascendu/ascendu.mp4?v=2" data-src-m="/assets/ascendu/ascendu-m.mp4?v=2" poster="/assets/ascendu/ascendu-poster.jpg" muted playsinline autoplay preload="auto" aria-label="A woman doubts herself at the mirror before dawn, climbs a stairwell toward the light and stands confident on a rooftop at sunrise"></video><script>(function(){var v=document.getElementById("film");var m=matchMedia("(max-width: 760px), (max-aspect-ratio: 4/5)").matches;v.src=m?v.dataset.srcM:v.dataset.src;})();</script>
     <div id="poster" role="img" aria-label="A figure standing at the foot of a lit stairway above the clouds at dawn"></div>
     <div id="ui">
       <div class="scrim"></div>
@@ -411,7 +411,7 @@ body.ready .ds-loader { opacity: 0; pointer-events: none; }
   (function(){var b=document.getElementById('burger'),n=document.getElementById('dsnav');b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded','false')}})})();
 </script>
 
-<script src="/assets/ascendu/play.js" defer></script>
+<script src="/assets/ascendu/play.js?v=2" defer></script>
 
 </body>
 </html>

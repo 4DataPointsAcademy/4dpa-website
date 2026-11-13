@@ -7,10 +7,10 @@
   const vid = el('film');
   const STAGES = [
     { key: 'LIMITATION', n: '01', at: 0, title: 'Every result starts with how you see yourself.', body: 'A limited self-image quietly sets the ceiling on the goals you set, the risks you take and the value you claim.' },
-    { key: 'AWARENESS', n: '02', at: 0.2, title: 'Awareness is the first crack in the ceiling.', body: 'You cannot change a picture you cannot see. The first step is recognizing the beliefs that have been holding you in place.' },
-    { key: 'BREAKTHROUGH', n: '03', at: 0.42, title: 'Old limits do not fall on their own.', body: 'A self-image built over decades shifts through structure, repetition and the right work done over consecutive days.' },
-    { key: 'PERSPECTIVE', n: '04', at: 0.65, title: 'A new self-image changes what you see as possible.', body: 'Stand taller in your leadership, your relationships and your goals, and see the path in front of you clearly.' },
-    { key: 'ASCEND', n: '05', at: 0.85, title: 'Elevate your mind. Transform your future.', body: 'Begin with the Self-Image Workshop. Go deeper with the two-week Intensive with Dr. Alfred E. Smith.' },
+    { key: 'AWARENESS', n: '02', at: 0.18, title: 'Awareness is the first crack in the ceiling.', body: 'You cannot change a picture you cannot see. The first step is recognizing the beliefs that have been holding you in place.' },
+    { key: 'BREAKTHROUGH', n: '03', at: 0.4, title: 'Old limits do not fall on their own.', body: 'A self-image built over decades shifts through structure, repetition and the right work done over consecutive days.' },
+    { key: 'PERSPECTIVE', n: '04', at: 0.6, title: 'A new self-image changes what you see as possible.', body: 'Stand taller in your leadership, your relationships and your goals, and see the path in front of you clearly.' },
+    { key: 'ASCEND', n: '05', at: 0.8, title: 'Elevate your mind. Transform your future.', body: 'Begin with the Self-Image Workshop. Go deeper with the two-week Intensive with Dr. Alfred E. Smith.' },
   ];
   let lastKey = null;
   function render(p) {

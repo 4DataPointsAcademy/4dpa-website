@@ -6,9 +6,9 @@
   const el = (id) => document.getElementById(id);
   const vid = el('film');
   const STAGES = [
-    { key: '', n: '', at: 0, title: "Whatever You're Building, Start Here.", body: 'Real estate investing mentorship, done-for-you business systems, personal development and international retreats, led by Odis D. James III.' },
-    { key: '', n: '', at: 0.34, title: 'Welcome to 4DPA Headquarters.', body: 'A licensed real estate broker, investor and seven-time published author, with a team that builds businesses.' },
-    { key: 'FINAL', n: '', at: 0.8, title: 'Six Ways In. Choose Your Path.', body: 'Real estate investing mentorship, entrepreneurship (Empire), personal development, retreats, books and land trusts. Pick the door that fits where you are.' },
+    { key: '', n: '', at: 0, title: 'Learn to Buy Real Estate Like an Investor.', body: 'Mentorship with no end date from Odis D. James III, a licensed broker who has overseen $650M+ in multifamily assets.' },
+    { key: '', n: '', at: 0.34, title: 'Learn to Buy Real Estate Like an Investor.', body: 'Live classes, real-world deal support and a framework you can use on any property. Then grow into business, mindset and capital.' },
+    { key: 'FINAL', n: '', at: 0.8, title: 'Learn to Buy Real Estate Like an Investor.', body: 'See the mentorship plans, or talk with Odis about where to start.' },
   ];
   let lastKey = null;
   function render(p) {

@@ -259,3 +259,41 @@ details.qa p{color:var(--muted);padding-bottom:18px}
 
 .form-err{display:none;margin-top:10px;color:#B42318;font-size:14px}
 .lead-form .hpf{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+.ticks .sub{list-style:none;margin:6px 0 2px;padding:0;display:grid;gap:4px}
+.ticks .sub li{padding-left:16px;font-size:.92em;opacity:.9}
+.ticks .sub li::before{content:"";width:5px;height:5px;border:0;border-radius:50%;background:var(--gold);transform:none;top:.6em;left:2px}
+.tier-lead{font-weight:600;margin:.4rem 0 .6rem;line-height:1.35}
+.tier-note{font-size:.8rem;opacity:.7;margin-top:.5rem}
+.tier-value{display:inline-block;background:rgba(212,183,57,.14);color:#7a6614;font-weight:600;font-size:.82rem;line-height:1.35;padding:6px 10px;border-radius:8px;margin:.2rem 0 .3rem}
+.plan-help{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;margin-top:26px;text-align:center}
+.fine{font-size:.78rem;opacity:.65;text-align:center;margin-top:28px}
+/* Credibility strip + free guide offer (Nov 2026) */
+.proof{background:var(--ink);color:var(--paper);padding-block:34px;border-top:1px solid rgba(212,175,55,.25);border-bottom:1px solid rgba(212,175,55,.25)}
+.proof .wrap{display:flex;align-items:center;gap:28px;flex-wrap:wrap;justify-content:center}
+.proof .who{display:flex;align-items:center;gap:14px;min-width:240px}
+.proof .who img{width:68px;height:68px;border-radius:50%;object-fit:cover;object-position:50% 20%;border:2px solid var(--gold)}
+.proof .who b{display:block;font-family:var(--display);font-size:1.05rem}
+.proof .who span{font-size:.85rem;color:var(--muted-dk)}
+.proof .stats{display:flex;flex-wrap:wrap;gap:10px 30px;justify-content:center}
+.proof .stat{text-align:center;min-width:110px}
+.proof .stat b{display:block;font-family:var(--display);font-size:1.5rem;color:var(--gold);line-height:1.1}
+.proof .stat span{font-size:.8rem;color:var(--muted-dk)}
+.guide-band{background:var(--mist);padding-block:clamp(48px,7vw,80px)}
+.guide-band .wrap{display:grid;grid-template-columns:minmax(160px,260px) 1fr;gap:clamp(24px,5vw,56px);align-items:center;max-width:980px}
+.guide-band img{width:100%;border-radius:8px;box-shadow:0 18px 40px rgba(0,0,0,.25)}
+.guide-band h2{font-family:var(--display);font-size:clamp(1.6rem,3.4vw,2.3rem);line-height:1.15;margin:8px 0 12px}
+.guide-band ul{margin:0 0 20px;padding-left:20px;color:var(--muted)}
+.guide-band .alt{font-size:.85rem;color:var(--muted);margin-top:12px}
+@media (max-width:640px){.guide-band .wrap{grid-template-columns:1fr;text-align:center}.guide-band img{max-width:200px;margin:0 auto}.guide-band ul{text-align:left;display:inline-block}}
+.capital-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-top:22px;padding:16px 20px;border:1px solid rgba(212,175,55,.45);border-radius:var(--r);background:rgba(255,255,255,.03);color:inherit}.capital-bar .btn-line{color:var(--gold)}
+.capital-bar p{margin:0}
+.hero-cta-m{display:none}
+@media (max-width:760px){.hero-cta-m{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;padding:14px 20px;background:var(--ink)}}
+.prose p{margin:0 0 14px}.prose h2{margin:8px 0 18px}
+.appline{margin-top:22px;text-align:center;font-size:.92rem;color:var(--muted-dk)}.appline a{color:var(--gold);font-weight:600}
+.tier-quote{margin:0 0 .8rem;padding:10px 12px;border-left:3px solid var(--gold);background:var(--mist);font-size:.88rem;font-style:italic;line-height:1.4}.tier-quote cite{display:block;font-style:normal;font-size:.75rem;opacity:.7;margin-top:4px}
+.guide-band .lead-form{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px;max-width:440px}
+@media (max-width:640px){.guide-band .lead-form{text-align:left;margin:0 auto}}
+/* Free 4 Data Points guide offer: hidden until the redesigned guide is final. Delete these two lines to turn it on. */
+#guide{display:none!important}
+a[href="#guide"]{display:none!important}

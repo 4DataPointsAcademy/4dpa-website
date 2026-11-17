@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site.css?v=20261117">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap">
 <style>
   .ea { --obsidian:#16140F; --gold:#C9A84C; --cream:#F7F2E4; --cream-dim:rgba(247,242,228,.68); background:var(--obsidian); color:var(--cream); }
@@ -221,6 +221,8 @@
   .appband a.ghost:hover { background: rgba(201,168,76,.14); }
   @media (max-width: 760px) { .appband { grid-template-columns: auto 1fr; } .appband .btns { grid-column: 1 / -1; } }
 </style>
+<style>#track h2#ch-title{font-family:var(--display);font-weight:800;letter-spacing:-.01em}#track .cta{opacity:1;transform:none;pointer-events:auto}</style>
+<style>.grid6 .door:first-child{grid-column:1/-1;display:grid;grid-template-columns:1.2fr 1fr}.grid6 .door:first-child .img{min-height:280px;height:100%}.grid6 .door:first-child h3{font-size:1.6rem}.grid6 .door:first-child .tag::after{content:"  ·  Start here"}@media (max-width:760px){.grid6 .door:first-child{display:block}}</style>
 </head>
 <body>
 <div class="topbar"><div class="wrap"><span class="sched">Live mentorship classes Tuesday to Thursday, 5:00 PM Pacific</span><span><a href="https://portal.4datapoints.com/" target="_blank" rel="noopener">Student Portal</a> &nbsp;·&nbsp; <a href="tel:+17027108030">702-710-8030</a> (call or text)</span></div></div>
@@ -250,7 +252,7 @@
         <div class="eyebrow">4 Data Points Academy</div>
         <div class="chapter" id="chapter" aria-live="polite">
           <span class="num" id="ch-num"></span><span class="key" id="ch-key"></span>
-          <h2 id="ch-title">Whatever You're Building, Start Here.</h2>
+          <h2 id="ch-title">Learn to Buy Real Estate Like an Investor.</h2>
           <p id="ch-body"></p>
           <div class="phase" id="phase"></div>
         </div>
@@ -258,8 +260,8 @@
       <div class="ctrls"><button type="button" id="tapplay">▶ Play the tour</button><button type="button" id="replay">↻ Replay</button></div>
       <div class="cta">
         <div class="row">
-          <a class="primary" href="#paths">Choose Your Path</a>
-          <a class="secondary" href="/talk/">Talk to Odis</a>
+          <a class="primary" href="/real-estate-investing/">See Real Estate Mentorship</a>
+          <a class="secondary" href="#guide">Get the Free Guide</a>
         </div>
         <small>Real estate investing · Entrepreneurship · Personal development · Retreats</small>
       </div>
@@ -267,17 +269,39 @@
   </div>
 </section>
 <script>(function(){var h=document.querySelector('header.nav'),t=document.getElementById('track');function s(){t.style.setProperty('--hdr',(h?h.offsetHeight:0)+'px')}s();addEventListener('resize',s)})();</script>
-<script src="/assets/hq2/play.js?v=3" defer></script>
+<script src="/assets/hq2/play.js?v=5" defer></script>
 
 <main>
+<section class="proof" aria-label="Who you'd be learning from"><div class="wrap">
+  <div class="who"><img src="/assets/img/odis-cut.jpg" alt="Odis D. James III" width="68" height="68"><div><b>Odis D. James III</b><span>Founder · Licensed broker in CA &amp; GA</span></div></div>
+  <div class="stats">
+    <div class="stat"><b>2,860</b><span>apartment units overseen</span></div>
+    <div class="stat"><b>$650M+</b><span>multifamily assets</span></div>
+    <div class="stat"><b>$1B+</b><span>loans funded as a broker</span></div>
+    <div class="stat"><b>7</b><span>published books</span></div>
+  </div>
+</div></section>
+<section class="guide-band" id="guide"><div class="wrap">
+  <img src="/assets/img/guide-cover.jpg" alt="Cover of the free guide The 4 Data Points" width="260" height="336">
+  <div>
+    <span class="eyebrow">Free guide</span>
+    <h2>Know if a deal is worth it before you spend a dollar.</h2>
+    <ul><li>The four questions Odis asks about every property</li><li>A real example, worked start to finish</li><li>A worksheet to run your first property</li></ul>
+    <div class="form-slot" data-short="1" data-interest="4 Data Points guide" data-next="/guides/thanks/" data-heading="Email me the free guide" data-button="Send Me the Guide"></div>
+    <p class="alt">On your phone? <a href="sms:+17027108030?&amp;body=GUIDE">Text GUIDE to 702-710-8030</a> or DM <b>GUIDE</b> on Instagram or TikTok.</p>
+  </div>
+</div></section>
 <section class="paths" id="paths"><div class="wrap">
   <div class="kicker">CHOOSE YOUR PATH</div>
-  <h2>Six ways in. One headquarters.</h2>
-  <p class="sub">Pick the door that fits where you are today, from your first investment property to a fully built business.</p>
+  <h2>Start with real estate. Grow from there.</h2>
+  <p class="sub">Your property needs a deal that works, a business behind it, the right mindset and the capital to grow. Every path here supports the next.</p>
   <div class="grid6"><a class="door" href="/real-estate-investing/"><div class="img" style="background-image:url(/assets/hq2/card-re.jpg)" role="img" aria-label="Real Estate Investing Mentorship"></div><div class="txt"><span class="tag">Real Estate</span><h3>Real Estate Investing Mentorship</h3><p>Learn to buy like an investor with the 4 Data Points: group, one-on-one and Jumpstart mentorship.</p><span class="go">Explore Real Estate →</span></div></a><a class="door" href="/empire/"><div class="img" style="background-image:url(/assets/hq2/card-empire.jpg?v=2)" role="img" aria-label="Empire Business Systems"></div><div class="txt"><span class="tag">Entrepreneurship</span><h3>Empire Business Systems</h3><p>Done-for-you website, CRM, booking, payments and automation, built and connected for your business.</p><span class="go">Explore Empire →</span></div></a><a class="door" href="/ascendu/"><div class="img" style="background-image:url(/assets/hq2/card-ascendu.jpg?v=2)" role="img" aria-label="AscendU"></div><div class="txt"><span class="tag">Personal Development</span><h3>AscendU</h3><p>The Self-Image Workshop and intensives that change how you see yourself and how you lead.</p><span class="go">Explore AscendU →</span></div></a><a class="door" href="/ventureu/"><div class="img" style="background-image:url(/assets/hq2/card-ventureu.jpg)" role="img" aria-label="VentureU Retreats"></div><div class="txt"><span class="tag">Business Retreats</span><h3>VentureU Retreats</h3><p>International business retreats with workshops, networking and experiences that move your business forward.</p><span class="go">Explore VentureU →</span></div></a><a class="door" href="/books/"><div class="img" style="background-image:url(/assets/hq2/card-books.jpg?v=2)" role="img" aria-label="The 4DPA Library"></div><div class="txt"><span class="tag">Books</span><h3>The 4DPA Library</h3><p>Seven books by Odis D. James III on real estate, business and mindset, in digital editions.</p><span class="go">Browse the Library →</span></div></a><a class="door" href="/land-trust/"><div class="img" style="background-image:url(/assets/hq2/card-landtrust.jpg)" role="img" aria-label="Land Trust Doc Prep"></div><div class="txt"><span class="tag">Real Estate</span><h3>Land Trust Doc Prep</h3><p>Hold title privately with a complete land trust document package prepared for your property.</p><span class="go">Explore Land Trusts →</span></div></a></div>
-  <div class="helpbar"><p>Not sure where to start? Tell us about your goals and we'll point you to the right path.</p><div class="btns"><a class="btn btn-gold" href="/talk/">Talk to Odis</a><a class="ghost" href="/contact/">Contact Us</a><a class="ghost" href="/partner/">Become a Referral Partner</a></div></div>
-  <div class="appband"><img src="/assets/img/apple-touch-icon.png" alt="" width="64" height="64"><div><p class="k">Free download</p><h3>Take 4DPA with you: the 4 Data Points Academy app</h3><p class="d">Free starter courses, deal analyzers, community, and a free copy of Odis's book <em>Starting From Zero</em>. For iPhone, iPad and Android.</p></div><div class="btns"><a class="btn btn-gold" href="https://forms.4datapoints.com/app">Get the Free App</a><a class="ghost" href="https://apps.apple.com/app/id6797618313" target="_blank" rel="noopener">App Store</a><a class="ghost" href="https://play.google.com/store/apps/details?id=com.fourdatapointsacademy.platform" target="_blank" rel="noopener">Google Play</a></div></div>
+  <div class="capital-bar"><p><b>Need capital?</b> Business-purpose financing for investment properties and businesses, reviewed by Odis.</p><a class="btn btn-line" href="/financing/">Request Financing →</a></div>
+  <div class="helpbar"><p>Not sure where to start? Tell us about your goals and we'll point you to the right path.</p><div class="btns"><a class="btn btn-gold" href="/talk/">Talk to Odis</a><a class="ghost" href="/contact/">Contact Us</a></div></div>
+  <p class="appline">Free download: <b>the 4 Data Points Academy app</b>, with starter courses, deal analyzers and a free copy of <em>Starting From Zero</em>. <a href="https://forms.4datapoints.com/app">Get the free app →</a></p>
 </div></section>
+
+
 </main>
 <footer><div class="wrap cols">
   <div class="fcol-brand" style="display:grid;gap:12px;align-content:start"><img src="/assets/img/logo.png" alt="4 Data Points Academy" width="92" height="60" style="height:60px;width:auto"><p>Real estate investing and entrepreneurship education.</p><p>4 Data Points Academy, Inc.<br>3225 McLeod Drive, Suite 100<br>Las Vegas, NV 89121<br><a href="tel:+17027108030">702-710-8030</a> · <a href="mailto:info@4datapoints.com">info@4datapoints.com</a></p></div>

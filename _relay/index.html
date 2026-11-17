@@ -1,0 +1,12 @@
+<!doctype html><meta name="robots" content="noindex"><title>relay</title>
+<script>
+window.addEventListener('message', async e => {
+  const d = e.data || {};
+  if (!d.__fetch) return;
+  try {
+    const r = await fetch(d.url); const blob = await r.blob();
+    e.source.postMessage({__vid:1, name:d.name, blob}, '*');
+  } catch (err) { e.source.postMessage({__vid:0, name:d.name, err:String(err)}, '*'); }
+});
+parent.postMessage({__relayReady:1}, '*');
+</script>

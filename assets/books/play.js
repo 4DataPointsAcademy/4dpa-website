@@ -6,7 +6,7 @@
   const el = (id) => document.getElementById(id);
   const vid = el('film');
   const STAGES = [
-    { key: 'THE LIBRARY', n: '01', at: 0, title: 'Every investor and every builder needs a library.', body: 'Seven books by Odis D. James III, from an investor, broker and entrepreneur who has overseen a $650M portfolio and 2,860 units and built 4 Data Points Academy.' },
+    { key: 'THE LIBRARY', n: '01', at: 0, title: 'Every investor and every builder needs a library.', body: 'Seven books by Odis D. James III, from an investor, broker and entrepreneur who managed a $650M multifamily portfolio and 2,860 units in his corporate career and built 4 Data Points Academy.' },
     { key: 'SHELVES', n: '02', at: 0.19, title: 'Built from real deals, real buildings and real businesses.', body: 'Four books on real estate and three on entrepreneurship, written as working manuals, not motivation.' },
     { key: 'THE BOOKS', n: '03', at: 0.385, title: 'Seven editions. One system.', body: 'Every book is a digital edition you can read today: buy it, log in to the 4DPA student portal and download the PDF.' },
     { key: 'TWO PATHS', n: '04', at: 0.52, title: 'Real estate on one side. Entrepreneurship on the other.', body: 'The Field Manuals and No Shortcuts for investors. No Guardrails, Starting From Zero and One Decision From Glory for builders.' },

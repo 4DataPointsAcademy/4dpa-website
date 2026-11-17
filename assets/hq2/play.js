@@ -6,7 +6,7 @@
   const el = (id) => document.getElementById(id);
   const vid = el('film');
   const STAGES = [
-    { key: '', n: '', at: 0, title: 'Learn to Buy Real Estate Like an Investor.', body: 'Mentorship with no end date from Odis D. James III, a licensed broker who has overseen $650M+ in multifamily assets.' },
+    { key: '', n: '', at: 0, title: 'Learn to Buy Real Estate Like an Investor.', body: 'Mentorship with no end date from Odis D. James III, a licensed broker who managed $650M+ in multifamily assets in his corporate career.' },
     { key: '', n: '', at: 0.34, title: 'Learn to Buy Real Estate Like an Investor.', body: 'Live classes, real-world deal support and a framework you can use on any property. Then grow into business, mindset and capital.' },
     { key: 'FINAL', n: '', at: 0.8, title: 'Learn to Buy Real Estate Like an Investor.', body: 'See the mentorship plans, or talk with Odis about where to start.' },
   ];

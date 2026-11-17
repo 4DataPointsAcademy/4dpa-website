@@ -294,6 +294,3 @@ details.qa p{color:var(--muted);padding-bottom:18px}
 .tier-quote{margin:0 0 .8rem;padding:10px 12px;border-left:3px solid var(--gold);background:var(--mist);font-size:.88rem;font-style:italic;line-height:1.4}.tier-quote cite{display:block;font-style:normal;font-size:.75rem;opacity:.7;margin-top:4px}
 .guide-band .lead-form{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px;max-width:440px}
 @media (max-width:640px){.guide-band .lead-form{text-align:left;margin:0 auto}}
-/* Free 4 Data Points guide offer: hidden until the redesigned guide is final. Delete these two lines to turn it on. */
-#guide{display:none!important}
-a[href="#guide"]{display:none!important}

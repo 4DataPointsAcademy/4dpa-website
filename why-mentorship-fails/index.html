@@ -44,7 +44,8 @@
 
 <main>
 <section class="page show" id="p-why" data-page="why-mentorship-fails">
-  <div class="sub-hero img" style="background-image:url('/assets/img/s40.jpg')"><div class="wrap">
+  <style>.why-hero{background:#111}.why-hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}.why-hero::after{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(90deg,rgba(12,12,12,.86) 0%,rgba(12,12,12,.68) 55%,rgba(12,12,12,.45) 100%)}@media (prefers-reduced-motion:reduce){.why-hero video{display:none}}</style>
+  <div class="sub-hero why-hero" style="background:#111 url('/assets/why/hero-poster.jpg') center/cover"><video id="whyv" muted loop playsinline autoplay preload="metadata" poster="/assets/why/hero-poster.jpg" aria-hidden="true"></video><script>(function(){var v=document.getElementById('whyv');v.src=innerWidth<700?'/assets/why/hero-m.mp4':'/assets/why/hero.mp4';var p=v.play();p&&p.catch(function(){});})();</script><div class="wrap">
     <span class="eyebrow">Why Mentorship Fails</span>
     <h1>Most mentorship programs don't work.<br><span class="gold">Here's why, and what we do instead.</span></h1>
     <p class="lead">A lot of our students came to us from other programs. They paid a lot, got very little help, and still didn't have a deal. We built 4 Data Points Academy around the support those programs left out.</p>

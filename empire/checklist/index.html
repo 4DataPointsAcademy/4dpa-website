@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Business Systems Checklist | 4 Data Points Academy</title>
+<meta name="description" content="Check off the 60 systems every business runs on and see exactly what yours is missing, plus which Empire package fits. Free, about 3 minutes.">
+<link rel="canonical" href="https://4datapoints.com/empire/checklist/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="4 Data Points Academy">
+<meta property="og:title" content="Business Systems Checklist | 4 Data Points Academy">
+<meta property="og:description" content="Check off the 60 systems every business runs on and see exactly what yours is missing, plus which Empire package fits. Free, about 3 minutes.">
+<meta property="og:url" content="https://4datapoints.com/empire/checklist/">
+<meta property="og:image" content="https://4datapoints.com/assets/img/og-site.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://4datapoints.com/assets/img/og-site.jpg">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/site.css?v=20261117d">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap">
+<style>
+  .ea { --obsidian:#16140F; --gold:#C9A84C; --cream:#F7F2E4; --cream-dim:rgba(247,242,228,.68); background:var(--obsidian); color:var(--cream); }
+  .ea-hero { padding-block: clamp(48px,8vw,96px) 32px; background: radial-gradient(120% 90% at 85% 0%, rgba(201,168,76,.16), transparent 60%), var(--obsidian); }
+  .ea-hero .wrap, .ea-body .wrap { max-width: 1080px; }
+  .ea .kicker { font-family: Cinzel, Georgia, serif; letter-spacing: .22em; color: var(--gold); font-size: 15px; display:flex; gap:12px; align-items:center; }
+  .ea .kicker i { font-style: normal; opacity:.6 }
+  .ea h1 { font-family: Poppins, system-ui, sans-serif; font-weight: 700; font-size: clamp(2rem, 4.6vw, 3.2rem); line-height: 1.1; margin: 18px 0 16px; color: var(--cream); text-wrap: balance; max-width: 18ch; }
+  .ea .lede { font-size: 1.08rem; line-height: 1.6; color: var(--cream-dim); max-width: 60ch; margin:0 }
+  .ea-body { padding-block: 24px clamp(56px,8vw,96px); }
+  .ea-grid { display:grid; grid-template-columns: minmax(0,1fr) minmax(0,1.5fr); gap: clamp(24px,4vw,56px); align-items:start; }
+  @media (max-width: 860px) { .ea-grid { grid-template-columns: 1fr; } }
+  .ea-side { display:grid; gap:20px; }
+  .ea-side ol { margin:0; padding:0; list-style:none; display:grid; gap:18px; counter-reset: s; }
+  .ea-side li { counter-increment: s; display:grid; grid-template-columns: 40px 1fr; gap: 14px; line-height:1.5; color: var(--cream-dim); }
+  .ea-side li::before { content: counter(s, decimal-leading-zero); font-family: Cinzel, Georgia, serif; color: var(--gold); font-size: 18px; padding-top: 2px; }
+  .ea-side li b { display:block; color: var(--cream); font-weight:600; font-family: Poppins, system-ui, sans-serif; }
+  .ea-side .fine { font-size:.85rem; color: rgba(247,242,228,.5); line-height:1.5; border-top:1px solid rgba(201,168,76,.25); padding-top:16px; margin:0 }
+  .ea .lead-form { border-color: rgba(201,168,76,.4); box-shadow: 0 30px 80px rgba(0,0,0,.35); }
+  .ea .lead-form fieldset { border:0; margin:0; padding:0; display:grid; gap:12px; min-width:0 }
+  .ea .lead-form legend { font-family: Poppins, system-ui, sans-serif; font-weight:600; font-size:.78rem; letter-spacing:.12em; text-transform:uppercase; color:#8A6D12; padding:0; margin-bottom:4px }
+  .ea .lead-form .sep { height:1px; background: var(--line); margin: 6px 0 }
+  .ea .req { color:#8A6D12 }
+  .ea .chips { display:flex; flex-wrap:wrap; gap:8px }
+  .ea .lead-form label.chip { display:inline-flex; gap:0; font-weight:500; font-size:.86rem; cursor:pointer }
+  .ea .chip input { position:absolute; opacity:0; width:1px; height:1px }
+  .ea .chip span { border:1px solid #CFCBBF; border-radius:999px; padding:.45em .9em; background:#fff; transition: background .15s, border-color .15s }
+  .ea .chip input:checked + span { background:#16140F; color:#F7F2E4; border-color:#16140F }
+  .ea .chip input:focus-visible + span { outline: 2px solid #C9A84C; outline-offset: 2px }
+  .ea .hint { font-weight:400; font-size:.8rem; color: var(--muted) }
+  .ea .form-err { display:none; color:#9B2C1F; font-size:.92rem }
+  .ea .done { display:none; text-align:left }
+  .ea .done h3 { font-size:1.4rem; margin:0 0 8px }
+  .ea .done p { margin:0 0 10px; line-height:1.55 }
+  .ea .hpf { position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden }
+  .ck-sec { border-top:1px solid var(--line); padding-top:14px; display:grid; gap:6px }
+  .ck-sec:first-of-type { border-top:0; padding-top:0 }
+  .ck-sec h3 { font-family: Poppins, system-ui, sans-serif; font-size:1rem; margin:0 0 4px; color:#16140F; display:flex; justify-content:space-between; gap:12px }
+  .ck-sec h3 small { font-weight:500; color:#8A6D12; font-size:.8rem }
+  .ea .lead-form label.ck { display:grid; grid-template-columns: 22px 1fr; gap:10px; align-items:start; font-weight:400; font-size:.95rem; line-height:1.45; padding:6px 4px; border-radius:6px; cursor:pointer }
+  .ea .lead-form label.ck:hover { background:#F7F2E4 }
+  .ck input { width:18px; height:18px; margin-top:2px; accent-color:#16140F }
+  .ck-count { position:sticky; top:8px; z-index:2; background:#16140F; color:#F7F2E4; border-radius:999px; padding:8px 14px; font-size:.88rem; justify-self:start }
+  .res { display:none; background:#fff; color:#16140F; border:1px solid rgba(201,168,76,.4); border-radius:14px; padding:clamp(20px,4vw,32px); box-shadow:0 30px 80px rgba(0,0,0,.35) }
+  .res .score { font-family:Cinzel,Georgia,serif; color:#8A6D12; letter-spacing:.12em; font-size:13px; text-transform:uppercase }
+  .res h2 { font-family:Poppins,system-ui,sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.2; margin:8px 0 10px }
+  .res .pkg { border:2px solid #C9A84C; border-radius:12px; padding:16px 18px; margin:16px 0; background:#FBF8EF }
+  .res .pkg b { font-family:Poppins,system-ui,sans-serif; font-size:1.15rem } .res .pkg .price { color:#8A6D12; font-weight:600; margin:4px 0 8px }
+  .res .miss h4 { margin:14px 0 4px; font-size:.95rem } .res .miss ul { margin:0; padding-left:20px; line-height:1.5; font-size:.93rem; color:#3a372f }
+  .res .ctas { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px }
+  .res .btn-ghost { border:1px solid #16140F; color:#16140F; background:transparent }
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span class="sched">Live mentorship classes Tuesday to Thursday, 5:00 PM Pacific</span><span><a href="https://portal.4datapoints.com/" target="_blank" rel="noopener">Student Portal</a> &nbsp;·&nbsp; <a href="tel:+17027108030">702-710-8030</a> (call or text)</span></div></div>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="/" aria-label="4 Data Points Academy home"><img src="/assets/img/logo.png" alt="4 Data Points Academy" width="83" height="54"></a>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">Menu</button>
+  <nav class="menu" id="menu">
+    <a class="hq" href="/" style="color:var(--gold);font-weight:600;white-space:nowrap"><span aria-hidden="true">←</span> 4DPA Headquarters</a>
+    <div class="dd"><a href="/real-estate-investing/">Real Estate</a><div class="sub"><a href="/mentorship/">Mentorship</a><a href="/multifamily/">Multifamily Workshop</a><a href="/land-trust/">Land Trusts</a><a href="/financing/">Investor Financing</a></div></div>
+    <div class="dd"><a href="/entrepreneurship/">Entrepreneurship</a><div class="sub"><a href="/empire/">Empire</a><a href="/entrepreneurship/">Entrepreneur Course</a><a href="/ventureu/">VentureU Retreat</a><a href="/financing/">Business Financing</a></div></div>
+    <a href="/ascendu/">Personal Development</a>
+    <a href="/events/">Events</a>
+    <a href="/books/">Books</a>
+    <a href="https://forms.4datapoints.com/app">Get the App</a>
+    <a href="/about/">About Odis</a>
+    <a class="btn btn-gold" href="/talk/">Talk to Odis</a>
+  </nav>
+  <a class="btn btn-gold lp-call" href="tel:+17027108030">Call 702-710-8030</a>
+</div></header>
+<main class="ea">
+  <section class="ea-hero"><div class="wrap">
+    <div class="kicker"><span>BUSINESS STARTER</span><i aria-hidden="true">—</i><span style="font-family:Inter,system-ui,sans-serif;letter-spacing:.08em;font-size:12px;text-transform:uppercase">Business systems checklist</span></div>
+    <h1>What is your business missing?</h1>
+    <p class="lede">Every business runs on systems. Check off the ones you already have. You'll see exactly what's missing, organized by the 8 areas every business owner must master, and which Empire package would build it for you. Free, about 3 minutes.</p>
+  </div></section>
+  <section class="ea-body"><div class="wrap ea-grid">
+    <aside class="ea-side">
+      <ol>
+        <li><span><b>Check what you have</b>Go area by area. Only check a system if it's set up and working today.</span></li>
+        <li><span><b>See your gaps</b>Your missing systems, grouped by area, so you know what to fix first.</span></li>
+        <li><span><b>Get your recommendation</b>The Empire package that builds what you're missing, if you'd rather not build it yourself.</span></li>
+      </ol>
+      <p class="fine">Part of the free Business Starter course in the 4DPA app. Questions? Call or text <span style="white-space:nowrap">702-710-8030</span>.</p>
+    </aside>
+    <div>
+    <form class="lead-form" id="ck-form" novalidate>
+      <div class="ck-count" id="ck-count" aria-live="polite">0 of 60 checked</div>
+      <div id="ck-list" style="display:grid;gap:14px"></div>
+      <div class="sep"></div>
+      <fieldset>
+        <legend>Where should we send your results?</legend>
+        <div class="row2"><label><span>First name <span class="req">*</span></span><input name="first_name" autocomplete="given-name" required></label><label>Last name<input name="last_name" autocomplete="family-name"></label></div>
+        <div class="row2"><label><span>Email <span class="req">*</span></span><input type="email" name="email" autocomplete="email" required></label><label>Phone <span class="hint">(optional)</span><input type="tel" name="phone" autocomplete="tel"></label></div>
+        <label>Business name <span class="hint">(optional)</span><input name="business_name" autocomplete="organization"></label>
+      </fieldset>
+      <div class="hpf" aria-hidden="true"><label>Leave this field empty<input name="hp" tabindex="-1" autocomplete="off"></label></div>
+      <p class="hint" style="margin:0">We'll use your email to follow up about your results. See our <a href="/privacy-policy/" style="color:#8A6D12">Privacy Policy</a>.</p>
+      <button class="btn btn-gold" type="submit">See My Results</button>
+      <div class="form-err" role="alert"></div>
+    </form>
+    <div class="res" id="ck-res" role="status" tabindex="-1"></div>
+    </div>
+  </div></section>
+</main>
+<footer><div class="wrap cols">
+  <div class="fcol-brand" style="display:grid;gap:12px;align-content:start"><img src="/assets/img/logo.png" alt="4 Data Points Academy" width="92" height="60" style="height:60px;width:auto"><p>Real estate investing and entrepreneurship education.</p><p>4 Data Points Academy, Inc.<br>3225 McLeod Drive, Suite 100<br>Las Vegas, NV 89121<br><a href="tel:+17027108030">702-710-8030</a> · <a href="mailto:info@4datapoints.com">info@4datapoints.com</a></p></div>
+  <div class="fcol"><h4>Real Estate</h4><ul><li><a href="/mentorship/">Mentorship</a></li><li><a href="/multifamily/">Multifamily Workshop</a></li><li><a href="/land-trust/">Land Trusts</a></li><li><a href="/financing/">Investor Financing</a></li><li><a href="/books/">Books</a></li><li><a href="https://forms.4datapoints.com/app">The App</a></li></ul></div>
+  <div class="fcol"><h4>Entrepreneurship</h4><ul><li><a href="/empire/">Empire</a></li><li><a href="/entrepreneurship/">Entrepreneur Course</a></li><li><a href="/ventureu/">VentureU Retreat</a></li><li><a href="/financing/">Business Financing</a></li><li><a href="/ascendu/">Self-Image Workshop</a></li><li><a href="/events/">Events</a></li></ul></div>
+  <div class="fcol"><h4>Company</h4><ul><li><a href="/about/">About Odis</a></li><li><a href="/contact/">Contact</a></li><li><a href="/partner/">Referral Partners</a></li><li><a href="https://portal.4datapoints.com/" target="_blank" rel="noopener">Student Portal</a></li></ul></div>
+</div><div class="wrap disclaim">4 Data Points Academy provides education. Nothing on this site is investment, legal, tax or financial advice. Real estate investing and starting a business involve risk, including loss of money. Student results and examples shown are not typical and are not a promise or guarantee of income or results; your results depend on your effort, experience, market and decisions. Odis D. James III is a licensed real estate broker in California and Georgia; 4DPA programs are educational and do not create a broker-client relationship.</div><div class="wrap legal"><span>© 2026 4 Data Points Academy, Inc.</span><span><a href="/privacy-policy/">Privacy Policy</a> · <a href="/terms-of-service/">Terms of Service</a> · <a href="/sms-terms/">Text Messaging Terms</a> · <a href="/refund-policy/">Refund Policy</a></span></div></footer>
+<script src="/assets/site.js" defer></script>
+<script>
+(function () {
+  var DATA = {"sections": [{"id": "s1", "name": "Business Foundation", "lesson": "Welcome: Build Your Business Blueprint"}, {"id": "s2", "name": "Market", "lesson": "Market Understanding"}, {"id": "s3", "name": "Offers and Digital Products", "lesson": "Offer Creation"}, {"id": "s4", "name": "Sales", "lesson": "Sales System"}, {"id": "s5", "name": "Marketing", "lesson": "Marketing Strategy"}, {"id": "s6", "name": "Operations, Automation and AI", "lesson": "Operations and Systems"}, {"id": "s7", "name": "Financial", "lesson": "Financial Clarity"}, {"id": "s8", "name": "Team", "lesson": "Team and Leadership"}, {"id": "s9", "name": "Leadership Rhythm", "lesson": "Mindset and Personal Growth"}], "items": [{"id": "s1i1", "s": "s1", "t": "X", "x": "Registered business entity (LLC or corporation) and EIN"}, {"id": "s1i2", "s": "s1", "t": "X", "x": "Business bank account, separate from personal"}, {"id": "s1i3", "s": "s1", "t": "C", "x": "Your own domain with branded email, set up so your emails don't land in spam"}, {"id": "s1i4", "s": "s1", "t": "C", "x": "Dedicated business phone number with call tracking"}, {"id": "s1i5", "s": "s1", "t": "C", "x": "Business texting registered with the carriers (A2P 10DLC) so your texts get delivered"}, {"id": "s1i6", "s": "s1", "t": "C", "x": "A mobile app to run your business (leads, messages, payments) from your phone"}, {"id": "s2i1", "s": "s2", "t": "C", "x": "One CRM where every lead and customer is saved, with their full history"}, {"id": "s2i2", "s": "s2", "t": "C", "x": "Tags and lead sources, so you know who each contact is and where they came from"}, {"id": "s2i3", "s": "s2", "t": "F", "x": "Intake forms, surveys or quizzes that sort leads by what they need"}, {"id": "s2i4", "s": "s2", "t": "B", "x": "Reporting that shows which marketing actually brings in customers"}, {"id": "s3i1", "s": "s3", "t": "F", "x": "A sales page for each product or service you offer"}, {"id": "s3i2", "s": "s3", "t": "B", "x": "A landing page system so you can launch a new offer anytime without a developer"}, {"id": "s3i3", "s": "s3", "t": "D", "x": "Online checkout with upsells, order bumps and coupon codes"}, {"id": "s3i4", "s": "s3", "t": "D", "x": "Online storefront for your products and services"}, {"id": "s3i5", "s": "s3", "t": "D", "x": "Recurring billing for memberships, subscriptions or retainers"}, {"id": "s3i6", "s": "s3", "t": "D", "x": "A digital product (course, guide, program or membership) built from your expertise"}, {"id": "s3i7", "s": "s3", "t": "D", "x": "A members area that delivers digital products automatically after purchase"}, {"id": "s3i8", "s": "s3", "t": "D", "x": "An online community or group space for your customers"}, {"id": "s3i9", "s": "s3", "t": "B", "x": "A free mini-course or lead magnet that attracts new buyers"}, {"id": "s4i1", "s": "s4", "t": "C", "x": "Sales pipeline that shows where every prospect stands"}, {"id": "s4i2", "s": "s4", "t": "C", "x": "Online booking calendar with automatic reminders"}, {"id": "s4i3", "s": "s4", "t": "C", "x": "Deposits or payment collected at booking"}, {"id": "s4i4", "s": "s4", "t": "F", "x": "Proposals, estimates and contracts that clients sign electronically"}, {"id": "s4i5", "s": "s4", "t": "C", "x": "Text-to-pay and payment links you can send in seconds"}, {"id": "s4i6", "s": "s4", "t": "D", "x": "Abandoned-checkout recovery that follows up with people who didn't finish buying"}, {"id": "s4i7", "s": "s4", "t": "C", "x": "One inbox for texts, email, Facebook and Instagram messages, web chat and WhatsApp"}, {"id": "s5i1", "s": "s5", "t": "F", "x": "Full website on your own domain, with a blog"}, {"id": "s5i2", "s": "s5", "t": "F", "x": "Lead capture funnels with a free offer"}, {"id": "s5i3", "s": "s5", "t": "F", "x": "Nurture sequences: automatic emails and texts that build trust over weeks until a lead is ready to buy"}, {"id": "s5i4", "s": "s5", "t": "B", "x": "Email and text marketing campaigns to your whole list"}, {"id": "s5i5", "s": "s5", "t": "F", "x": "Social media planner that schedules posts across your accounts"}, {"id": "s5i6", "s": "s5", "t": "B", "x": "Ad funnels with tracking for Facebook, Instagram and Google ads"}, {"id": "s5i7", "s": "s5", "t": "C", "x": "Google Business Profile set up and connected"}, {"id": "s5i8", "s": "s5", "t": "C", "x": "Automatic review requests and a way to respond to reviews"}, {"id": "s5i9", "s": "s5", "t": "F", "x": "Website chat widget that captures visitors"}, {"id": "s5i10", "s": "s5", "t": "B", "x": "Referral or affiliate program that rewards people who send you business"}, {"id": "s6i1", "s": "s6", "t": "B", "x": "AI assistant that answers leads 24/7 by website chat, text and social DMs"}, {"id": "s6i2", "s": "s6", "t": "V", "x": "AI voice receptionist that answers calls and books appointments"}, {"id": "s6i3", "s": "s6", "t": "C", "x": "Missed-call text-back, so a missed call never becomes a lost customer"}, {"id": "s6i4", "s": "s6", "t": "F", "x": "Workflow automations that tag contacts, assign tasks and send internal alerts for you"}, {"id": "s6i5", "s": "s6", "t": "C", "x": "Appointment reminders and no-show follow-up that run on their own"}, {"id": "s6i6", "s": "s6", "t": "F", "x": "Automatic client onboarding (welcome messages, forms and next steps)"}, {"id": "s6i7", "s": "s6", "t": "F", "x": "Client portal where customers find their documents, courses and updates"}, {"id": "s6i8", "s": "s6", "t": "X", "x": "Written step-by-step procedures (SOPs) for repeat work"}, {"id": "s6i9", "s": "s6", "t": "C", "x": "Task and project tracking"}, {"id": "s6i10", "s": "s6", "t": "F", "x": "Document collection and organized file storage"}, {"id": "s6i11", "s": "s6", "t": "F", "x": "Your tools connected to each other (bookkeeping, scheduling, payments)"}, {"id": "s7i1", "s": "s7", "t": "X", "x": "Bookkeeping software connected to your business account"}, {"id": "s7i2", "s": "s7", "t": "C", "x": "Invoices and estimates with card and bank payments"}, {"id": "s7i3", "s": "s7", "t": "C", "x": "Payment plans and recurring invoices"}, {"id": "s7i4", "s": "s7", "t": "F", "x": "Sales dashboard showing revenue and where it came from"}, {"id": "s7i5", "s": "s7", "t": "X", "x": "Monthly budget and cash-flow tracker"}, {"id": "s7i6", "s": "s7", "t": "X", "x": "Sales tax and income tax set up correctly"}, {"id": "s8i1", "s": "s8", "t": "C", "x": "User accounts for each team member with the right permissions"}, {"id": "s8i2", "s": "s8", "t": "F", "x": "Automatic lead assignment, so every new lead goes to the right person"}, {"id": "s8i3", "s": "s8", "t": "X", "x": "Written role descriptions for the next hire or contractor"}, {"id": "s8i4", "s": "s8", "t": "X", "x": "Hiring and onboarding checklist"}, {"id": "s8i5", "s": "s8", "t": "X", "x": "One place for team communication"}, {"id": "s9i1", "s": "s9", "t": "X", "x": "Weekly planning routine"}, {"id": "s9i2", "s": "s9", "t": "F", "x": "Dashboard of the 3\u20135 numbers you check every week"}]};
+  var URL = 'https://qqiqvxtbeswxnzqxcrye.supabase.co/functions/v1/business-checklist';
+  var list = document.getElementById('ck-list'), count = document.getElementById('ck-count');
+  var form = document.getElementById('ck-form'), err = form.querySelector('.form-err'), res = document.getElementById('ck-res');
+  function esc(s){ return String(s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  DATA.sections.forEach(function (s) {
+    var its = DATA.items.filter(function (i) { return i.s === s.id; });
+    var sec = document.createElement('div'); sec.className = 'ck-sec';
+    sec.innerHTML = '<h3><span>' + esc(s.name) + '</span><small>' + its.length + ' systems</small></h3>' +
+      its.map(function (i) { return '<label class="ck"><input type="checkbox" name="have" value="' + i.id + '"><span>' + esc(i.x) + '</span></label>'; }).join('');
+    list.appendChild(sec);
+  });
+  function upd(){ count.textContent = form.querySelectorAll('input[name=have]:checked').length + ' of ' + DATA.items.length + ' checked'; }
+  form.addEventListener('change', upd); upd();
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); err.style.display = 'none';
+    var f = new FormData(form);
+    if (!String(f.get('first_name')||'').trim()) { err.textContent = 'Please enter your first name.'; err.style.display='block'; return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(String(f.get('email')||'').trim())) { err.textContent = 'Please enter a valid email.'; err.style.display='block'; return; }
+    var btn = form.querySelector('button[type=submit]'); btn.disabled = true; btn.textContent = 'Working out your results...';
+    var payload = { first_name:f.get('first_name'), last_name:f.get('last_name'), email:f.get('email'), phone:f.get('phone'),
+      business_name:f.get('business_name'), hp:f.get('hp'), have:f.getAll('have'), page: location.pathname + location.search };
+    fetch(URL, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) })
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        if (!d || !d.ok) throw new Error((d && d.message) || 'Something went wrong. Please try again.');
+        var name = esc(String(f.get('first_name')).trim());
+        var h = '<div class="score">' + d.have + ' of ' + d.total + ' systems in place</div>';
+        if (d.package) {
+          h += '<h2>' + name + ', you\'re missing ' + d.missingCount + ' of the ' + d.total + ' systems.</h2>' +
+            '<p style="margin:0;line-height:1.55">Based on your answers, <b>' + esc(d.package.name) + '</b> fits your business best.</p>' +
+            '<div class="pkg"><b>' + esc(d.package.name) + '</b><div class="price">' + esc(d.package.price) + '</div><div style="line-height:1.5">' + esc(d.package.why) + '</div></div>' +
+            '<p style="margin:0;line-height:1.55">You can build these yourself using what you learned in Business Starter, or have the Empire team build them for you.</p>';
+        } else {
+          h += '<h2>' + name + ', your business has every system on the list.</h2><p style="margin:0;line-height:1.55">That puts you ahead of most business owners. If you want help growing from here, start with a free business review.</p>';
+        }
+        if (d.missingBySection && d.missingBySection.length) {
+          h += '<div class="miss"><h4 style="margin-top:18px">What your business is missing</h4>' + d.missingBySection.map(function (s) {
+            return '<h4>' + esc(s.name) + '</h4><ul>' + s.items.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>'; }).join('') + '</div>';
+        }
+        h += '<div class="ctas"><a class="btn btn-gold" href="/empire/assessment/">Get My Free Business Review</a><a class="btn btn-ghost" href="/empire/#empire-pk">See Empire Packages</a></div>';
+        res.innerHTML = h; form.style.display = 'none'; res.style.display = 'block'; res.focus();
+        window.scrollTo({ top: res.getBoundingClientRect().top + window.scrollY - 90, behavior: 'smooth' });
+      })
+      .catch(function (x) { err.textContent = x.message || 'Something went wrong. Please try again.'; err.style.display='block'; btn.disabled=false; btn.textContent='See My Results'; });
+  });
+})();
+</script>
+</body>
+</html>

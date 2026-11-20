@@ -7,7 +7,7 @@
   const el = (id) => document.getElementById(id);
   const vid = el('film');
   const STAGES = [
-    { key: '', n: '', at: 0, title: "You've Got a Website. But Do You Have a Business?", body: 'A desk, a phone and a simple website can open the doors. Watch what a fully built business runs on.' },
+    { key: '', n: '', at: 0, title: "You've Got a Website. But Do You Have a Business?", body: "We build the systems that turn your online presence into a functioning business. Watch what a fully built business runs on." },
     { key: 'BLUEPRINT', n: '01', at: 0.1003, title: 'Before We Build, We Strategize.', body: 'We identify the systems, processes, and opportunities your business needs to operate more efficiently.' },
     { key: 'BUILD', n: '02', at: 0.2431, title: 'We Build Your Business Infrastructure.', body: 'Website, CRM, booking, email and SMS, payments, pipelines and onboarding, set up for your business based on the package you choose.' },
     { key: 'LAUNCH', n: '03', at: 0.4386, title: 'Your Systems. Connected. Automated.', body: 'AI, automation, and integrated business systems help manage communication, customers, and daily operations.' },
@@ -54,8 +54,8 @@
     vid.addEventListener('loadedmetadata', () => { vid.currentTime = vid.duration - 0.05; });
   } else {
     render(0);
-    const p = vid.play();
-    if (p && p.catch) p.catch(() => document.body.classList.add('needs-tap'));
+    // hold on the opening headline for a few seconds so the offer reads before the story starts
+    setTimeout(() => { const p = vid.play(); if (p && p.catch) p.catch(() => document.body.classList.add('needs-tap')); }, 3200);
   }
   document.body.classList.add('ready');
   window.__ready = true;

@@ -1,8 +1,10 @@
 /* 4DPA ad measurement: Meta Pixel (VentureU Website Data) + Google tag (Google Ads).
-   Fires PageView on every page and Lead on thank-you pages after a form. */
+   Fires PageView on every page and a Lead on thank-you pages after a form.
+   Forms that finish in place (no thank-you page) call window.dpaLead('name'). */
 (function () {
   var META_PIXEL = '1430246128961754';
   var GOOGLE_TAG = 'AW-17059633286';
+  var LEAD_CONVERSION = 'AW-17059633286/m3FUCKuiqOkbEIax1cY_'; /* Google Ads "Submit lead form" */
   var path = location.pathname;
   var isLead = /\/thanks\/?$|\/thank-you\/?$/.test(path);
 
@@ -25,11 +27,18 @@
   gtag('js', new Date());
   gtag('config', GOOGLE_TAG);
 
+  window.dpaLead = function (what) {
+    fbq('track', 'Lead', { content_name: what });
+    gtag('event', 'generate_lead', { lead_source: what });
+    gtag('event', 'conversion', { send_to: LEAD_CONVERSION, value: 1.0, currency: 'USD' });
+  };
+
   if (isLead) {
     var what = path.indexOf('/blueprint/') === 0 ? 'VentureU Business Blueprint'
       : path.indexOf('/guides/') === 0 ? '4 Data Points guide'
+      : path.indexOf('/44-places/') === 0 ? '44 Places guide'
+      : path.indexOf('/beyond-rental-income/') === 0 ? 'Beyond Rental Income guide'
       : path.replace(/\//g, ' ').trim();
-    fbq('track', 'Lead', { content_name: what });
-    gtag('event', 'generate_lead', { lead_source: what });
+    window.dpaLead(what);
   }
 })();

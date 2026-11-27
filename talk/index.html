@@ -327,6 +327,12 @@
       : '<b>Free 30-minute call with Odis.</b> No cost, no obligation.';
   }
   list.addEventListener('change', update);
+  // Arriving from a program page (e.g. /talk/?topic=mentorship): preselect that topic and go to step 2.
+  try {
+    var pre = new URLSearchParams(location.search).get('topic');
+    var box = pre && list.querySelector('input[name=topics][value="' + pre.replace(/[^a-z]/g, '') + '"]');
+    if (box) { box.checked = true; update(); }
+  } catch (e) {}
 
   // Background changes as you scroll through the steps
   var bgs = [].slice.call(document.querySelectorAll('.tk-bg [data-bg]'));

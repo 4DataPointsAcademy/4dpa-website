@@ -404,3 +404,8 @@ img{height:auto}
 
 @media (min-width:701px) and (max-width:1024px) and (orientation:portrait){.vh h1{font-size:clamp(2.6rem,6.6vw,3.6rem);max-width:15ch}.vh .btns{flex-direction:row}.vh .btns .btn{width:auto}}
 @media (max-width:400px){.vsticky .btn{padding:0 14px;font-size:15px}.vsticky{gap:8px;padding-left:10px;padding-right:10px}}
+@media (max-width:700px), (max-width:1024px) and (orientation:portrait){
+  .vh h1{text-shadow:0 2px 22px rgba(0,0,0,.55)}
+  .vh h1 .l2{color:#E6CF9F}
+  .vh-shade{background:linear-gradient(180deg,rgba(13,14,15,.92) 0%,rgba(13,14,15,.8) 26%,rgba(13,14,15,.55) 42%,rgba(13,14,15,.2) 52%,rgba(13,14,15,.72) 66%,rgba(13,14,15,.97) 100%)}
+}

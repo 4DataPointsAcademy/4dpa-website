@@ -18,179 +18,228 @@
 <meta name="twitter:image" content="https://4datapoints.com/assets/img/og-site.jpg">
 <link rel="icon" href="/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/assets/site.css?v=20261117d">
-<link rel="stylesheet" href="/assets/mentorship/mentorship.css?v=3">
-<link rel="preload" as="image" href="/assets/re3d/rehab-poster.jpg">
+<link rel="preload" as="font" type="font/woff2" href="/assets/mentorship/fonts/manrope.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/assets/mentorship/fonts/inter.woff2" crossorigin>
+<link rel="stylesheet" href="/assets/mentorship/v3.css?v=20261127c">
+<meta name="theme-color" content="#101112">
+<link rel="preload" as="image" href="/assets/mentorship/hero-desk.jpg" media="(min-width:701px) and (orientation:landscape), (min-width:1025px)">
+<link rel="preload" as="image" href="/assets/mentorship/hero-mob.jpg" media="(max-width:700px), (max-width:1024px) and (orientation:portrait)">
 
 </head>
-<body>
-<div class="topbar"><div class="wrap"><span class="sched">Live mentorship classes Tuesday to Thursday, 5:00 PM Pacific</span><span><a href="https://portal.4datapoints.com/" target="_blank" rel="noopener">Student Portal</a> &nbsp;·&nbsp; <a href="tel:+17027108030">702-710-8030</a> (call or text)</span></div></div>
-<header class="nav mnav"><div class="wrap">
+<body class="no-js">
+<a class="skip" href="#main">Skip to content</a>
+<header class="vnav" id="vnav"><div class="wrap">
   <a class="logo" href="/" aria-label="4 Data Points Academy home"><img src="/assets/img/logo.png" alt="4 Data Points Academy" width="83" height="54"></a>
-  <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">Menu</button>
-  <nav class="menu" id="menu" aria-label="On this page">
+  <nav id="vmenu" aria-label="On this page">
     <a href="#four-data-points">The Method</a>
     <a href="#mentor">Your Mentor</a>
+    <a href="#curriculum">Curriculum</a>
     <a href="#stories">Student Stories</a>
     <a href="#programs">Programs</a>
-    <a class="mnav-home" href="/">4datapoints.com &rarr;</a>
-    <a class="btn btn-gold" href="#programs" data-explore="nav">Enroll</a>
+    <a class="btn btn-ch" href="#programs" data-explore="nav">Enroll</a>
   </nav>
+  <div class="navr"><a class="btn btn-ch btn-m" href="#programs" data-explore="nav-m">Enroll</a><button class="vmenu" id="vmenu-btn" aria-expanded="false" aria-controls="vmenu">Menu</button></div>
 </div></header>
-
-<main id="mentorship-flagship">
-
-<section class="mh" aria-label="Real estate investing mentorship">
-  <video class="mh-vid" id="mh-vid" muted loop playsinline preload="none" poster="/assets/re3d/rehab-poster.jpg" aria-hidden="true" data-src="/assets/re3d/rehab.mp4"></video>
-  <div class="mh-shade"></div>
-  <div class="wrap mh-in">
-    <span class="eyebrow">4 Data Points Academy &nbsp;|&nbsp; Real Estate Investing Mentorship</span>
-    <h1>Every successful investment starts with the right numbers.<br><span class="gold">We teach you how to find them.</span></h1>
-    <p class="lead">Cost to buy. Cost to rehab. After-repair value. Income potential. Learn to find, analyze, finance and execute real estate deals with a licensed broker who has done it at every level.</p>
-    <div class="btn-row">
-      <a class="btn btn-gold" href="#programs" data-explore="hero">Explore Mentorship Programs</a>
-      <a class="btn btn-line mh-ghost" href="/talk/?topic=mentorship#details" data-speak="hero">Book a Free Mentorship Call</a>
+<main id="main">
+<section class="vh" aria-label="Real estate investing mentorship">
+  <picture><source media="(max-width:700px), (max-width:1024px) and (orientation:portrait)" srcset="/assets/mentorship/hero-mob.jpg"><img class="vh-poster" src="/assets/mentorship/hero-desk.jpg" alt="" width="1920" height="1080" fetchpriority="high"></picture>
+  <video id="vh-vid" muted loop playsinline preload="none" aria-hidden="true" data-desk="/assets/mentorship/hero-desk.mp4" data-mob="/assets/mentorship/hero-mob.mp4"></video>
+  <div class="vh-shade"></div>
+  <div class="wrap vh-in">
+    <div class="vh-top"><span class="kick">Real Estate Investing Mentorship</span>
+    <h1>Every successful investment starts with the right numbers. <span class="l2">We teach you how to find them.</span></h1></div>
+    <div class="vh-bot"><p class="lede">Learn to find, analyze, finance and execute real estate deals with a licensed broker who has done it at every level.</p>
+    <div class="btns">
+      <a class="btn btn-ch" href="#programs" data-explore="hero">Explore Mentorship Programs <span class="ar" aria-hidden="true">&rarr;</span></a>
+      <a class="btn btn-ghost" href="/talk/?topic=mentorship#details" data-speak="hero">Book a Free Mentorship Call</a>
     </div>
-    <p class="mh-tags">Residential &nbsp;•&nbsp; Multifamily &nbsp;•&nbsp; Creative Financing &nbsp;•&nbsp; Land Trusts</p>
+    <div class="vh-rail" aria-label="The four data points">
+      <a href="#four-data-points" data-step="buy"><b>01</b>Cost to buy</a>
+      <a href="#four-data-points" data-step="rehab"><b>02</b>Cost to rehab</a>
+      <a href="#four-data-points" data-step="arv"><b>03</b>After-repair value</a>
+      <a href="#four-data-points" data-step="rent"><b>04</b>Rental income</a>
+    </div></div>
   </div>
 </section>
-
-<section class="mc" aria-label="Who you'll learn from"><div class="wrap">
-  <div class="mc-grid">
-    <div class="mc-item"><b>2,860</b><span>Apartment units overseen in his corporate multifamily career</span></div>
-    <div class="mc-item"><b>$650M+</b><span>In multifamily assets managed (not owned)</span></div>
-    <div class="mc-item"><b>$1B+</b><span>In loans funded as a mortgage broker</span></div>
-    <div class="mc-item"><b>25 yrs</b><span>In real estate, starting in multifamily in 2001</span></div>
-    <div class="mc-item"><b>CA &amp; GA</b><span>Licensed real estate broker in two states</span></div>
+<section class="vc" aria-label="Who you'll learn from"><div class="wrap">
+  <div class="vc-grid">
+    <div class="vc-i"><b>2,860</b><span>Apartment units overseen in a corporate multifamily career</span></div>
+    <div class="vc-i"><b>$650M+</b><span>In multifamily assets managed (not owned)</span></div>
+    <div class="vc-i"><b>$1B+</b><span>In loans funded as a mortgage broker</span></div>
+    <div class="vc-i"><b>25 years</b><span>In real estate, starting in multifamily in 2001</span></div>
+    <div class="vc-i"><b>CA &amp; GA</b><span>Licensed real estate broker in two states</span></div>
   </div>
-  <p class="mc-line">Second-generation real estate professional &nbsp;·&nbsp; U.S. Navy veteran &nbsp;·&nbsp; Author of 7 books</p>
+  <p class="vc-line"><span>Second-generation real estate professional</span><span>U.S. Navy veteran</span><span>Author of 7 books</span></p>
 </div></section>
-
-<section class="band white mdp" id="four-data-points"><div class="wrap">
-  <div class="head"><span class="eyebrow">The method behind the name</span><h2>Every deal begins with four data points.</h2><p class="muted">Four numbers. One informed decision. Move the numbers below and watch how they work together.</p></div>
-  <div class="calc">
-    <div class="calc-stage" aria-hidden="true">
-      <img class="on" data-k="buy" src="/assets/mentorship/dp-cost.jpg" alt="" width="1200" height="671">
-      <img data-k="rehab" src="/assets/mentorship/dp-rehab.jpg" alt="" width="1200" height="671" loading="lazy">
-      <img data-k="arv" src="/assets/mentorship/dp-arv.jpg" alt="" width="1200" height="671" loading="lazy">
-      <img data-k="rent" src="/assets/mentorship/dp-income.jpg" alt="" width="1200" height="671" loading="lazy">
-      <span class="calc-tag" id="calc-tag">01 · Cost to buy</span>
+<section class="sec vdp" id="four-data-points" aria-labelledby="dp-h"><div class="wrap">
+  <div class="sec-head split">
+    <div><span class="kick">The method behind the name</span><h2 class="h2" id="dp-h">Every deal begins with four data points.</h2></div>
+    <p class="lede">Four numbers. One informed decision. Change any number and the property model shows what that number represents.</p>
+  </div>
+  <div class="dp">
+    <div class="dp-stage" id="dp-stage"><div class="dp-view" id="dp-view">
+      <div class="dp-fallback" aria-hidden="true">
+        <img class="on" data-k="buy" src="/assets/mentorship/dp-cost.jpg" alt="" width="1200" height="671" loading="lazy">
+        <img data-k="rehab" src="/assets/mentorship/dp-rehab.jpg" alt="" width="1200" height="671" loading="lazy">
+        <img data-k="arv" src="/assets/mentorship/dp-arv.jpg" alt="" width="1200" height="671" loading="lazy">
+        <img data-k="rent" src="/assets/mentorship/dp-income.jpg" alt="" width="1200" height="671" loading="lazy">
+      </div>
+      <div class="dp-cap"><span><b id="dp-cap-t">01 · Cost to buy</b> <span id="dp-cap-d">The property as you find it.</span></span><span class="dp-hint" id="dp-hint"></span></div></div>
+      <div class="dp-steps" role="group" aria-label="Show a data point">
+        <button type="button" data-k="buy" aria-pressed="true"><b>01</b>Cost to buy</button>
+        <button type="button" data-k="rehab" aria-pressed="false"><b>02</b>Cost to rehab</button>
+        <button type="button" data-k="arv" aria-pressed="false"><b>03</b>After-repair value</button>
+        <button type="button" data-k="rent" aria-pressed="false"><b>04</b>Rental income</button>
+      </div>
     </div>
-    <form class="calc-in" id="calc" onsubmit="return false" aria-describedby="calc-disc">
-      <div class="field" data-k="buy"><label for="c-buy"><span class="n">01</span> Cost to buy</label><div class="row"><input type="range" id="c-buy-r" min="20000" max="400000" step="5000" value="95000" aria-label="Cost to buy slider"><div class="num"><span>$</span><input id="c-buy" inputmode="numeric" value="95,000"></div></div><p>The price you pay to acquire the property.</p></div>
-      <div class="field" data-k="rehab"><label for="c-rehab"><span class="n">02</span> Cost to rehab</label><div class="row"><input type="range" id="c-rehab-r" min="0" max="200000" step="2500" value="45000" aria-label="Cost to rehab slider"><div class="num"><span>$</span><input id="c-rehab" inputmode="numeric" value="45,000"></div></div><p>Every repair, budgeted before you buy.</p></div>
-      <div class="field" data-k="arv"><label for="c-arv"><span class="n">03</span> After-repair value</label><div class="row"><input type="range" id="c-arv-r" min="30000" max="700000" step="5000" value="195000" aria-label="After-repair value slider"><div class="num"><span>$</span><input id="c-arv" inputmode="numeric" value="195,000"></div></div><p>What renovated comparables actually sell for.</p></div>
-      <div class="field" data-k="rent"><label for="c-rent"><span class="n">04</span> Monthly rental income</label><div class="row"><input type="range" id="c-rent-r" min="0" max="8000" step="50" value="1800" aria-label="Monthly rental income slider"><div class="num"><span>$</span><input id="c-rent" inputmode="numeric" value="1,800"></div></div><p>Realistic market rent for the finished property.</p></div>
-    </form>
-    <div class="calc-out" aria-live="polite">
-      <div><span>Acquisition + renovation</span><b id="o-all">$140,000</b><small>Cost to buy + cost to rehab</small></div>
-      <div><span>Potential gross equity spread</span><b id="o-spread">$55,000</b><small>After-repair value − (buy + rehab). <em>Not profit:</em> closing, financing, holding and selling costs come out of this.</small></div>
-      <div><span>Annual gross rental income</span><b id="o-rent">$21,600</b><small>Monthly rent × 12. <em>Not cash flow:</em> taxes, insurance, vacancy, repairs and debt payments come out of this.</small></div>
+    <div class="dash">
+      <div class="dash-h">Deal snapshot <span>Illustrative example</span></div>
+      <form id="calc" onsubmit="return false" aria-describedby="calc-disc">
+        <div class="fld" data-k="buy"><div class="fld-t"><label for="c-buy"><i>01</i>Cost to buy</label><div class="num"><span>$</span><input id="c-buy" inputmode="numeric" autocomplete="off" value="95,000"></div></div>
+      <input type="range" id="c-buy-r" min="20000" max="400000" step="5000" value="95000" aria-label="Cost to buy slider"><small>The price you pay to acquire the property.</small></div>
+        <div class="fld" data-k="rehab"><div class="fld-t"><label for="c-rehab"><i>02</i>Cost to rehab</label><div class="num"><span>$</span><input id="c-rehab" inputmode="numeric" autocomplete="off" value="45,000"></div></div>
+      <input type="range" id="c-rehab-r" min="0" max="200000" step="2500" value="45000" aria-label="Cost to rehab slider"><small>Every repair, budgeted before you buy.</small></div>
+        <div class="fld" data-k="arv"><div class="fld-t"><label for="c-arv"><i>03</i>After-repair value</label><div class="num"><span>$</span><input id="c-arv" inputmode="numeric" autocomplete="off" value="195,000"></div></div>
+      <input type="range" id="c-arv-r" min="30000" max="700000" step="5000" value="195000" aria-label="After-repair value slider"><small>What renovated comparables actually sell for.</small></div>
+        <div class="fld" data-k="rent"><div class="fld-t"><label for="c-rent"><i>04</i>Monthly rental income</label><div class="num"><span>$</span><input id="c-rent" inputmode="numeric" autocomplete="off" value="1,800"></div></div>
+      <input type="range" id="c-rent-r" min="0" max="8000" step="50" value="1800" aria-label="Monthly rental income slider"><small>Realistic market rent for the finished property.</small></div>
+      </form>
+      <div class="outs" aria-live="polite">
+        <div class="out"><span>Acquisition + renovation</span><b id="o-all">$140,000</b><small>Cost to buy + cost to rehab</small></div>
+        <div class="out key"><span>Potential gross equity spread</span><b id="o-spread">$55,000</b><small>After-repair value − (buy + rehab). <em>Not profit:</em> closing, financing, holding and selling costs come out of this.</small></div>
+        <div class="out"><span>Annual gross rental income</span><b id="o-rent">$21,600</b><small>Monthly rent × 12. <em>Not cash flow:</em> taxes, insurance, vacancy, repairs and debt payments come out of this.</small></div>
+      </div>
     </div>
-    <p class="calc-disc" id="calc-disc">Illustrative example only. These figures are not a real property, an offer, an appraisal or a projection of your results, and they leave out closing, financing, holding and selling costs. In mentorship you learn to find and verify each number on real deals.</p>
   </div>
+  <p class="disc" id="calc-disc">Illustrative example only. These figures are not a real property, an offer, an appraisal or a projection of your results, and they leave out closing, financing, holding and selling costs. In mentorship you learn to find and verify each number on real deals.</p>
 </div></section>
-
-<section class="band dark mm" id="mentor"><div class="wrap split rev">
-  <div class="mm-photo"><img src="/assets/mentorship/odis-navy.jpg" alt="Odis D. James III" width="700" height="1050" loading="lazy"></div>
-  <div class="text">
-    <span class="eyebrow">Meet your mentor</span>
-    <h2>Odis D. James III</h2>
-    <p class="lead" style="color:#E4E4E4">Investor, entrepreneur, author and founder of 4 Data Points Academy and VentureU.</p>
-    <p class="muted">Odis grew up going to real estate investment meetings with his father, who has been licensed since 1971. After serving in the U.S. Navy, he started as a leasing consultant in 2001 and rose to the corporate level in multifamily, overseeing 2,860 apartment units and more than $650 million in assets. As a mortgage broker he funded more than $1 billion in loans.</p>
-    <p class="muted">Today he is a licensed real estate broker in California and Georgia, a full-time investor and the author of seven books. He built 4 Data Points Academy to teach investors the same standard he uses on his own deals.</p>
-    <div class="btn-row"><a class="btn btn-gold" href="#programs" data-explore="mentor">Explore Mentorship Programs</a></div>
-  </div>
-</div></section>
-
-<section class="band light"><div class="wrap">
-  <div class="head"><span class="eyebrow">Inside the Academy</span><h2>Live, instructor-led training in residential and commercial real estate.</h2><p class="muted">100+ real estate topics, with new lessons added regularly, in a video and PDF library you can study on your own time.</p></div>
-  <div class="grid g3 mi">
-    <div class="card"><span class="tag">Live classes</span><h3>Three nights a week</h3><p>Tuesday to Thursday at 5:00 PM Pacific / 8:00 PM Eastern, online and recorded. Mondays are reserved for One-on-One and Jumpstart appointments.</p></div>
-    <div class="card"><span class="tag">Residential</span><h3>Deals from first look to closing</h3><p>Analyzing residential deals, finding off-market property, building your team, fix &amp; flip, BRRRR and buy &amp; hold.</p></div>
-    <div class="card"><span class="tag">Commercial</span><h3>Multifamily and beyond</h3><p>Cap rates and NOI, multifamily due diligence, types of commercial leases and running income property.</p></div>
-    <div class="card"><span class="tag">Financing</span><h3>Creative and conventional</h3><p>Seller financing, subject-to, hard money and asset-based lending, and conventional loans.</p></div>
-    <div class="card"><span class="tag">Asset protection</span><h3>Land trusts and compliance</h3><p>Understanding land trusts and deeds, staying compliant, and tax deeds.</p></div>
-    <div class="card"><span class="tag">Tools</span><h3>The 4 Data Points Academy app</h3><p>Class reminders, lessons, deal tools and the digital Field Manuals in your pocket, plus the student portal and document library.</p></div>
-  </div>
-  <div class="mi-terms">
-    <p><b>No end date.</b> Once your tuition is paid in full, your access to classes, the library and support continues for as long as you're building. Access is subject to our <a href="/terms-of-service/">Terms of Service</a>, including keeping your account in good standing.</p>
-    <p><b>Events.</b> Students get student pricing on in-person workshops and events. VentureU international business retreats are separate programs with their own registration.</p>
-  </div>
-</div></section>
-
-<section class="band dark2" id="stories"><div class="wrap">
-  <div class="head"><span class="eyebrow">Real students. Real experiences.</span><h2>Hear it from mentorship students doing the deals.</h2></div>
-  <div class="tvids tvids-3"><div class="tv"><video data-v="johnny-jackson" poster="/assets/img/t-johnny-jackson.jpg" controls playsinline preload="none" aria-label="Johnny Jackson testimonial video, captioned"></video><b>Johnny Jackson</b><small>One-on-One student, three years</small><q>His program will have you confident in your abilities to execute real estate deals.</q></div><div class="tv"><video data-v="brandon-hines" poster="/assets/img/t-brandon-hines.jpg" controls playsinline preload="none" aria-label="Brandon Hines testimonial video, captioned"></video><b>Brandon Hines</b><small>Mentorship student</small><q>Fast forward a couple years. I’m a landlord. I own multiple properties.</q></div><div class="tv"><video data-v="eli-louis" poster="/assets/img/t-eli-louis.jpg" controls playsinline preload="none" aria-label="Eli Louis testimonial video, captioned"></video><b>Eli Louis</b><small>Mentorship student</small><q>We were able to successfully flip several properties because of the program.</q></div></div>
-  <div class="split ms-more" style="margin-top:40px;align-items:center">
-    <div class="ms-pair"><div class="tv"><video data-v="millena-gay" poster="/assets/img/t-millena-gay.jpg" controls playsinline preload="none" aria-label="Millena Gay testimonial video, captioned"></video><b>Millena Gay</b><small>Mentorship student</small><q>Four years ago, when I decided to get back into real estate, 4 Data Points was where I got started.</q></div></div>
-    <div><div class="split" style="margin-top:48px;align-items:center"><div class="tv"><video style="aspect-ratio:16/9" data-v="bush-family" poster="/assets/img/t-bush-family.jpg" controls playsinline preload="none" aria-label="William &amp; Katrese Bush testimonial video, captioned"></video></div><div class="text"><span class="eyebrow">Mentorship · No end date</span><p class="quote" style="color:#E4E4E4">“It’s not a six-to-eight-month program and then you’re done. You’re with the family. You can come back as much as you need.”</p><p class="quote-by">William &amp; Katrese Bush</p><small style="color:#A9ACB2">Mentorship students · Group project investors</small></div></div></div>
-  </div>
-  <div class="ms-ws"><span class="eyebrow">From our live workshops</span><p class="muted">Workshop attendees, not mentorship students.</p>
-    <div class="tposters"><div class="tp"><div class="thumb"><img src="/assets/img/t-luciana-collins.jpg" alt="Luciana Collins testimonial video" loading="lazy"><span class="dur">0:42</span></div><b>Luciana Collins</b><small>Multifamily workshop</small><q>You will gain value from a mentor that is going to give you his time and individual attention.</q></div><div class="tp"><div class="thumb"><img src="/assets/img/t-salomon-makwani.jpg" alt="Salomon Makwani testimonial video" loading="lazy"><span class="dur">1:07</span></div><b>Salomon Makwani</b><small>Live workshop</small><q>He’s not talking about theory. He’s talking about things that he has done.</q></div><div class="tp"><div class="thumb"><img src="/assets/img/t-brittany-wilson.jpg" alt="Brittany Wilson testimonial video" loading="lazy"><span class="dur">1:09</span></div><b>Brittany Wilson</b><small>Live workshop</small><q>It was time to actually put some action behind all of this learning.</q></div><div class="tp"><div class="thumb"><img src="/assets/img/t-gercy-jean-pierre.jpg" alt="Gercy Jean-Pierre testimonial video" loading="lazy"><span class="dur">2:03</span></div><b>Gercy Jean-Pierre</b><small>Live workshop</small><q>I’m feeling much more prepared, ready to go. He’s given me actionable items.</q></div><div class="tp"><div class="thumb"><img src="/assets/img/t-jocelyn-mcclure.jpg" alt="Jocelyn McClure testimonial video" loading="lazy"><span class="dur">1:23</span></div><b>Jocelyn McClure</b><small>Realtor for 30 years</small><q>My expectation was that I would get value from the event, and that’s exactly what happened.</q></div><div class="tp"><div class="thumb"><img src="/assets/img/t-nicole.jpg" alt="Nicole testimonial video" loading="lazy"><span class="dur">1:40</span></div><b>Nicole</b><small>Live workshop</small><q>Walking through it step by step, everything just clicked.</q></div><div class="tp"><div class="thumb"><img src="/assets/img/t-tracy.jpg" alt="Tracy testimonial video" loading="lazy"><span class="dur">0:38</span></div><b>Tracy</b><small>Live workshop</small><q>There’s a lot of misinformation out there about LLCs and business structure. They clarified it in one day.</q></div><div class="tp"><div class="thumb"><img src="/assets/img/t-zach.jpg" alt="Zach testimonial video" loading="lazy"><span class="dur">0:41</span></div><b>Zach</b><small>Mastermind attendee</small><q>I’ve been stuck in analysis paralysis. Now I’m definitely ready to take action.</q></div></div></div>
-  <p class="ms-note">Individual experiences, shared with permission. Results are not typical and are not a guarantee of results.</p>
-</div></section>
-
-<section class="band light" id="programs"><div class="wrap">
-  <div class="head"><span class="eyebrow">Choose your level of support</span><h2>Pick your program and enroll today.</h2><p class="muted">No application and no waiting list. Every program includes the full curriculum and live classes, is a one-time payment, and has no end date. Your access starts the moment you enroll.</p></div>
-  <div class="cmp-wrap" role="region" aria-label="Program comparison" tabindex="0"><table class="cmp">
-  <thead><tr><th scope="col"><span class="sr">Included</span></th><th scope="col"><span class="lvl">01 · Learn</span>Group<br><b>$5,999</b></th><th scope="col" class="f"><span class="lvl">02 · Execute</span>1-on-1<br><b>$12,999</b></th><th scope="col"><span class="lvl">03 · Build</span>Jumpstart<br><b>$15,999</b></th></tr></thead>
-  <tbody>
-    <tr><th scope="row">Full residential &amp; multifamily curriculum</th><td>✓</td><td class="f">✓</td><td>✓</td></tr>
-    <tr><th scope="row">Live classes Tue–Thu, recorded</th><td>✓</td><td class="f">✓</td><td>✓</td></tr>
-    <tr><th scope="row">App, portal, document library, Field Manual set</th><td>✓</td><td class="f">✓</td><td>✓</td></tr>
-    <tr><th scope="row">Group projects &amp; student event pricing</th><td>✓</td><td class="f">✓</td><td>✓</td></tr>
-    <tr><th scope="row">Hands-on help on your own deals</th><td>—</td><td class="f">✓</td><td>✓</td></tr>
-    <tr><th scope="row">Deal reviews &amp; land trust package</th><td>—</td><td class="f">✓</td><td>✓</td></tr>
-    <tr><th scope="row">Priority, direct access to Odis</th><td>—</td><td class="f">✓</td><td>✓</td></tr>
-    <tr><th scope="row">Empire Cornerstone business setup</th><td>—</td><td class="f">—</td><td>✓</td></tr>
-    <tr><th scope="row">A year of business consulting &amp; 90-day plan</th><td>—</td><td class="f">—</td><td>✓</td></tr>
-    <tr class="pay"><th scope="row">Tuition</th><td>One-time</td><td class="f">One-time</td><td>One-time*</td></tr>
-  </tbody></table>
-  <p class="cmp-note">*Jumpstart tuition is one-time. The optional Empire Cornerstone service is $97/month, billed separately once your build is live.</p></div>
-  <div class="grid g3">
-      <div class="card tier" id="tier-group"><svg class="lvl-art" viewBox="0 0 120 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.4"><path d="M8 58h104"/><path d="M30 58V30l30-20 30 20v28"/><path d="M48 58V40h24v18"/><path d="M8 50h104M8 42h104M8 34h104M8 26h104M8 18h104" stroke-dasharray="2 4" opacity=".35"/></g></svg><span class="lvl">Level 01 · Learn</span><span class="tag">Group Curriculum</span><p class="pos">Learn to think like an investor.</p><div class="price">$5,999</div><p class="tier-lead">No end date: support for as long as you need it.</p><ul class="ticks"><li>Live classes Tuesday to Thursday, plus recordings</li><li>Full residential and multifamily curriculum</li><li>Real Estate Investor's Field Manual set (Residential and Multifamily Commercial)</li><li>4 Data Points Academy app, student portal and document library</li><li>Group projects, plus student pricing on in-person workshops and events</li></ul><a class="btn btn-gold" href="https://link.4datapoints.com/payment-link/698119c83533383294c0cf03" target="_blank" rel="noopener" data-enroll="Group" data-price="5999">Enroll in Group · $5,999</a></div>
-      <div class="card tier feat" id="tier-1on1"><svg class="lvl-art" viewBox="0 0 120 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 58h104"/><path d="M30 58V30l30-20 30 20v28z" fill="currentColor" fill-opacity=".12"/><path d="M50 58V42h20v16"/><rect x="36" y="32" width="10" height="8"/><rect x="74" y="32" width="10" height="8"/></g></svg><span class="lvl">Level 02 · Execute</span><span class="tag">1-on-1 Mentorship</span><p class="pos">Stop guessing. Start executing.</p><div class="price">$12,999</div><p class="tier-value">Includes a land trust package ($700 value) and deal reviews ($500+ value each)</p><p class="tier-lead">Hands-on guidance on your real deals, across every strategy.</p><p class="tier-note" style="margin:-.3rem 0 .5rem">Where most of our student success stories come from.</p><blockquote class="tier-quote">“His program will have you confident in your abilities to execute real estate deals.”<cite>Johnny Jackson, One-on-One student</cite></blockquote><ul class="ticks"><li>Everything in Group</li><li>Land trust document package ($700 value)</li><li>Deal reviews included ($500+ value each)</li><li>Step-by-step help on your own deals: fix &amp; flip, BRRRR, buy &amp; hold, multifamily and creative financing</li><li>Help structuring group deals you can write yourself into</li><li>Rehab setup, zoning and permits, and recording</li><li>Systems to run your income property</li><li>Personal intake and a custom plan for your goals</li><li>How to represent yourself on a purchase and pull equity out of a property</li><li>Priority, direct access to Odis by text</li><li>Spots are limited</li></ul><a class="btn btn-gold" href="https://link.4datapoints.com/payment-link/69811a6fc80eafe16897c482" target="_blank" rel="noopener" data-enroll="1-on-1" data-price="12999">Enroll in 1-on-1 · $12,999</a></div>
-      <div class="card tier" id="tier-jumpstart"><svg class="lvl-art" viewBox="0 0 120 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 58h104"/><rect x="14" y="30" width="26" height="28" fill="currentColor" fill-opacity=".12"/><rect x="46" y="12" width="30" height="46" fill="currentColor" fill-opacity=".18"/><rect x="82" y="24" width="24" height="34" fill="currentColor" fill-opacity=".12"/><path d="M52 20h6M64 20h6M52 30h6M64 30h6M52 40h6M64 40h6M20 38h6M30 38h4M88 32h4M96 32h4M88 42h4M96 42h4"/></g></svg><span class="lvl">Level 03 · Build</span><span class="tag">Jumpstart Business Premier</span><p class="pos">Build more than a portfolio. Build a business.</p><div class="price">$15,999</div><p class="tier-value">Includes the $1,497 Empire Cornerstone setup and a year of business consulting</p><p class="tier-lead">Your real estate and your business, built together.</p><ul class="ticks"><li>Everything in 1-on-1</li><li>Empire Cornerstone, done-for-you business setup ($1,497 value):<ul class="sub"><li>Website on your own domain and branded email</li><li>Business number with missed-call text-back</li><li>CRM, booking calendar and reminders</li><li>Invoices, estimates and online payments</li><li>Automatic lead replies and review requests</li><li>Google Business Profile setup</li></ul></li><li>Upgrade to Empire Foundation or Builder anytime by paying the difference</li><li>A full year of business consulting with Odis</li><li>Any business, real estate or not</li><li>Full business intake and a 90-day plan</li><li>Spots are limited</li></ul><p class="tier-note"><b>Separate from tuition:</b> Empire Cornerstone has a $97/month service fee that starts only once your build is live. Keeping it running is your choice.</p><a class="btn btn-gold" href="https://link.4datapoints.com/payment-link/69811fc36503cad9dc7f896c" target="_blank" rel="noopener" data-enroll="Jumpstart" data-price="15999">Enroll in Jumpstart · $15,999</a></div>
+<section class="sec light" id="mentor" aria-labelledby="mentor-h"><div class="wrap vf">
+  <figure class="vf-ph rv" style="margin:0"><img src="/assets/mentorship/odis-4x5.jpg" srcset="/assets/mentorship/odis-4x5-sm.jpg 480w, /assets/mentorship/odis-4x5.jpg 800w" sizes="(max-width:900px) 92vw, 440px" alt="Odis D. James III, founder of 4 Data Points Academy" width="800" height="1000" loading="lazy"></figure>
+  <div>
+    <span class="kick">Meet your mentor</span>
+    <h2 class="h2" id="mentor-h">Learn from someone who has actually done it.</h2>
+    <p class="who">Odis D. James III<span>Investor, entrepreneur, author and founder of 4 Data Points Academy and VentureU</span></p>
+    <div class="cred">
+      <div><b>2,860</b><span>Apartment units overseen</span></div>
+      <div><b>$650M+</b><span>Multifamily assets managed (not owned)</span></div>
+      <div><b>$1B+</b><span>Loans funded as a mortgage broker</span></div>
+      <div><b>Since 2001</b><span>25 years in real estate</span></div>
+      <div><b>CA &amp; GA</b><span>Licensed real estate broker</span></div>
+      <div><b>7 books</b><span>Published author · U.S. Navy veteran</span></div>
     </div>
-    
-  <div class="plan-help"><b>Not sure which program fits?</b> <a class="btn btn-line" href="/talk/?topic=mentorship#details" data-speak="programs">Book a Free Mentorship Call</a></div>
+    <details class="more"><summary>Read Odis's story</summary>
+      <p>Odis grew up going to real estate investment meetings with his father, who has been licensed since 1971. After serving in the U.S. Navy, he started as a leasing consultant in 2001 and rose to the corporate level in multifamily, overseeing 2,860 apartment units and more than $650 million in assets. As a mortgage broker he funded more than $1 billion in loans.</p>
+      <p>Today he is a licensed real estate broker in California and Georgia, a full-time investor and the author of seven books. He built 4 Data Points Academy to teach investors the same standard he uses on his own deals.</p>
+    </details>
+    <div class="btns"><a class="btn btn-ink" href="#programs" data-explore="mentor">Explore Mentorship Programs <span class="ar" aria-hidden="true">&rarr;</span></a></div>
+  </div>
+</div></section>
+<section class="sec light ivory2" id="curriculum" aria-labelledby="cur-h"><div class="wrap">
+  <div class="sec-head split">
+    <div><span class="kick">Inside the Academy</span><h2 class="h2" id="cur-h">Live, instructor-led training in residential and commercial real estate.</h2></div>
+    <p class="lede">100+ real estate topics, with new lessons added regularly, in a video and PDF library you can study on your own time.</p>
+  </div>
+  <div class="cur">
+    <article class="ct c-a rv"><div class="im"><img src="/assets/mentorship/cur-acq.jpg" alt="A distressed two-story brick house before renovation" width="1200" height="675" loading="lazy"></div><div class="tx"><span class="no">01 · ACQUISITION &amp; DEAL ANALYSIS</span><h3>Deals from first look to closing</h3><p>Analyzing residential deals, finding off-market property and building your team.</p></div></article>
+    <article class="ct c-b rv"><div class="im"><img src="/assets/mentorship/cur-mf.jpg" alt="Aerial view of a neighborhood with multifamily apartment buildings" width="1200" height="675" loading="lazy"></div><div class="tx"><span class="no">02 · RESIDENTIAL &amp; MULTIFAMILY</span><h3>Multifamily and beyond</h3><p>Cap rates and NOI, multifamily due diligence, types of commercial leases and running income property.</p></div></article>
+    <article class="ct c-c rv"><div class="im"><svg viewBox="0 0 400 300" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="400" height="300" fill="#EDE8DD"/><g fill="none" stroke="currentColor" stroke-width="1.3"><path d="M40 250h320" /><path d="M90 250V140l70-50 70 50v110"/><path d="M130 250v-60h60v60"/><path d="M230 250V170h110v80"/><path d="M250 190h20v20h-20zM300 190h20v20h-20z"/><path d="M60 110c40-30 80-30 120 0s80 30 120 0 60-25 80-10" stroke-dasharray="4 6" opacity=".7"/><circle cx="60" cy="110" r="4" fill="currentColor"/><circle cx="300" cy="110" r="4" fill="currentColor"/></g><g fill="currentColor" font-family="Manrope,sans-serif" font-size="11" letter-spacing="1.5" opacity=".75"><text x="40" y="275">SELLER</text><text x="306" y="275">INVESTOR</text></g></svg></div><div class="tx"><span class="no">03 · CREATIVE FINANCING</span><h3>Creative and conventional</h3><p>Seller financing, subject-to, hard money and asset-based lending, and conventional loans.</p></div></article>
+    <article class="ct c-d rv"><div class="im"><img src="/assets/mentorship/cur-rehab.jpg" alt="A house under renovation with scaffolding and a dumpster" width="900" height="675" loading="lazy"></div><div class="tx"><span class="no">04 · REHAB &amp; EXECUTION</span><h3>Strategies that get executed</h3><p>Fix &amp; flip, BRRRR and buy &amp; hold, from the first bid to the finished property.</p></div></article>
+    <article class="ct c-e rv"><div class="im"><svg viewBox="0 0 400 300" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="400" height="300" fill="#EDE8DD"/><g fill="none" stroke="currentColor" stroke-width="1.3"><path d="M200 40l110 40v70c0 60-50 95-110 115-60-20-110-55-110-115V80z"/><path d="M200 62l88 32v56c0 48-40 77-88 93-48-16-88-45-88-93V94z" opacity=".45"/><path d="M150 200v-55l50-35 50 35v55z"/><path d="M185 200v-32h30v32"/></g></svg></div><div class="tx"><span class="no">05 · ASSET PROTECTION</span><h3>Land trusts and compliance</h3><p>Understanding land trusts and deeds, staying compliant, and tax deeds.</p></div></article>
+    <article class="ct c-f rv"><div class="im"><svg viewBox="0 0 400 300" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="400" height="300" fill="#EDE8DD"/><g fill="none" stroke="currentColor" stroke-width="1.3"><rect x="150" y="40" width="100" height="200" rx="16"/><path d="M185 52h30"/><rect x="164" y="72" width="72" height="50" rx="6"/><path d="M176 110l14-14 12 10 22-22" /><path d="M164 136h72M164 152h50M164 168h60M164 184h40"/><rect x="164" y="200" width="72" height="22" rx="11" fill="currentColor" fill-opacity=".12"/><path d="M70 230h70M260 230h70M90 230V150l30-22 30 22M310 230v-70h-40" opacity=".55"/></g></svg></div><div class="tx"><span class="no">06 · TECHNOLOGY &amp; TOOLS</span><h3>The 4 Data Points Academy app</h3><p>Class reminders, lessons, deal tools and the digital Field Manuals in your pocket, plus the student portal and document library.</p></div></article>
+  </div>
+  <div class="sched rv">
+    <h3><span>Live classes</span>Three nights a week</h3>
+    <p><b>Tuesday to Thursday, 5:00 PM Pacific / 8:00 PM Eastern.</b> Online and recorded. Mondays are reserved for One-on-One and Jumpstart appointments.</p>
+    <p><b>No end date.</b> Once your tuition is paid in full, your access to classes, the library and support continues for as long as you're building, subject to our <a href="/terms-of-service/">Terms of Service</a>, including keeping your account in good standing. Students get student pricing on in-person workshops and events; VentureU international retreats are separate programs.</p>
+  </div>
+</div></section>
+<section class="sec" id="stories" aria-labelledby="st-h"><div class="wrap">
+  <div class="sec-head split">
+    <div><span class="kick">Mentorship students</span><h2 class="h2" id="st-h">Hear it from the students doing the deals.</h2></div>
+    <p class="lede">Every video is an unscripted account from an Academy student, shared with permission.</p>
+  </div>
+  <div class="feat3"><article class="st rv"><div class="vid"><video data-v="johnny-jackson" poster="/assets/img/t-johnny-jackson.jpg" playsinline preload="none" aria-label="Johnny Jackson testimonial video, captioned"></video><button class="play" type="button" aria-label="Play Johnny Jackson's story"><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L13.6 8z" fill="currentColor"/></svg></i><span class="len"></span></button></div>
+  <div class="st-m"><b>Johnny Jackson</b><small>One-on-One student · three years</small><q>His program will have you confident in your abilities to execute real estate deals.</q></div></article><article class="st rv"><div class="vid"><video data-v="brandon-hines" poster="/assets/img/t-brandon-hines.jpg" playsinline preload="none" aria-label="Brandon Hines testimonial video, captioned"></video><button class="play" type="button" aria-label="Play Brandon Hines's story"><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L13.6 8z" fill="currentColor"/></svg></i><span class="len"></span></button></div>
+  <div class="st-m"><b>Brandon Hines</b><small>Mentorship student</small><q>Fast forward a couple years. I’m a landlord. I own multiple properties.</q></div></article><article class="st rv"><div class="vid"><video data-v="eli-louis" poster="/assets/img/t-eli-louis.jpg" playsinline preload="none" aria-label="Eli Louis testimonial video, captioned"></video><button class="play" type="button" aria-label="Play Eli Louis's story"><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L13.6 8z" fill="currentColor"/></svg></i><span class="len"></span></button></div>
+  <div class="st-m"><b>Eli Louis</b><small>Mentorship student</small><q>We were able to successfully flip several properties because of the program.</q></div></article></div>
+  <p class="swipe">Swipe for more stories &rarr;</p>
+  <div class="more-st"><article class="st rv"><div class="vid"><video data-v="millena-gay" poster="/assets/img/t-millena-gay.jpg" playsinline preload="none" aria-label="Millena Gay testimonial video, captioned"></video><button class="play" type="button" aria-label="Play Millena Gay's story"><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L13.6 8z" fill="currentColor"/></svg></i><span class="len"></span></button></div>
+  <div class="st-m"><b>Millena Gay</b><small>Mentorship student</small><q>Four years ago, when I decided to get back into real estate, 4 Data Points was where I got started.</q></div></article><article class="st rv"><div class="vid"><video data-v="bush-family" poster="/assets/img/t-bush-family.jpg" playsinline preload="none" aria-label="William &amp; Katrese Bush testimonial video, captioned"></video><button class="play" type="button" aria-label="Play William &amp; Katrese Bush's story"><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L13.6 8z" fill="currentColor"/></svg></i><span class="len"></span></button></div>
+  <div class="st-m"><b>William &amp; Katrese Bush</b><small>Mentorship students · group project investors</small><q>It’s not a six-to-eight-month program and then you’re done. You’re with the family. You can come back as much as you need.</q></div></article></div>
+  <div class="subh"><h3>From our live workshops</h3><p>Workshop and event attendees, not mentorship students.</p></div>
+  <div class="rail" tabindex="0" aria-label="Workshop attendee testimonials"><div class="wk"><div class="ph"><img src="/assets/img/t-luciana-collins.jpg" alt="Luciana Collins testimonial video" width="480" height="270" loading="lazy"><span>0:42</span></div><b>Luciana Collins</b><small>Multifamily workshop</small><q>You will gain value from a mentor that is going to give you his time and individual attention.</q></div><div class="wk"><div class="ph"><img src="/assets/img/t-salomon-makwani.jpg" alt="Salomon Makwani testimonial video" width="480" height="270" loading="lazy"><span>1:07</span></div><b>Salomon Makwani</b><small>Live workshop</small><q>He’s not talking about theory. He’s talking about things that he has done.</q></div><div class="wk"><div class="ph"><img src="/assets/img/t-brittany-wilson.jpg" alt="Brittany Wilson testimonial video" width="480" height="270" loading="lazy"><span>1:09</span></div><b>Brittany Wilson</b><small>Live workshop</small><q>It was time to actually put some action behind all of this learning.</q></div><div class="wk"><div class="ph"><img src="/assets/img/t-gercy-jean-pierre.jpg" alt="Gercy Jean-Pierre testimonial video" width="480" height="270" loading="lazy"><span>2:03</span></div><b>Gercy Jean-Pierre</b><small>Live workshop</small><q>I’m feeling much more prepared, ready to go. He’s given me actionable items.</q></div><div class="wk"><div class="ph"><img src="/assets/img/t-jocelyn-mcclure.jpg" alt="Jocelyn McClure testimonial video" width="480" height="270" loading="lazy"><span>1:23</span></div><b>Jocelyn McClure</b><small>Realtor for 30 years</small><q>My expectation was that I would get value from the event, and that’s exactly what happened.</q></div><div class="wk"><div class="ph"><img src="/assets/img/t-nicole.jpg" alt="Nicole testimonial video" width="480" height="270" loading="lazy"><span>1:40</span></div><b>Nicole</b><small>Live workshop</small><q>Walking through it step by step, everything just clicked.</q></div><div class="wk"><div class="ph"><img src="/assets/img/t-tracy.jpg" alt="Tracy testimonial video" width="480" height="270" loading="lazy"><span>0:38</span></div><b>Tracy</b><small>Live workshop</small><q>There’s a lot of misinformation out there about LLCs and business structure. They clarified it in one day.</q></div><div class="wk"><div class="ph"><img src="/assets/img/t-zach.jpg" alt="Zach testimonial video" width="480" height="270" loading="lazy"><span>0:41</span></div><b>Zach</b><small>Mastermind attendee</small><q>I’ve been stuck in analysis paralysis. Now I’m definitely ready to take action.</q></div></div>
+  <p class="st-note">Individual experiences, shared with permission. Results are not typical and are not a guarantee of results.</p>
+</div></section>
+<section class="sec light" id="programs" aria-labelledby="pg-h"><div class="wrap">
+  <div class="sec-head split">
+    <div><span class="kick">Choose your level of support</span><h2 class="h2" id="pg-h">Pick your program and enroll today.</h2></div>
+    <p class="lede">No application and no waiting list. Every program includes the full curriculum and live classes, is a one-time tuition payment, and has no end date.</p>
+  </div>
+  <div class="tiers">
+  <article class="tier" id="tier-group"><svg class="art" viewBox="0 0 120 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 58h108"/><path d="M34 58V32l26-20 26 20v26"/><path d="M52 58V42h16v16"/><path d="M6 50h108M6 42h108M6 34h108M6 26h108M6 18h108" stroke-dasharray="2 4" opacity=".35"/></g></svg><span class="lv">Level 01 · Learn</span><h3>Group Curriculum</h3><p class="vp">Learn to think like an investor.</p>
+    <div class="pr"><b>$5,999</b><span>One-time tuition</span></div>
+    <p class="fee"><b>No monthly fees.</b> No end date: support for as long as you need it.</p>
+    <ul class="k"><li>Live classes Tuesday to Thursday, plus recordings</li><li>Full residential and multifamily curriculum</li><li>Real Estate Investor's Field Manual set (Residential and Multifamily Commercial)</li><li>4 Data Points Academy app, student portal and document library</li><li>Group projects, plus student pricing on in-person workshops and events</li></ul>
+    <div class="go"><a class="btn btn-ink" href="https://link.4datapoints.com/payment-link/698119c83533383294c0cf03" target="_blank" rel="noopener" data-enroll="Group" data-price="5999">Enroll in Group · $5,999</a></div>
+  </article>
+  <article class="tier f" id="tier-1on1"><svg class="art" viewBox="0 0 120 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 58h108"/><path d="M34 58V32l26-20 26 20v26z" fill="currentColor" fill-opacity=".12"/><path d="M52 58V44h16v14"/><rect x="40" y="34" width="9" height="8"/><rect x="71" y="34" width="9" height="8"/><path d="M92 58V40h18v18" opacity=".55"/></g></svg><span class="lv">Level 02 · Execute</span><h3>One-on-One Mentorship</h3><p class="vp">Stop guessing. Start executing.</p>
+    <div class="pr"><b>$12,999</b><span>One-time tuition</span></div>
+    <p class="fee"><b>No monthly fees.</b> Includes a land trust package ($700 value) and deal reviews ($500+ value each).</p>
+    <p class="hl">Where most of our student success stories come from.</p>
+    <ul class="k"><li>Everything in Group</li><li>Step-by-step help on your own deals, across every strategy</li><li>Deal reviews included ($500+ value each)</li><li>Land trust document package ($700 value)</li><li>Personal intake and a custom plan for your goals</li><li>Priority, direct access to Odis by text</li></ul>
+    <div class="go"><a class="btn btn-ch" href="https://link.4datapoints.com/payment-link/69811a6fc80eafe16897c482" target="_blank" rel="noopener" data-enroll="1-on-1" data-price="12999">Enroll in One-on-One · $12,999</a></div>
+    <details><summary>See everything included</summary><ul>
+      <li>Everything in Group</li><li>Land trust document package ($700 value)</li><li>Deal reviews included ($500+ value each)</li><li>Step-by-step help on your own deals: fix &amp; flip, BRRRR, buy &amp; hold, multifamily and creative financing</li><li>Help structuring group deals you can write yourself into</li><li>Rehab setup, zoning and permits, and recording</li><li>Systems to run your income property</li><li>Personal intake and a custom plan for your goals</li><li>How to represent yourself on a purchase and pull equity out of a property</li><li>Priority, direct access to Odis by text</li><li>Spots are limited</li></ul>
+      <blockquote>“His program will have you confident in your abilities to execute real estate deals.”<cite>Johnny Jackson, One-on-One student</cite></blockquote></details>
+  </article>
+  <article class="tier" id="tier-jumpstart"><svg class="art" viewBox="0 0 120 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 58h108"/><rect x="12" y="32" width="24" height="26" fill="currentColor" fill-opacity=".1"/><rect x="44" y="10" width="32" height="48" fill="currentColor" fill-opacity=".18"/><rect x="84" y="24" width="24" height="34" fill="currentColor" fill-opacity=".1"/><path d="M51 18h6M63 18h6M51 28h6M63 28h6M51 38h6M63 38h6M18 40h5M27 40h4M90 32h4M98 32h4M90 42h4M98 42h4"/></g></svg><span class="lv">Level 03 · Build</span><h3>Jumpstart Business Premier</h3><p class="vp">Build more than a portfolio. Build a business.</p>
+    <div class="pr"><b>$15,999</b><span>One-time tuition</span></div>
+    <p class="fee"><b>Plus $97/month, billed separately:</b> the Empire Cornerstone service fee starts only once your business build is live. Keeping it running is your choice.</p>
+    <ul class="k"><li>Everything in One-on-One</li><li>Empire Cornerstone done-for-you business setup ($1,497 value)</li><li>A full year of business consulting with Odis</li><li>Full business intake and a 90-day plan</li><li>Any business, real estate or not</li><li>Upgrade to Empire Foundation or Builder anytime by paying the difference</li></ul>
+    <div class="go"><a class="btn btn-ink" href="https://link.4datapoints.com/payment-link/69811fc36503cad9dc7f896c" target="_blank" rel="noopener" data-enroll="Jumpstart" data-price="15999">Enroll in Jumpstart · $15,999</a></div>
+    <details><summary>See everything included</summary><ul>
+      <li>Everything in 1-on-1</li><li>Empire Cornerstone, done-for-you business setup ($1,497 value):<ul><li>Website on your own domain and branded email</li><li>Business number with missed-call text-back</li><li>CRM, booking calendar and reminders</li><li>Invoices, estimates and online payments</li><li>Automatic lead replies and review requests</li><li>Google Business Profile setup</li></ul></li><li>Upgrade to Empire Foundation or Builder anytime by paying the difference</li><li>A full year of business consulting with Odis</li><li>Any business, real estate or not</li><li>Full business intake and a 90-day plan</li><li>Spots are limited</li></ul>
+      <p>Empire Cornerstone monthly fee ($97/month) billed separately, starting once your build is live.</p></details>
+  </article>
+</div>
+  <div class="cmp-h"><h3>Compare programs side by side</h3></div>
+  <table class="cmp"><caption class="sr">Program comparison</caption>
+  <thead><tr><th scope="col"><span class="sr">Included</span></th><th scope="col"><small>01 · Learn</small>Group<b>$5,999</b></th><th scope="col" class="f"><small>02 · Execute</small>One-on-One<b>$12,999</b></th><th scope="col"><small>03 · Build</small>Jumpstart<b>$15,999</b></th></tr></thead>
+  <tbody><tr><th scope="row">Full residential &amp; multifamily curriculum</th><td data-l="Group"><span class="y" role="img" aria-label="Included"></span></td><td data-l="1-on-1" class="f"><span class="y" role="img" aria-label="Included"></span></td><td data-l="Jumpstart"><span class="y" role="img" aria-label="Included"></span></td></tr><tr><th scope="row">Live classes Tue–Thu, recorded</th><td data-l="Group"><span class="y" role="img" aria-label="Included"></span></td><td data-l="1-on-1" class="f"><span class="y" role="img" aria-label="Included"></span></td><td data-l="Jumpstart"><span class="y" role="img" aria-label="Included"></span></td></tr><tr><th scope="row">App, portal, document library, Field Manual set</th><td data-l="Group"><span class="y" role="img" aria-label="Included"></span></td><td data-l="1-on-1" class="f"><span class="y" role="img" aria-label="Included"></span></td><td data-l="Jumpstart"><span class="y" role="img" aria-label="Included"></span></td></tr><tr><th scope="row">Group projects &amp; student event pricing</th><td data-l="Group"><span class="y" role="img" aria-label="Included"></span></td><td data-l="1-on-1" class="f"><span class="y" role="img" aria-label="Included"></span></td><td data-l="Jumpstart"><span class="y" role="img" aria-label="Included"></span></td></tr><tr><th scope="row">Hands-on help on your own deals</th><td data-l="Group"><span class="n" aria-label="Not included">—</span></td><td data-l="1-on-1" class="f"><span class="y" role="img" aria-label="Included"></span></td><td data-l="Jumpstart"><span class="y" role="img" aria-label="Included"></span></td></tr><tr><th scope="row">Deal reviews &amp; land trust package</th><td data-l="Group"><span class="n" aria-label="Not included">—</span></td><td data-l="1-on-1" class="f"><span class="y" role="img" aria-label="Included"></span></td><td data-l="Jumpstart"><span class="y" role="img" aria-label="Included"></span></td></tr><tr><th scope="row">Priority, direct access to Odis</th><td data-l="Group"><span class="n" aria-label="Not included">—</span></td><td data-l="1-on-1" class="f"><span class="y" role="img" aria-label="Included"></span></td><td data-l="Jumpstart"><span class="y" role="img" aria-label="Included"></span></td></tr><tr><th scope="row">Empire Cornerstone business setup</th><td data-l="Group"><span class="n" aria-label="Not included">—</span></td><td data-l="1-on-1" class="f"><span class="n" aria-label="Not included">—</span></td><td data-l="Jumpstart"><span class="y" role="img" aria-label="Included"></span></td></tr><tr><th scope="row">A year of business consulting &amp; 90-day plan</th><td data-l="Group"><span class="n" aria-label="Not included">—</span></td><td data-l="1-on-1" class="f"><span class="n" aria-label="Not included">—</span></td><td data-l="Jumpstart"><span class="y" role="img" aria-label="Included"></span></td></tr><tr><th scope="row">Tuition</th><td data-l="Group">$5,999 once</td><td data-l="1-on-1" class="f">$12,999 once</td><td data-l="Jumpstart">$15,999 once + $97/mo*</td></tr></tbody></table>
+  <p class="cmp-note">*Jumpstart tuition is one-time. The Empire Cornerstone service is $97/month, billed separately once your build is live.</p>
+  <div class="helpbar"><div><b>Not sure which program fits?</b><p>Talk it through with our team first. It's free, and there's no obligation.</p></div><a class="btn btn-ghost" href="/talk/?topic=mentorship#details" data-speak="programs">Book a Free Mentorship Call</a></div>
   <p class="fine">Tuition is a one-time payment. All sales are final; see our <a href="/refund-policy/">Refund Policy</a>. Start with Group and upgrade later by paying the difference.</p>
 </div></section>
-
-<section class="band white"><div class="wrap">
-  <div class="head"><span class="eyebrow">Questions people ask</span><h2>Before you enroll</h2></div>
-  <div class="faqs">
-    <details class="qa"><summary>Do I need experience or a lot of money?</summary><p>No. You don't need prior experience or a big savings account. You need guidance and a plan, and that's what we build with you.</p></details>
-    <details class="qa"><summary>How much time does it take?</summary><p>Live classes are three evenings a week, Tuesday to Thursday at 5:00 PM Pacific, and every class is recorded. Most students fit it around a full-time job and study the library on their own schedule.</p></details>
-    <details class="qa"><summary>Do I have to apply?</summary><p>No. Choose the program that fits and enroll. Onboarding starts right away. If you're unsure which level is right, book a free mentorship call first.</p></details>
-    <details class="qa"><summary>What does "no end date" mean?</summary><p>Once your tuition is paid in full, your access and support continue for as long as you're building. There are no monthly fees to keep your access. Access is subject to our Terms of Service.</p></details>
-    <details class="qa"><summary>What's the difference between the levels?</summary><p>Group Curriculum gives you the full curriculum, live classes and the student community. One-on-One adds hands-on help on your own deals and priority access to Odis. Jumpstart Business Premier adds a done-for-you business setup and a year of business consulting.</p></details>
-    <details class="qa"><summary>Is there a monthly fee?</summary><p>Not for tuition. The only recurring charge is the optional Empire Cornerstone service in Jumpstart Business Premier: $97/month, billed separately once your business build is live.</p></details>
-    <details class="qa"><summary>What if I miss a live class?</summary><p>Classes are recorded and added to the library, so you can catch up on your own time.</p></details>
-    <details class="qa"><summary>Do you offer refunds?</summary><p>All sales are final, so please ask any questions before you enroll. Book a free mentorship call or call 702-710-8030.</p></details>
+<section class="sec" aria-labelledby="faq-h"><div class="wrap">
+  <div class="sec-head"><span class="kick">Questions people ask</span><h2 class="h2" id="faq-h">Before you enroll</h2></div>
+  <div class="faq">
+    <div>
+    <details><summary>Do I need experience or a lot of money?</summary><p>No. You don't need prior experience or a big savings account. You need guidance and a plan, and that's what we build with you.</p></details>
+    <details><summary>How much time does it take?</summary><p>Live classes are three evenings a week, Tuesday to Thursday at 5:00 PM Pacific, and every class is recorded. Most students fit it around a full-time job and study the library on their own schedule.</p></details>
+    <details><summary>Do I have to apply?</summary><p>No. Choose the program that fits and enroll. Onboarding starts right away. If you're unsure which level is right, book a free mentorship call first.</p></details>
+    <details><summary>What does "no end date" mean?</summary><p>Once your tuition is paid in full, your access and support continue for as long as you're building. There are no monthly fees to keep your access. Access is subject to our Terms of Service.</p></details>
+    </div><div>
+    <details><summary>What's the difference between the levels?</summary><p>Group Curriculum gives you the full curriculum, live classes and the student community. One-on-One adds hands-on help on your own deals and priority access to Odis. Jumpstart Business Premier adds a done-for-you business setup and a year of business consulting.</p></details>
+    <details><summary>Is there a monthly fee?</summary><p>Not for tuition. The only recurring charge is the Empire Cornerstone service in Jumpstart Business Premier: $97/month, billed separately once your business build is live.</p></details>
+    <details><summary>What if I miss a live class?</summary><p>Classes are recorded and added to the library, so you can catch up on your own time.</p></details>
+    <details><summary>Do you offer refunds?</summary><p>All sales are final, so please ask any questions before you enroll. Book a free mentorship call or call 702-710-8030.</p></details>
+    </div>
   </div>
 </div></section>
-
-<section class="band dark mf"><div class="wrap">
-  <span class="eyebrow">From opportunity to ownership</span>
-  <h2>Your next deal starts with the right numbers.</h2>
-  <div class="btn-row" style="justify-content:center"><a class="btn btn-gold" href="#programs" data-explore="final">Explore Mentorship Programs</a><a class="btn btn-line" href="/talk/?topic=mentorship#details" data-speak="final">Book a Free Mentorship Call</a></div>
-</div></section>
-
-<div class="msticky" id="msticky"><a class="btn btn-gold" href="#programs" data-explore="sticky">Explore Programs</a><a class="btn btn-line" href="/talk/?topic=mentorship#details" data-speak="sticky">Free Call</a></div>
+<section class="vend graph" aria-labelledby="end-h">
+  <img src="/assets/mentorship/end.jpg" alt="" width="1600" height="900" loading="lazy">
+  <div class="wrap"><span class="kick">From opportunity to ownership</span>
+  <h2 id="end-h">Your next deal starts with the right numbers.</h2>
+  <div class="btns"><a class="btn btn-ch" href="#programs" data-explore="final">Explore Mentorship Programs <span class="ar" aria-hidden="true">&rarr;</span></a><a class="btn btn-ghost" href="/talk/?topic=mentorship#details" data-speak="final">Book a Free Mentorship Call</a></div></div>
+</section>
 </main>
-
-<footer><div class="wrap cols">
-  <div class="fcol-brand" style="display:grid;gap:12px;align-content:start"><img src="/assets/img/logo.png" alt="4 Data Points Academy" width="92" height="60" style="height:60px;width:auto"><p>Real estate investing and entrepreneurship education.</p><p>4 Data Points Academy, Inc.<br>3225 McLeod Drive, Suite 100<br>Las Vegas, NV 89121<br><a href="tel:+17027108030">702-710-8030</a> · <a href="mailto:info@4datapoints.com">info@4datapoints.com</a></p></div>
-  <div class="fcol"><h4>Real Estate</h4><ul><li><a href="/mentorship/">Mentorship</a></li><li><a href="/multifamily/">Multifamily Workshop</a></li><li><a href="/land-trust/">Land Trusts</a></li><li><a href="/financing/">Investor Financing</a></li><li><a href="/books/">Books</a></li><li><a href="https://forms.4datapoints.com/app">The App</a></li></ul></div>
-  <div class="fcol"><h4>Entrepreneurship</h4><ul><li><a href="/empire/">Empire</a></li><li><a href="/entrepreneurship/">Entrepreneur Course</a></li><li><a href="/ventureu/">VentureU Retreat</a></li><li><a href="/financing/">Business Financing</a></li><li><a href="/ascendu/">Self-Image Workshop</a></li><li><a href="/events/">Events</a></li></ul></div>
-  <div class="fcol"><h4>Company</h4><ul><li><a href="/about/">About Odis</a></li><li><a href="/contact/">Contact</a></li><li><a href="/partner/">Referral Partners</a></li><li><a href="https://portal.4datapoints.com/" target="_blank" rel="noopener">Student Portal</a></li></ul></div>
-</div><div class="wrap disclaim">4 Data Points Academy provides education. Nothing on this site is investment, legal, tax or financial advice. Real estate investing and starting a business involve risk, including loss of money. Student results and examples shown are not typical and are not a promise or guarantee of income or results; your results depend on your effort, experience, market and decisions. Odis D. James III is a licensed real estate broker in California and Georgia; 4DPA programs are educational and do not create a broker-client relationship.</div><div class="wrap legal"><span>© 2026 4 Data Points Academy, Inc.</span><span><a href="/privacy-policy/">Privacy Policy</a> · <a href="/terms-of-service/">Terms of Service</a> · <a href="/sms-terms/">Text Messaging Terms</a> · <a href="/refund-policy/">Refund Policy</a></span></div></footer>
-<script src="/assets/site.js" defer></script>
-<script src="/assets/mentorship/mentorship.js?v=3" defer></script>
+<footer class="vfoot"><div class="wrap">
+  <div class="top"><a href="/" aria-label="4 Data Points Academy home"><img src="/assets/img/logo.png" alt="4 Data Points Academy" width="83" height="54"></a>
+    <div class="ct2"><a href="tel:+17027108030">702-710-8030</a><a href="mailto:info@4datapoints.com">info@4datapoints.com</a><a href="https://portal.4datapoints.com/" target="_blank" rel="noopener">Student Portal</a><a href="/">4datapoints.com</a></div></div>
+  <p class="disc2">4 Data Points Academy provides education. Nothing on this site is investment, legal, tax or financial advice. Real estate investing involves risk, including loss of money. Student results and examples shown are not typical and are not a promise or guarantee of income or results; your results depend on your effort, experience, market and decisions. Odis D. James III is a licensed real estate broker in California and Georgia; 4DPA programs are educational and do not create a broker-client relationship.</p>
+  <div class="leg"><span>© 2026 4 Data Points Academy, Inc. · 3225 McLeod Drive, Suite 100, Las Vegas, NV 89121</span><span><a href="/privacy-policy/">Privacy</a><a href="/terms-of-service/">Terms</a><a href="/sms-terms/">Text Messaging Terms</a><a href="/refund-policy/">Refund Policy</a></span></div>
+</div></footer>
+<div class="vsticky" id="vsticky"><a class="btn btn-ch" href="#programs" data-explore="sticky">Explore Programs · from $5,999</a><a class="lnk" href="/talk/?topic=mentorship#details" data-speak="sticky">Free call</a></div>
+<script src="/assets/mentorship/v3.js?v=20261127c" defer></script>
 </body>
 </html>

@@ -1,0 +1,68 @@
+/* Mentorship flagship page. Builds on site.css: black, cream and gold, Poppins over Inter. */
+
+/* 1. Hero: muted rehab footage behind live text; button works from first paint */
+.mh{position:relative;min-height:min(88vh,820px);display:flex;align-items:flex-end;color:var(--paper);overflow:hidden;background:#111 url('/assets/re3d/rehab-poster.jpg') center/cover no-repeat}
+.mh-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;max-width:none}
+.mh-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(17,17,17,.25) 0%,rgba(17,17,17,.45) 45%,rgba(17,17,17,.92) 100%)}
+.mh-in{position:relative;display:grid;gap:18px;padding-block:clamp(110px,16vh,180px) clamp(48px,8vh,80px);max-width:1180px}
+.mh h1{font-size:clamp(2.2rem,5.4vw,4rem);max-width:17ch}
+.mh .lead{color:#E9E9E9;max-width:56ch}
+.mh-ghost{color:var(--paper)}
+.mh-tags{font-family:var(--display);font-size:.85rem;letter-spacing:.06em;color:#CFCFCF}
+
+/* 2. Credibility strip */
+.mc{background:var(--ink);color:var(--paper);border-top:1px solid #2c2c2c;padding-block:34px 30px}
+.mc-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;border:1px solid #333;border-radius:var(--r);overflow:hidden}
+.mc-item{padding:20px 18px;border-right:1px solid #333;display:grid;gap:4px;align-content:start}
+.mc-item:last-child{border-right:0}
+.mc-item b{font-family:var(--display);font-size:clamp(1.5rem,2.4vw,2rem);color:var(--gold-lt);font-variant-numeric:tabular-nums}
+.mc-item span{font-size:.86rem;color:#BFC1C5}
+.mc-line{margin-top:16px;text-align:center;font-family:var(--display);font-size:.88rem;letter-spacing:.04em;color:#CFCFCF}
+@media (max-width:900px){.mc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mc-item{border-bottom:1px solid #333}.mc-item:nth-child(2n){border-right:0}.mc-item:last-child{grid-column:1/-1;border-bottom:0}}
+
+/* 3. Four Data Points: sticky image swaps as each step scrolls into view */
+.mdp-wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:start}
+.mdp-stage{position:sticky;top:110px;border-radius:var(--r);overflow:hidden;aspect-ratio:1200/671;background:#e9e6dc}
+.mdp-stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease}
+.mdp-stage img.on{opacity:1}
+.mdp-cap{position:absolute;left:12px;bottom:10px;background:rgba(17,17,17,.7);color:#eee;font-size:.75rem;padding:4px 10px;border-radius:20px}
+.mdp-steps{list-style:none;margin:0;padding:0;display:grid;gap:18px}
+.mdp-steps li{display:grid;grid-template-columns:56px 1fr;gap:16px;padding:26px 22px;border:1px solid var(--line);border-radius:var(--r);background:var(--paper);min-height:34vh;align-content:center;transition:border-color .3s,box-shadow .3s}
+.mdp-steps li.on{border-color:var(--gold);box-shadow:0 10px 30px rgba(0,0,0,.06)}
+.mdp-steps .n{font-family:var(--display);font-weight:700;font-size:1.6rem;color:#9C7C17}
+.mdp-steps h3{font-size:1.3rem;margin-bottom:6px}
+.mdp-steps p{color:var(--muted)}
+.mdp-mob{display:none;margin-top:14px;border-radius:8px}
+@media (max-width:860px){.mdp-wrap{grid-template-columns:1fr}.mdp-stage{display:none}.mdp-steps li{min-height:0}.mdp-mob{display:block}}
+
+/* 4. Mentor */
+.mm-photo img{border-radius:var(--r);width:100%;max-width:440px;margin-inline:auto;object-fit:cover;aspect-ratio:2/3;object-position:top}
+
+/* 5. Inside the Academy */
+.mi .card h3{font-size:1.1rem}
+.mi-foot{margin-top:28px;color:var(--muted);max-width:80ch}
+
+/* 7. Program levels */
+#programs .lvl{font-family:var(--display);font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+#programs .for{color:var(--text);font-weight:500}
+#programs .tag{font-size:1.05rem;letter-spacing:.04em;text-transform:none}
+
+/* 9. Final call to action */
+.mf .wrap{text-align:center;display:grid;gap:16px;justify-items:center}
+.mf .btn-line{color:var(--paper)}
+
+/* Mobile: persistent bottom buttons */
+.msticky{display:none}
+@media (max-width:760px){
+  .msticky{display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px max(12px,env(safe-area-inset-left,0px)) calc(10px + env(safe-area-inset-bottom,0px));background:rgba(26,26,26,.96);border-top:1px solid #333;transform:translateY(110%);transition:transform .25s}
+  .msticky.show{transform:none}
+  .msticky .btn{flex:1;justify-content:center;padding:.75em 1em}
+  .msticky .btn-line{color:var(--paper)}
+  body{padding-bottom:72px}
+}
+
+@media (prefers-reduced-motion:reduce){.mdp-stage img,.msticky,.mdp-steps li{transition:none}}
+#mentorship-flagship .dark2 p.note{background:none;border:0;padding:0;box-shadow:none}
+.mh-shade{background:linear-gradient(180deg,rgba(17,17,17,.55) 0%,rgba(17,17,17,.55) 40%,rgba(17,17,17,.94) 100%)}
+.mm-photo img{max-width:380px}
+@media (max-width:860px){.mm-photo img{max-width:260px}}

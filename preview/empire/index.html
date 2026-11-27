@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Preview: Empire: Done-for-You Business Infrastructure | 4 Data Points Academy</title>
+<meta name="description" content="Empire builds the infrastructure behind your business: website, CRM, automated follow-up, booking, payments and AI-powered communication, connected and tested for you.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="4 Data Points Academy">
+<meta property="og:title" content="Empire: Done-for-You Business Infrastructure | 4 Data Points Academy">
+<meta property="og:description" content="Empire builds the infrastructure behind your business: website, CRM, automated follow-up, booking, payments and AI-powered communication, connected and tested for you.">
+<meta property="og:url" content="https://4datapoints.com/empire/">
+<meta property="og:image" content="https://4datapoints.com/assets/img/og-site.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://4datapoints.com/assets/img/og-site.jpg">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/site.css?v=20261117d">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap">
+<style>
+  #track { --obsidian: #16140F; --gold: #C9A84C; --gold-soft: rgba(201,168,76,0.55); --cream: #F7F2E4; --cream-body: rgba(247,242,228,0.9); --cream-dim: rgba(247,242,228,0.62); --graphite: #4A4540; }
+  #track { position: relative; height: 640vh; background: var(--obsidian); color: var(--cream); }
+  body[data-view="mobile"] #track { height: 680vh; }
+  #track .stage { position: sticky; top: var(--hdr, 0px); height: calc(100vh - var(--hdr, 0px)); height: calc(100lvh - var(--hdr, 0px)); overflow: hidden; }
+  #track #scene, #track #poster, #track #ui, #track .loading { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  #track #poster { background: url(poster.jpg) 68% center / cover no-repeat; display: none; }
+  body.no-webgl #track #scene { display: none; }
+  body.no-webgl #track #poster { display: block; }
+  body.no-webgl #track { height: auto; }
+  body.no-webgl #track .stage { position: relative; }
+  body.no-webgl #track .chapter, body.no-webgl #track .rail, body.no-webgl #track .scroll-cue, body.no-webgl #track .loading { display: none; }
+  #track #ui { pointer-events: none; }
+  #track #ui[hidden] { display: none; }
+  #track .scrim { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(22,20,15,0.93) 0%, rgba(22,20,15,0.86) 30%, rgba(22,20,15,0.45) 45%, rgba(22,20,15,0) 60%); }
+  #track .brand { position: absolute; top: 26px; left: max(16px, 5.5vw); display: flex; align-items: baseline; gap: 14px; }
+  #track .brand b { font-family: Cinzel, Georgia, serif; font-weight: 600; font-size: 22px; letter-spacing: 0.22em; color: var(--gold); }
+  #track .brand { align-items: center; }
+  #track .brand i { font-style: normal; color: var(--cream-dim); }
+  #track .brand img { height: 30px; width: auto; display: block; }
+  #track .brand span { font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--cream-dim); }
+  #track .copy { position: absolute; left: max(16px, 5.5vw); top: 47%; transform: translateY(-50%); width: min(40vw, 600px); }
+  #track .eyebrow { font-size: 12px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold); font-weight: 600; display: flex; align-items: center; gap: 14px; }
+  #track .eyebrow::before { content: ''; width: 34px; height: 1px; background: var(--gold); }
+  #track .chapter { margin-top: 22px; min-height: 260px; }
+  #track .chapter.in { animation: emIn 0.55s ease both; }
+  @keyframes emIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  #track .num { font-size: 12px; letter-spacing: 0.2em; color: var(--cream-dim); }
+  #track .key { font-size: 13px; letter-spacing: 0.32em; color: var(--gold); font-weight: 600; margin-left: 10px; }
+  #track h1, #track h2 { font-family: Cinzel, Georgia, serif; font-weight: 600; font-size: clamp(30px, 2.9vw, 50px); line-height: 1.12; margin: 14px 0 18px; letter-spacing: 0.005em; text-wrap: balance; color: var(--cream); }
+  #track .chapter p { font-size: 17px; line-height: 1.6; color: var(--cream-body); margin: 0; max-width: 46ch; text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
+  #track .phase { margin-top: 18px; font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); opacity: 0; transition: opacity 0.3s; display: flex; align-items: center; gap: 10px; min-height: 18px; }
+  #track .phase::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 4px rgba(201,168,76,0.22); flex: none; }
+  #track .phase.on { opacity: 1; }
+  #track .rail { margin-top: 30px; display: flex; max-width: 460px; position: relative; }
+  #track .rail::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 2px; background: rgba(247,242,228,0.16); }
+  #track #rail-fill { position: absolute; left: 0; right: 0; top: 0; height: 2px; background: var(--gold); transform-origin: left; transform: scaleX(0); }
+  #track .rail .step { flex: 1; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(247,242,228,0.5); padding-top: 12px; font-weight: 600; }
+  #track .rail .step.on { color: var(--gold); }
+  #track .scroll-cue { position: fixed; z-index: 15; left: max(16px, 5.5vw); bottom: max(24px, env(safe-area-inset-bottom, 0px)); font-size: 13px; font-weight: 600; letter-spacing: 0.22em; color: var(--gold); text-transform: uppercase; display: flex; align-items: center; gap: 14px; background: rgba(22,20,15,0.6); padding: 9px 16px; border-radius: 999px; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); transition: opacity 0.4s; }
+  #track .scroll-cue::before { content: ''; width: 11px; height: 11px; border-right: 2px solid var(--gold); border-bottom: 2px solid var(--gold); transform: translateY(-3px) rotate(45deg); animation: emBounce 1.6s ease-in-out infinite; }
+  @keyframes emBounce { 0%, 100% { transform: translateY(-4px) rotate(45deg); } 50% { transform: translateY(4px) rotate(45deg); } }
+  body.scrolled #track .scroll-cue { opacity: 0; pointer-events: none; }
+  #track .cta { position: absolute; left: max(16px, 5.5vw); bottom: max(28px, 6vh); display: flex; flex-direction: column; gap: 16px; pointer-events: none; opacity: 0; transform: translateY(10px); transition: opacity 0.5s, transform 0.5s; }
+  #track .cta .row { display: flex; gap: 14px; flex-wrap: wrap; }
+  #track .cta a { text-decoration: none; font-weight: 600; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; padding: 17px 26px; }
+  #track .cta .primary { background: var(--gold); color: var(--obsidian); }
+  #track .cta .primary:hover { background: #dcbd66; }
+  #track .cta .secondary { border: 1px solid var(--gold); color: var(--cream); }
+  #track .cta .secondary:hover { background: rgba(201,168,76,0.14); }
+  #track .cta small { font-size: 13px; color: var(--cream-dim); letter-spacing: 0.02em; }
+  body.final #track .cta { opacity: 1; transform: none; pointer-events: auto; }
+  body.final #track .scroll-cue { opacity: 0; }
+  body.final #track .chapter { min-height: 0; }
+  #track .rail { transition: opacity 0.5s; }
+  body.final #track .rail { opacity: 0; }
+  @media (max-height: 700px) { body.final #track .chapter p { display: none; } }
+  #track .loading { display: grid; place-items: center; background: var(--obsidian); color: var(--cream-dim); font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; transition: opacity 0.6s; z-index: 10; }
+  body.ready #track .loading { opacity: 0; pointer-events: none; }
+  body.capture #track .loading { display: none; }
+
+  body[data-view="mobile"] #track .scrim { background: linear-gradient(180deg, rgba(22,20,15,0.95) 0%, rgba(22,20,15,0.9) 40%, rgba(22,20,15,0.4) 54%, rgba(22,20,15,0) 62%, rgba(22,20,15,0) 80%, rgba(22,20,15,0.8) 100%); }
+  body[data-view="mobile"] #track .brand { top: max(16px, env(safe-area-inset-top)); left: 20px; }
+  body[data-view="mobile"] #track .brand b { font-size: 17px; }
+  body[data-view="mobile"] #track .brand { gap: 9px; }
+  body[data-view="mobile"] #track .brand img { height: 24px; }
+  body[data-view="mobile"] #track .brand span { font-size: 9px; letter-spacing: 0.18em; }
+  body[data-view="mobile"] #track .copy { top: 60px; transform: none; left: 20px; right: 20px; width: auto; }
+  body[data-view="mobile"] #track .eyebrow { font-size: 10.5px; letter-spacing: 0.2em; }
+  body[data-view="mobile"] #track .chapter { margin-top: 12px; min-height: 0; }
+  body[data-view="mobile"] #track h1, #track h2 { font-size: 25px; margin: 8px 0 10px; }
+  body[data-view="mobile"] #track .chapter p { font-size: 14.5px; line-height: 1.5; }
+  body[data-view="mobile"] #track .phase { font-size: 10.5px; margin-top: 10px; text-shadow: 0 1px 3px rgba(0,0,0,0.8); }
+  body[data-view="mobile"] #track .rail { margin-top: 12px; height: 2px; }
+  body[data-view="mobile"] #track .rail .step { font-size: 0; padding: 0; }
+  body[data-view="mobile"] #track .scroll-cue { left: 50%; transform: translateX(-50%); bottom: max(22px, env(safe-area-inset-bottom, 0px)); font-size: 11.5px; letter-spacing: 0.18em; white-space: nowrap; }
+  body[data-view="mobile"] #track .cta { left: 16px; right: 16px; bottom: max(16px, env(safe-area-inset-bottom)); gap: 10px; }
+  body[data-view="mobile"] #track .cta .row { flex-direction: column; gap: 10px; }
+  body[data-view="mobile"] #track .cta a { text-align: center; padding: 15px; }
+  body[data-view="mobile"] #track .cta small { text-align: center; font-size: 12px; }
+  @media (max-height: 620px) { body.final[data-view="mobile"] #track .chapter p { display: none; } }
+  body.final[data-view="mobile"] #track h1, #track h2 { font-size: 21px; margin-bottom: 6px; }
+  body.final[data-view="mobile"] #track .eyebrow { display: none; }
+  body.final[data-view="mobile"] #track .chapter { margin-top: 0; }
+  body.final[data-view="mobile"] #track .chapter p { font-size: 13px; }
+  body.final[data-view="mobile"] #track .rail { display: none; }
+  body[data-view="mobile"] #track .cta .row { flex-direction: row; gap: 8px; }
+  body[data-view="mobile"] #track .cta .row a { flex: 1; padding: 14px 6px; font-size: 11.5px; letter-spacing: 0.1em; }
+  @media (prefers-reduced-motion: reduce) { #track .chapter.in { animation: none; } #track .scroll-cue::before { animation: none; } }
+
+
+  /* ---- video edition ---- */
+  #track #film { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% 50%; background: var(--obsidian); display: block; }
+  body[data-view="mobile"] #track #film { top: 32%; height: 68%; object-position: 58% 100%; }
+  #track .sys { position: absolute; right: max(16px, 4vw); top: 50%; transform: translateY(-50%); width: 230px; opacity: 0; transition: opacity .6s; pointer-events: none; }
+  body.sys-on #track .sys { opacity: 1; }
+  #track .sys-h { display: block; font-size: 11px; letter-spacing: .26em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 12px; text-shadow: 0 1px 6px rgba(0,0,0,.8); }
+  #track .sys ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  #track .sys li { font-size: 14px; font-weight: 600; letter-spacing: .02em; color: rgba(247,242,228,.35); background: rgba(22,20,15,.55); border: 1px solid rgba(201,168,76,.18); padding: 9px 14px 9px 34px; position: relative; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); transition: color .4s, border-color .4s, background .4s, box-shadow .4s; }
+  #track .sys li::before { content: ""; position: absolute; left: 13px; top: 50%; width: 8px; height: 8px; margin-top: -4px; border-radius: 50%; background: rgba(201,168,76,.25); transition: background .4s, box-shadow .4s; }
+  #track .sys li.lit { color: var(--cream); border-color: rgba(201,168,76,.7); background: rgba(22,20,15,.72); box-shadow: 0 0 22px -6px rgba(201,168,76,.55); }
+  #track .sys li.lit::before { background: var(--gold); box-shadow: 0 0 0 4px rgba(201,168,76,.22); }
+  body.final #track .sys { opacity: 0; }
+  #track .cta .tertiary { color: var(--gold); border: 0; padding-left: 6px; padding-right: 6px; text-decoration: underline; text-underline-offset: 5px; text-decoration-color: rgba(201,168,76,.6); }
+  #track .cta .tertiary:hover { color: #dcbd66; }
+  body[data-view="mobile"] #track .sys { right: auto; left: 16px; top: auto; bottom: max(70px, 10vh); transform: none; width: calc(100% - 32px); }
+  body[data-view="mobile"] #track .sys-h { margin-bottom: 8px; }
+  body[data-view="mobile"] #track .sys ul { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+  body[data-view="mobile"] #track .sys li { font-size: 12.5px; padding: 7px 10px 7px 28px; }
+  body[data-view="mobile"] #track .sys li::before { left: 10px; }
+  #track .hqlink { position: absolute; top: 26px; right: max(16px, 4vw); z-index: 5; pointer-events: auto; font-size: 13px; font-weight: 600; letter-spacing: .04em; color: var(--gold); text-decoration: none; background: rgba(22,20,15,.55); border: 1px solid rgba(201,168,76,.35); padding: 8px 14px; border-radius: 999px; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+  #track .hqlink:hover { border-color: var(--gold); }
+  body[data-view="mobile"] #track .hqlink { top: 16px; right: 16px; font-size: 11.5px; padding: 6px 11px; }
+  body[data-view="mobile"] #track .brand span, body[data-view="mobile"] #track .brand i { display: none; }
+
+  #track { font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+</style>
+<style>
+  .odis-quote{margin:0;position:relative;border-radius:var(--r);overflow:hidden;background:#16140F;aspect-ratio:4/5;max-width:460px;width:100%;justify-self:center;box-shadow:0 24px 60px -20px rgba(22,20,15,.45)}
+  .odis-quote .oq-photo,.odis-quote .oq-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+  .odis-quote blockquote{position:absolute;left:0;right:0;bottom:0;margin:0;padding:64px 24px 22px;background:linear-gradient(180deg,rgba(22,20,15,0) 0%,rgba(22,20,15,.86) 34%,rgba(22,20,15,.96) 100%);color:#F7F2E4}
+  .odis-quote blockquote p{font-family:Cinzel,Georgia,serif;font-size:clamp(17px,1.5vw,20px);line-height:1.45;margin:0 0 14px;text-wrap:balance}
+  .odis-quote figcaption{display:flex;flex-direction:column;gap:2px;border-left:2px solid #C9A84C;padding-left:12px;font-size:13px}
+  .odis-quote figcaption b{color:#C9A84C;font-weight:600;letter-spacing:.04em}
+  .odis-quote figcaption span{color:rgba(247,242,228,.7)}
+</style>
+<style>
+  /* self-playing edition: one screen tall, no scroll scrubbing */
+  #track, body[data-view="mobile"] #track { height: auto; }
+  #track .stage { position: relative; top: 0; height: calc(100svh - var(--hdr, 0px)); min-height: 600px; }
+  #track .scroll-cue { display: none; }
+  #track .ctrls { position: absolute; right: max(16px, 4vw); bottom: max(28px, 6vh); z-index: 6; display: flex; gap: 10px; pointer-events: auto; }
+  #track .ctrls button { font: 600 12px/1 Inter, system-ui, sans-serif; letter-spacing: .16em; text-transform: uppercase; color: var(--cream); background: rgba(22,20,15,.6); border: 1px solid rgba(201,168,76,.55); padding: 12px 16px; cursor: pointer; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); display: none; }
+  #track .ctrls button:hover { border-color: var(--gold); color: var(--gold); }
+  body.ended #track #replay, body.needs-tap #track #tapplay { display: inline-flex; }
+  body.needs-tap #track #tapplay { background: var(--gold); color: var(--obsidian); font-size: 14px; padding: 16px 22px; }
+  body[data-view="mobile"] #track .ctrls { top: 52px; bottom: auto; right: 16px; }
+</style>
+
+<style>
+  /* ---- Empire redesign (staging) ---- */
+  #p-empire{--ob:#16140F;--gd:#C9A84C;--gd2:#E2C66F;--cr:#F7F2E4;--crb:rgba(247,242,228,.86);--crd:rgba(247,242,228,.66);--sand:#F5F1E6;--ln:#E3DCC8;--tx:#1E1C18;--mu:#55524B}
+  #p-empire .eyebrow{display:inline-flex;align-items:center;gap:12px;font:600 12px/1.2 Inter,system-ui,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:#735A0C}
+  #p-empire .eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+  .em-band{padding:clamp(64px,8vw,112px) 0}
+  .em-cream{background:var(--sand);color:var(--tx)} .em-white{background:#fff;color:var(--tx)}
+  .em-dark{background:var(--ob);color:var(--cr)} .em-dark .eyebrow,.em-final .eyebrow{color:var(--gd)!important}
+  .em-h{font-family:Cinzel,Georgia,serif;font-weight:600;font-size:clamp(30px,3.6vw,50px);line-height:1.12;letter-spacing:.005em;margin:16px 0 18px;text-wrap:balance;max-width:22ch}
+  .em-head{margin-bottom:clamp(30px,4vw,48px)} .em-head .em-h{max-width:24ch}
+  .em-sub{font-size:clamp(16px,1.3vw,18.5px);line-height:1.6;color:var(--mu);max-width:60ch;margin:0}
+  .em-dark .em-sub,.em-dark .em-lead{color:var(--crb)}
+  .em-lead{font-size:clamp(16.5px,1.3vw,18.5px);line-height:1.65;color:#3B3832;max-width:60ch;margin:0 0 18px}
+  .em-note{font-size:13.5px;color:var(--crd);margin:16px 0 0} .em-note.em-note-lt{color:var(--mu);background:none}
+  .em-split{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,5vw,72px);align-items:center}
+  .em-vs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+  .em-vs-col{border:1px solid var(--ln);border-radius:12px;padding:20px 22px;background:#fff}
+  .em-vs-col b{display:block;font:600 15px Inter,sans-serif;margin-bottom:10px;color:var(--mu)}
+  .em-vs-col.on{background:var(--ob);border-color:var(--ob);color:var(--cr)} .em-vs-col.on b{color:var(--gd)}
+  .em-vs-col ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:15px;line-height:1.45}
+  .em-vs-col li{padding-left:22px;position:relative}
+  .em-vs-col li::before{content:"–";position:absolute;left:4px;color:#9A958A}
+  .em-vs-col.on li::before{content:"";left:2px;top:.45em;width:9px;height:5px;border-left:2px solid var(--gd);border-bottom:2px solid var(--gd);transform:rotate(-45deg)}
+  /* journey */
+  .em-journey{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(24px,4vw,56px);align-items:start}
+  .em-steps{display:grid;gap:8px}
+  @media (max-width:980px){.em-journey{display:block}.em-steps .em-panels{margin:4px 0 12px}}
+  .em-steps button{all:unset;cursor:pointer;display:grid;grid-template-columns:44px 1fr;column-gap:12px;padding:16px 18px;border:1px solid rgba(201,168,76,.18);border-radius:10px;background:rgba(247,242,228,.03);transition:background .25s,border-color .25s}
+  .em-steps button span{grid-row:span 2;font:600 13px Inter,sans-serif;letter-spacing:.12em;color:var(--crd);padding-top:3px}
+  .em-steps button b{font:600 16.5px/1.3 Inter,sans-serif;color:var(--cr)}
+  .em-steps button i{font-style:normal;font-size:14.5px;line-height:1.45;color:var(--crd);margin-top:4px}
+  .em-steps button[aria-selected="true"],.em-steps button[aria-expanded="true"]{background:rgba(201,168,76,.1);border-color:var(--gd)}
+  .em-steps button[aria-selected="true"] span,.em-steps button[aria-expanded="true"] span{color:var(--gd)}
+  .em-steps button:focus-visible{outline:2px solid var(--gd2);outline-offset:3px}
+  .em-panels{position:sticky;top:110px}
+  .em-panel[hidden]{display:none}
+  .em-panel.on{animation:emFade .45s ease both}
+  @keyframes emFade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  .mk{background:#FBF9F3;color:var(--tx);border-radius:14px;padding:clamp(20px,2.4vw,30px);box-shadow:0 30px 70px -30px rgba(0,0,0,.7);min-height:300px;display:flex;flex-direction:column;gap:14px}
+  .mk-h{font:600 12px Inter,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#8A6D12}
+  .mk-row{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{background:#fff;border:1px solid var(--ln);border-radius:999px;padding:8px 14px;font-size:14px;font-weight:500}
+  .mk-arrow{height:34px;width:2px;background:var(--gd);margin-left:22px;position:relative}
+  .mk-arrow::after{content:"";position:absolute;bottom:-2px;left:-5px;border:6px solid transparent;border-top-color:var(--gd)}
+  .mk-card{background:#fff;border:1px solid var(--ln);border-left:3px solid var(--gd);border-radius:8px;padding:14px 16px;display:grid;gap:4px}
+  .mk-card b{font-size:16px} .mk-card small{color:var(--mu);font-size:13.5px}
+  .mk-field{background:#fff;border:1px solid var(--ln);border-radius:8px;padding:10px 14px;display:grid;gap:2px}
+  .mk-field small{font-size:12px;color:var(--mu)} .mk-field span{font-size:15px}
+  .mk-btn{align-self:flex-start;background:var(--ob);color:var(--cr);font-weight:600;font-size:14px;padding:12px 20px;border-radius:6px}
+  .mk-sms{background:#E9F1EA;border-radius:14px 14px 14px 4px;padding:12px 16px;max-width:92%}
+  .mk-sms small{display:block;font-size:12px;color:#4D6B52;margin-bottom:4px} .mk-sms p{margin:0;font-size:15px;line-height:1.45}
+  .mk-cal{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .mk-cal span{background:#fff;border:1px solid var(--ln);border-radius:8px;padding:12px 8px;text-align:center;font-size:14px}
+  .mk-cal .pick{background:var(--ob);color:var(--gd);border-color:var(--ob);font-weight:600;grid-column:span 2}
+  .mk-inv{background:#fff;border:1px solid var(--ln);border-radius:8px;padding:6px 16px}
+  .mk-inv div{display:flex;justify-content:space-between;padding:10px 0;font-size:15px}
+  .mk-inv .t{border-top:1px solid var(--ln);font-weight:700}
+  .mk-paid{font-size:14px;font-weight:600;color:#2E6B3A;display:flex;align-items:center;gap:8px}
+  .mk-paid::before{content:"";width:16px;height:16px;border-radius:50%;background:#2E6B3A;box-shadow:inset 0 0 0 4px #E9F1EA}
+  .mk-tl{margin:0;padding:0 0 0 4px;list-style:none;display:grid;gap:12px;counter-reset:t}
+  .mk-tl li{position:relative;padding-left:30px;font-size:15px;line-height:1.4}
+  .mk-tl li::before{content:"";position:absolute;left:4px;top:5px;width:10px;height:10px;border-radius:50%;border:2px solid var(--gd);background:#fff}
+  /* capabilities */
+  .em-caps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--ln)}
+  .em-caps div{padding:26px 26px 28px 0;border-bottom:1px solid var(--ln)}
+  .em-caps div:not(:nth-child(3n+1)){padding-left:26px;border-left:1px solid var(--ln)}
+  .em-caps b{display:block;font:600 18px/1.3 Inter,sans-serif;margin-bottom:8px}
+  .em-caps p{margin:0;font-size:15.5px;line-height:1.55;color:var(--mu)}
+  /* industries */
+  .em-ind{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .em-ind article{background:#fff;border:1px solid var(--ln);border-radius:12px;padding:24px 24px 26px;border-top:3px solid var(--gd)}
+  .em-ind h3{font:600 18.5px/1.3 Inter,sans-serif;margin:0 0 8px}
+  .em-ind p{margin:0;font-size:15.5px;line-height:1.55;color:var(--mu)}
+  /* founder */
+  .em-founder{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,5vw,72px);align-items:center}
+  .em-fphoto{border-radius:14px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 30px 70px -30px rgba(0,0,0,.8)}
+  .em-fphoto img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block}
+  .em-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:28px;border-top:1px solid rgba(201,168,76,.3)}
+  .em-stats div{padding:18px 12px 0 0}
+  .em-stats b{display:block;font-family:Cinzel,Georgia,serif;font-size:clamp(24px,2.4vw,34px);color:var(--gd);font-weight:600}
+  .em-stats span{font-size:13.5px;color:var(--crd);line-height:1.35;display:block;margin-top:4px}
+  .em-fine{font-size:12.5px;color:var(--crd);margin:20px 0 0}
+  /* proof */
+  .em-proof{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .em-proof figure{margin:0}
+  .em-proof .frame{border-radius:10px;overflow:hidden;border:1px solid var(--ln);box-shadow:0 20px 50px -30px rgba(22,20,15,.6);background:#F1EEE6;padding-top:22px;position:relative}
+  .em-proof .frame::before{content:"";position:absolute;top:8px;left:12px;width:7px;height:7px;border-radius:50%;background:#CFC8B6;box-shadow:12px 0 0 #CFC8B6,24px 0 0 #CFC8B6}
+  .em-proof img{display:block;width:100%;height:auto;aspect-ratio:1280/860;object-fit:cover;object-position:top}
+  .em-proof figcaption{margin-top:14px;font-size:15px;line-height:1.5;color:var(--mu)}
+  .em-proof figcaption b{display:block;color:var(--tx);font-size:16px;margin-bottom:2px}
+  /* pricing */
+  .em-tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+  .em-tier{background:#fff;border:1px solid var(--ln);border-radius:14px;padding:28px 26px;display:flex;flex-direction:column;position:relative}
+  .em-tier.feat{border:2px solid var(--gd);box-shadow:0 26px 60px -34px rgba(138,109,18,.7)}
+  .em-badge{position:absolute;top:-13px;left:24px;background:var(--ob);color:var(--gd);font:600 11.5px Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+  .em-tname{font:600 12.5px Inter,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#8A6D12}
+  .em-tier h3,.em-dps h3{font-family:Cinzel,Georgia,serif;font-weight:600;font-size:clamp(21px,1.8vw,25px);line-height:1.2;margin:10px 0 8px}
+  .em-for{margin:0 0 18px;font-size:15px;line-height:1.5;color:var(--mu)}
+  .em-price{font-family:Cinzel,Georgia,serif;font-size:40px;font-weight:600;line-height:1;margin-bottom:18px}
+  .em-price small{font-family:Inter,sans-serif;font-size:14px;font-weight:500;color:var(--mu);margin-left:2px}
+  .em-price em{display:block;font-style:normal;font-family:Inter,sans-serif;font-size:15px;font-weight:600;color:#3B3832;margin-top:8px;line-height:1.4}
+  .em-tier ul,.em-dps ul{list-style:none;margin:0 0 24px;padding:0;display:grid;gap:9px;font-size:15px;line-height:1.45}
+  .em-tier li,.em-dps li{padding-left:24px;position:relative}
+  .em-tier li::before,.em-dps li::before{content:"";position:absolute;left:3px;top:.42em;width:9px;height:5px;border-left:2px solid #A88A2A;border-bottom:2px solid #A88A2A;transform:rotate(-45deg)}
+  .em-choose{margin-top:auto;display:block;text-align:center;text-decoration:none;font:600 14px Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:15px 18px;border:1.5px solid var(--ob);color:var(--ob);border-radius:6px;transition:background .2s,color .2s}
+  .em-choose:hover{background:var(--ob);color:var(--cr)}
+  .em-tier.feat .em-choose{background:var(--ob);color:var(--gd)}
+  .em-dps{margin-top:22px;background:var(--ob);color:var(--cr);border-radius:14px;padding:clamp(26px,3vw,40px);display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(20px,4vw,56px);align-items:center;border:1px solid rgba(201,168,76,.35)}
+  .em-dps .em-tname{color:var(--gd)} .em-dps .em-for{color:var(--crb)} .em-dps ul{grid-template-columns:1fr 1fr;margin-bottom:0;color:var(--crb)}
+  .em-dps li::before{border-color:var(--gd)}
+  .em-dps .em-price{color:var(--cr)} .em-dps .em-price small,.em-dps .em-price em{color:var(--crd)}
+  .em-dps .em-choose{border-color:var(--gd);color:var(--ob);background:var(--gd)} .em-dps .em-choose:hover{background:var(--gd2)}
+  .em-terms{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+  .em-terms div{border-top:1px solid #CFC6AE;padding-top:16px}
+  .em-terms b{display:block;font-size:15px;margin-bottom:6px} .em-terms p{margin:0;font-size:14.5px;line-height:1.55;color:var(--mu)}
+  .em-terms a{color:#7A5F0E}
+  .em-help{margin-top:36px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;justify-content:center;text-align:center}
+  .em-help span{font:600 17px Inter,sans-serif} .em-help small{flex-basis:100%;color:var(--mu);font-size:14.5px}
+  .em-cta,.em-ghost{display:inline-block;text-decoration:none;font:600 14.5px Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:17px 30px;border-radius:6px}
+  .em-cta{background:var(--gd);color:var(--ob)} .em-cta:hover{background:var(--gd2)}
+  .em-ghost{border:1.5px solid var(--gd);color:var(--cr)} .em-ghost:hover{background:rgba(201,168,76,.12)}
+  /* process */
+  .em-process{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .em-process li{border-top:2px solid var(--gd);padding-top:20px}
+  .em-process span{font-family:Cinzel,Georgia,serif;font-size:30px;color:#A88A2A;font-weight:600}
+  .em-process b{display:block;font:600 18.5px Inter,sans-serif;margin:10px 0 8px}
+  .em-process p{margin:0;font-size:15.5px;line-height:1.55;color:var(--mu)}
+  .em-faqwrap{max-width:900px}
+  /* final */
+  .em-final{background:linear-gradient(180deg,rgba(22,20,15,.86),rgba(22,20,15,.92)),url(/assets/empire/empire-poster.jpg) center/cover;color:var(--cr);text-align:center}
+  .em-final .wrap{display:grid;justify-items:center}
+  .em-final .em-h{max-width:20ch} .em-final .em-sub{color:var(--crb);margin-bottom:28px}
+  .em-btns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+  #p-empire a:focus-visible,#p-empire summary:focus-visible{outline:2px solid #8A6D12;outline-offset:3px}
+  /* hero: CTAs always visible */
+  #track .cta{opacity:1!important;transform:none!important;pointer-events:auto!important}
+  #track .cta .secondary{color:var(--cream)}
+  @media (min-width:761px) and (max-height:820px){#track .chapter{min-height:0} #track .copy{top:42%}}
+  @media (min-width:761px) and (max-height:700px){#track .chapter p{display:none}}
+  body[data-view="mobile"] #track .sys{bottom:auto;top:46%}
+  body[data-view="mobile"] #track .cta small{display:none}
+  /* responsive */
+  @media (max-width:980px){
+    .em-split,.em-journey,.em-founder{grid-template-columns:1fr}
+    .em-panels{position:static}
+    .em-caps,.em-ind,.em-proof,.em-tiers{grid-template-columns:1fr 1fr}
+    .em-caps div{padding-left:0!important;border-left:0!important}
+    .em-caps div:nth-child(2n){padding-left:22px!important;border-left:1px solid var(--ln)!important}
+    .em-dps{grid-template-columns:1fr} .em-terms{grid-template-columns:1fr}
+    .em-stats{grid-template-columns:1fr 1fr;row-gap:16px}
+    .em-fphoto{aspect-ratio:4/3;max-width:640px}
+  }
+  @media (max-width:640px){
+    .em-vs,.em-caps,.em-ind,.em-proof,.em-tiers,.em-process,.em-dps ul{grid-template-columns:1fr}
+    .em-caps div:nth-child(2n){padding-left:0!important;border-left:0!important}
+    .em-tiers{gap:26px}
+    .em-steps button{grid-template-columns:36px 1fr;padding:14px}
+    .mk-cal{grid-template-columns:repeat(2,1fr)}
+    .em-cta,.em-ghost{width:100%;text-align:center}
+    .em-help{flex-direction:column}
+  }
+  body[data-view="mobile"] #track .stage{min-height:0;height:calc(100svh - 121px)}
+  body[data-view="mobile"] #track .cta .row a{letter-spacing:.04em;font-size:12px}
+  @media (max-height:740px){body[data-view="mobile"] #track .sys{display:none}}
+  @media (prefers-reduced-motion:reduce){.em-panel.on{animation:none}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Empire", "serviceType": "Done-for-you business systems setup", "url": "https://4datapoints.com/empire/", "description": "Empire builds the infrastructure behind your business: website, CRM, automated follow-up, booking, payments and AI-powered communication, connected and tested for you.", "provider": {"@type": "Organization", "name": "4 Data Points Academy, Inc.", "url": "https://4datapoints.com/", "telephone": "+1-702-710-8030", "address": {"@type": "PostalAddress", "streetAddress": "3225 McLeod Drive, Suite 100", "addressLocality": "Las Vegas", "addressRegion": "NV", "postalCode": "89121", "addressCountry": "US"}}, "areaServed": "US", "offers": [{"@type": "Offer", "name": "Empire Cornerstone", "price": "1497", "priceCurrency": "USD", "description": "One-time setup; $97/month plan"}, {"@type": "Offer", "name": "Empire Foundation", "price": "2499", "priceCurrency": "USD", "description": "One-time setup; $197/month plan"}, {"@type": "Offer", "name": "Empire Builder", "price": "3499", "priceCurrency": "USD", "description": "One-time setup; $297/month plan"}, {"@type": "Offer", "name": "Empire Digital Product System", "price": "997", "priceCurrency": "USD", "description": "One-time setup; $97/month plan starting at launch"}]}</script>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span class="sched">Live mentorship classes Tuesday to Thursday, 5:00 PM Pacific</span><span><a href="https://portal.4datapoints.com/" target="_blank" rel="noopener">Student Portal</a> &nbsp;·&nbsp; <a href="tel:+17027108030">702-710-8030</a> (call or text)</span></div></div>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="/" aria-label="4 Data Points Academy home"><img src="/assets/img/logo.png" alt="4 Data Points Academy" width="83" height="54"></a>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">Menu</button>
+  <nav class="menu" id="menu">
+    <a class="hq" href="/" style="color:var(--gold);font-weight:600;white-space:nowrap"><span aria-hidden="true">←</span> 4DPA Headquarters</a>
+    <div class="dd"><a href="/real-estate-investing/">Real Estate</a><div class="sub"><a href="/mentorship/">Mentorship</a><a href="/multifamily/">Multifamily Workshop</a><a href="/land-trust/">Land Trusts</a><a href="/financing/">Investor Financing</a></div></div>
+    <div class="dd"><a href="/entrepreneurship/">Entrepreneurship</a><div class="sub"><a href="/empire/">Empire</a><a href="/entrepreneurship/">Entrepreneur Course</a><a href="/ventureu/">VentureU Retreat</a><a href="/financing/">Business Financing</a></div></div>
+    <a href="/ascendu/">Personal Development</a>
+    <a href="/events/">Events</a>
+    <a href="/books/">Books</a>
+    <a href="https://forms.4datapoints.com/app">Get the App</a>
+    <a href="/about/">About Odis</a>
+    <a class="btn btn-gold" href="/talk/">Talk to Odis</a>
+  </nav>
+  <a class="btn btn-gold lp-call" href="tel:+17027108030">Call 702-710-8030</a>
+</div></header>
+
+<!-- Empire hero (realistic video): a storefront grows into a connected operation. Existing page content follows unchanged. -->
+<section id="track" aria-label="Empire: how a basic business becomes a connected operation">
+  <div class="stage">
+    <video id="film" data-src="/assets/empire/empire.mp4?v=2" data-src-m="/assets/empire/empire-m.mp4?v=2" poster="/assets/empire/empire-poster.jpg" muted playsinline preload="auto" aria-label="A small storefront grows into a lit corporate tower over the city skyline"></video><script>(function(){var v=document.getElementById("film");if(!v||v.getAttribute("src"))return;var m=matchMedia("(max-width: 760px), (max-aspect-ratio: 4/5)").matches;v.src=m?v.dataset.srcM:v.dataset.src;})();</script>
+    <div id="ui">
+      <div class="scrim"></div>
+      <div class="brand"><b>EMPIRE</b><i aria-hidden="true">—</i><span>By 4 Data Points Academy</span><img src="/assets/empire/logo.png" alt="4 Data Points Academy logo"></div>
+      <div class="copy">
+        <div class="eyebrow">Done-for-you business systems</div>
+        <div class="chapter" id="chapter" aria-live="polite">
+          <span class="num" id="ch-num"></span><span class="key" id="ch-key"></span>
+          <h1 id="ch-title">You've Got a Website. But Do You Have a Business?</h1>
+          <p id="ch-body"></p>
+          <div class="phase" id="phase"></div>
+        </div>
+        <div class="rail" role="list" aria-label="Empire build progress">
+          <span id="rail-fill"></span>
+          <span class="step" role="listitem" data-k="BLUEPRINT">Blueprint</span><span class="step" role="listitem" data-k="BUILD">Build</span><span class="step" role="listitem" data-k="LAUNCH">Launch</span><span class="step" role="listitem" data-k="SCALE">Scale</span>
+        </div>
+      </div>
+      <div class="sys" id="sys" aria-label="What Empire connects">
+        <span class="sys-h">Your Empire runs on</span>
+        <ul>
+          <li>Website &amp; funnels</li><li>CRM</li><li>Booking</li><li>Email &amp; SMS</li><li>Payments</li><li>Pipelines</li><li>Onboarding</li><li>AI agents</li>
+        </ul>
+      </div>
+      <div class="ctrls"><button type="button" id="tapplay">▶ Play the story</button><button type="button" id="replay">↻ Replay</button></div>
+      <div class="cta">
+        <div class="row">
+          <a class="primary" href="/empire/assessment/">Build My Empire</a>
+          <a class="secondary" href="#how">See How Empire Works</a>
+        </div>
+        <small>Built for entrepreneurs. By entrepreneurs.</small>
+      </div>
+    </div>
+  </div>
+</section>
+<script>(function(){var h=document.querySelector('header.nav'),t=document.getElementById('track');function s(){t.style.setProperty('--hdr',(h?h.offsetHeight:0)+'px')}s();addEventListener('resize',s)})();</script>
+<script src="/assets/empire-preview/play.js?v=1" defer></script>
+
+
+<main>
+<section class="page show" id="p-empire" data-page="empire">
+
+  <!-- 2. Problem -->
+  <section class="em-band em-cream" id="problem"><div class="wrap em-split">
+    <div>
+      <span class="eyebrow">The problem</span>
+      <h2 class="em-h">A website is not a business system.</h2>
+      <p class="em-lead">Most companies can build a website. Far fewer understand the systems a business needs behind it. A website can bring someone to your door. It can't answer them at 9 PM, book the appointment, send the reminder, collect the payment or ask for the review.</p>
+      <div class="em-vs">
+        <div class="em-vs-col"><b>A website on its own</b><ul><li>Leads land in an inbox and wait</li><li>Missed calls stay missed</li><li>Booking happens by phone tag</li><li>Payments and invoices live somewhere else</li><li>Follow-up depends on your memory</li></ul></div>
+        <div class="em-vs-col on"><b>A business system</b><ul><li>Every lead is captured in one place</li><li>Missed calls get a text back automatically</li><li>Clients book themselves, reminders go out</li><li>Invoices and payments connect to the customer</li><li>Follow-up runs on its own</li></ul></div>
+      </div>
+    </div>
+    <figure class="odis-quote">
+      <div class="oq-photo"><img src="/assets/img/odis-empire.jpg" alt="Odis James, founder of 4 Data Points Academy" width="800" height="1000" loading="lazy"></div>
+      <blockquote>
+        <p>“A website is useless without the systems, workflows and automations to support it. A business needs a command center. A website is just a piece of it.”</p>
+        <figcaption><b>Odis James</b><span>Founder, 4 Data Points Academy</span></figcaption>
+      </blockquote>
+    </figure>
+  </div></section>
+
+  <!-- 4. Systems demonstration -->
+  <section class="em-band em-dark" id="how"><div class="wrap">
+    <div class="em-head"><span class="eyebrow">How Empire works</span><h2 class="em-h">Here's what happens when your business has a real system.</h2><p class="em-sub">One customer, start to finish. Every step below runs inside the same connected system.</p></div>
+    <div class="em-journey" id="journey">
+      <div class="em-steps" role="tablist" aria-label="Customer journey steps">
+        <button role="tab" id="js1" aria-controls="jp1" aria-selected="true" tabindex="0"><span>01</span><b>Customer discovery</b><i>They find you through an ad, social media, search or a referral.</i></button>
+        <button role="tab" id="js2" aria-controls="jp2" aria-selected="false" tabindex="-1"><span>02</span><b>Website inquiry</b><i>They visit your site, look at your services and send a request.</i></button>
+        <button role="tab" id="js3" aria-controls="jp3" aria-selected="false" tabindex="-1"><span>03</span><b>Automatic follow-up</b><i>Your CRM saves the lead and replies right away.</i></button>
+        <button role="tab" id="js4" aria-controls="jp4" aria-selected="false" tabindex="-1"><span>04</span><b>Appointment booked</b><i>They pick a time on your calendar. Reminders go out on their own.</i></button>
+        <button role="tab" id="js5" aria-controls="jp5" aria-selected="false" tabindex="-1"><span>05</span><b>Payment collected</b><i>They get an invoice or pay at a secure checkout.</i></button>
+        <button role="tab" id="js6" aria-controls="jp6" aria-selected="false" tabindex="-1"><span>06</span><b>Ongoing relationship</b><i>Onboarding, reminders, review requests and follow-up keep going.</i></button>
+      </div>
+      <div class="em-panels">
+        <div class="em-panel on" role="tabpanel" id="jp1" aria-labelledby="js1">
+          <div class="mk"><div class="mk-h">Where new customers come from</div>
+            <div class="mk-row"><span class="chip">Instagram ad</span><span class="chip">Google search</span><span class="chip">Referral</span><span class="chip">Facebook post</span></div>
+            <div class="mk-arrow" aria-hidden="true"></div>
+            <div class="mk-card"><b>Your website</b><small>yourbusiness.com · on your own domain</small></div></div>
+        </div>
+        <div class="em-panel" role="tabpanel" id="jp2" aria-labelledby="js2" hidden>
+          <div class="mk"><div class="mk-h">Request a consultation</div>
+            <div class="mk-field"><small>Name</small><span>Jordan Example</span></div>
+            <div class="mk-field"><small>Mobile</small><span>(555) 010-0000</span></div>
+            <div class="mk-field"><small>What do you need?</small><span>Kitchen remodel estimate</span></div>
+            <div class="mk-btn">Send Request</div></div>
+        </div>
+        <div class="em-panel" role="tabpanel" id="jp3" aria-labelledby="js3" hidden>
+          <div class="mk"><div class="mk-h">CRM · New lead</div>
+            <div class="mk-card"><b>Jordan Example</b><small>Source: Website form · Tag: Estimate request · Stage: New</small></div>
+            <div class="mk-sms"><small>Text sent automatically · 1 minute later</small><p>Hi Jordan, thanks for reaching out to Your Business. Here's a link to pick a time for your estimate.</p></div></div>
+        </div>
+        <div class="em-panel" role="tabpanel" id="jp4" aria-labelledby="js4" hidden>
+          <div class="mk"><div class="mk-h">Booking calendar</div>
+            <div class="mk-cal"><span>Tue 9:00</span><span>Tue 1:30</span><span class="pick">Thu 10:00 · Booked</span><span>Thu 3:00</span><span>Fri 11:00</span><span>Fri 2:30</span></div>
+            <div class="mk-sms"><small>Reminder · day before</small><p>Reminder: your estimate is tomorrow at 10:00 AM. Reply C to confirm.</p></div></div>
+        </div>
+        <div class="em-panel" role="tabpanel" id="jp5" aria-labelledby="js5" hidden>
+          <div class="mk"><div class="mk-h">Invoice</div>
+            <div class="mk-inv"><div><span>Remodel deposit</span><span>$500.00</span></div><div class="t"><span>Total</span><span>$500.00</span></div></div>
+            <div class="mk-paid">Paid by card · receipt sent · saved to Jordan's record</div></div>
+        </div>
+        <div class="em-panel" role="tabpanel" id="jp6" aria-labelledby="js6" hidden>
+          <div class="mk"><div class="mk-h">What keeps running after the sale</div>
+            <ol class="mk-tl"><li><b>Welcome email</b> with next steps</li><li><b>Job reminder</b> the day before</li><li><b>Review request</b> after the work is done</li><li><b>Check-in</b> a few months later for repeat business</li></ol></div>
+        </div>
+        <p class="em-note">Illustrative example. Names, numbers and amounts are samples, not real customer activity. What's included depends on your package.</p>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- 5. Capabilities -->
+  <section class="em-band em-white" id="included"><div class="wrap">
+    <div class="em-head"><span class="eyebrow">What we build for you</span><h2 class="em-h">Everything your business runs on, in one place.</h2><p class="em-sub">No more stitching together a website builder, a calendar app, a payment app and a spreadsheet of leads.</p></div>
+    <div class="em-caps">
+      <div><b>Website and presence</b><p>A website on your own domain, branded email and the pages your offers need.</p></div>
+      <div><b>Lead capture and CRM</b><p>Every lead lands in one customer hub with their history, tags and next step.</p></div>
+      <div><b>Booking and reminders</b><p>Clients book themselves, and reminders go out automatically so fewer people no-show.</p></div>
+      <div><b>Follow-up that runs itself</b><p>Missed-call text-back, automatic replies and nurture messages, so no lead goes cold.</p></div>
+      <div><b>Payments and reviews</b><p>Invoices, online payments and automatic review requests after every job.</p></div>
+      <div><b>AI assistant and ad funnel</b><p>With Empire Builder: an AI assistant that answers leads by chat and text, and a booking funnel for paid ads.</p></div>
+    </div>
+  </div></section>
+
+  <!-- 6. Industries -->
+  <section class="em-band em-cream" id="industries"><div class="wrap">
+    <div class="em-head"><span class="eyebrow">Who it's for</span><h2 class="em-h">Built for businesses that need more than a website.</h2></div>
+    <div class="em-ind">
+      <article><h3>Beauty and wellness</h3><p>Online booking with deposits, reminders, client texts and review requests after every visit.</p></article>
+      <article><h3>Contractors and home services</h3><p>Estimate requests, a lead pipeline, scheduling, follow-up and job-day reminders.</p></article>
+      <article><h3>Coaches and consultants</h3><p>Lead funnels, discovery-call booking, client onboarding, and digital products or memberships.</p></article>
+      <article><h3>Real estate professionals</h3><p>Lead capture, property inquiries, follow-up workflows and task tracking through each transaction.</p></article>
+      <article><h3>Professional services</h3><p>Intake forms, appointment scheduling, document collection, an organized CRM and client follow-up.</p></article>
+      <article><h3>Online educators and creators</h3><p>A storefront, automatic sales and delivery, course or membership access and buyer follow-up.</p></article>
+    </div>
+    <p class="em-note em-note-lt">Examples of how a connected system can work in each industry. Features vary by package; the intake tells us which ones fit your business.</p>
+  </div></section>
+
+  <!-- 7. Founder -->
+  <section class="em-band em-dark" id="founder"><div class="wrap em-founder">
+    <div class="em-fphoto"><img src="/assets/empire/odis-office.jpg" alt="Odis D. James III at his desk" width="1152" height="864" loading="lazy"></div>
+    <div>
+      <span class="eyebrow">Who builds Empire</span>
+      <h2 class="em-h">Built by business operators. Not just web designers.</h2>
+      <p class="em-lead">Odis D. James III spent years at the corporate level of the multifamily industry, running large apartment portfolios, leading teams and working alongside construction and operations crews. He ran a mortgage brokerage, built a national notary signing agent company, and built a seven-figure company that started with $585.</p>
+      <p class="em-lead">That's the thinking behind Empire: before we build anything, we look at how your business actually runs: how leads come in, who follows up, how you get paid and where things fall through the cracks.</p>
+      <div class="em-stats">
+        <div><b>2,860</b><span>apartment units managed</span></div>
+        <div><b>$650M+</b><span>in multifamily assets managed</span></div>
+        <div><b>$1B+</b><span>in loans funded as a broker</span></div>
+        <div><b>20+ yrs</b><span>building businesses</span></div>
+      </div>
+      <p class="em-fine">Units and assets managed during his corporate multifamily career. Licensed real estate broker in California and Georgia. Founder and CEO of 4 Data Points Academy.</p>
+    </div>
+  </div></section>
+
+  <!-- 8. Proof -->
+  <section class="em-band em-white" id="proof"><div class="wrap">
+    <div class="em-head"><span class="eyebrow">Real systems, working today</span><h2 class="em-h">We run our own business on the same systems.</h2><p class="em-sub">These are live pages from 4 Data Points Academy's own operation, built on the same platform we use for Empire clients.</p></div>
+    <div class="em-proof">
+      <figure><div class="frame"><img src="/assets/empire/proof/financing.jpg" alt="4DPA financing request page: a guided intake that routes each request" loading="lazy" width="1280" height="860"></div><figcaption><b>Lead intake and routing</b>A guided request form that sorts each inquiry and sends it to the right partner.</figcaption></figure>
+      <figure><div class="frame"><img src="/assets/empire/proof/assessment.jpg" alt="Empire business review form on 4datapoints.com" loading="lazy" width="1280" height="860"></div><figcaption><b>Qualification intake</b>The business review form on this site, saved straight into our CRM.</figcaption></figure>
+      <figure><div class="frame"><img src="/assets/empire/proof/checkout.jpg" alt="4DPA event checkout page with order summary and secure payment" loading="lazy" width="1280" height="860"></div><figcaption><b>Secure checkout</b>Event tickets sold online, with confirmation, tagging and follow-up after every purchase.</figcaption></figure>
+    </div>
+  </div></section>
+
+  <!-- 9. Packages -->
+  <section class="em-band em-cream" id="empire-pk"><div class="wrap">
+    <div class="em-head"><span class="eyebrow">Packages</span><h2 class="em-h">Choose the system that fits where your business is.</h2><p class="em-sub">One-time setup plus a monthly plan. Start smaller and upgrade anytime by paying the difference in setup.</p></div>
+    <div class="em-tiers">
+      <article class="em-tier">
+        <span class="em-tname">Empire Cornerstone</span><h3>Establish your business foundation</h3><p class="em-for">For service and local businesses that need the essentials set up fast.</p>
+        <div class="em-price">$1,497 <small>setup</small><em>+ $97/month</em></div>
+        <ul><li>One-page website on your own domain with a contact form</li><li>Branded email and a local business number with missed-call text-back</li><li>CRM with a sales pipeline, booking calendar and reminders</li><li>Invoices, estimates and online payments</li><li>Instant lead alerts with automatic replies</li><li>Google Business Profile setup and review requests</li></ul>
+        <a class="em-choose" href="https://go.4datapoints.com/empire-funnel#pricing">Choose Cornerstone</a>
+      </article>
+      <article class="em-tier">
+        <span class="em-tname">Empire Foundation</span><h3>Build a connected business system</h3><p class="em-for">For businesses that need a full website and their tools working together.</p>
+        <div class="em-price">$2,499 <small>setup</small><em>+ $197/month</em></div>
+        <ul><li>Everything in Cornerstone</li><li>Full custom website with the pages your offers need</li><li>Lead capture with automated follow-up and nurture</li><li>Empire Entrepreneur Foundations course</li></ul>
+        <a class="em-choose" href="https://go.4datapoints.com/empire-funnel#pricing">Choose Foundation</a>
+      </article>
+      <article class="em-tier feat">
+        <span class="em-badge">Most complete</span>
+        <span class="em-tname">Empire Builder</span><h3>Expand your business capabilities</h3><p class="em-for">For businesses ready for AI, stronger follow-up and paid-ad funnels.</p>
+        <div class="em-price">$3,499 <small>setup</small><em>+ $297/month</em></div>
+        <ul><li>Everything in Foundation</li><li>AI assistant that answers leads on your site and by text</li><li>Sales pipeline and a booking funnel for paid ads</li><li>Email campaigns and extra offer pages</li><li>A done-for-you lead-generation mini-course (up to 5 lessons) built from your content</li><li>Empire Advanced course</li></ul>
+        <a class="em-choose" href="https://go.4datapoints.com/empire-funnel#pricing">Choose Builder</a>
+      </article>
+    </div>
+    <article class="em-dps">
+      <div>
+        <span class="em-tname">Empire Digital Product System</span>
+        <h3>Turn your expertise into a digital product business.</h3>
+        <p class="em-for">For coaches, educators, consultants, authors and creators. We help you decide what to create, then build the system that sells and delivers it.</p>
+        <ul><li>We turn your expertise into a digital product</li><li>Sales page and secure checkout</li><li>Instant delivery after purchase</li><li>Welcome, follow-up and abandoned-checkout emails</li><li>Storefront and a CRM that tracks every buyer</li></ul>
+      </div>
+      <div class="em-dps-buy">
+        <div class="em-price">$997 <small>setup</small><em>+ $97/month, starting only when your system is ready to launch</em></div>
+        <a class="em-choose" href="https://go.4datapoints.com/empire-funnel#pricing">Choose Digital Product System</a>
+      </div>
+    </article>
+    <div class="em-terms">
+      <div><b>What the monthly plan covers</b><p>Hosting, platform and CRM access, email and text tools, maintenance, changes to your system and the basic third-party services it runs on.</p></div>
+      <div><b>Not included</b><p>Ad spend and running your ads, the voice AI receptionist (available as an add-on), and unlimited content or consulting. Usage beyond the basics is reviewed with you before it's billed.</p></div>
+      <div><b>Billing terms</b><p>Setup is paid in full and is non-refundable because work starts when you enroll. You can cancel the monthly plan anytime; you keep your domain, content and customer list. See the <a href="/refund-policy/">Refund Policy</a>.</p></div>
+    </div>
+    <div class="em-help"><span>Not sure which package fits?</span><a class="em-cta" href="/empire/assessment/">Build My Empire</a><small>Start with a free business review. Odis recommends the right package.</small></div>
+  </div></section>
+
+  <!-- 10. Process -->
+  <section class="em-band em-white" id="process"><div class="wrap">
+    <div class="em-head"><span class="eyebrow">How it works</span><h2 class="em-h">Three steps from intake to launch.</h2></div>
+    <ol class="em-process">
+      <li><span>01</span><b>Tell us about your business</b><p>A short, free intake covers your stage, your industry, what you already use and what's slowing you down. About three minutes.</p></li>
+      <li><span>02</span><b>Get a recommendation</b><p>Odis reviews it personally and replies within two business days with what he'd set up first and which package fits.</p></li>
+      <li><span>03</span><b>We build, test and hand it over</b><p>Most core systems take about two to three weeks, depending on the package and how quickly we get your content. You learn how to run it.</p></li>
+    </ol>
+  </div></section>
+
+  <!-- 11. FAQ -->
+  <section class="em-band em-cream" id="faq"><div class="wrap em-faqwrap">
+    <div class="em-head"><span class="eyebrow">Questions</span><h2 class="em-h">Before you start</h2></div>
+    <div class="faqs">
+      <details class="qa"><summary>Is the business review really free?</summary><p>Yes. The intake and Odis's written recommendation are free, with no obligation. You only pay if you choose a package.</p></details>
+      <details class="qa"><summary>Do I need to have a business already?</summary><p>No. Empire works for a business you're starting and for one that's already running. The intake tells us where you are.</p></details>
+      <details class="qa"><summary>I already have a website. Do I start over?</summary><p>Not necessarily. The intake asks what you already have, and we recommend only what's missing.</p></details>
+      <details class="qa"><summary>What does the monthly fee cover?</summary><p>Hosting, platform and CRM access, email and text tools, maintenance, changes to your system and the basic third-party services it runs on. Ad spend isn't included, and any usage beyond the basics is reviewed with you before it's billed.</p></details>
+      <details class="qa"><summary>How long does a build take?</summary><p>Most core systems take about two to three weeks. Some steps need your input, like your content and logins, and add-ons can extend the timeline.</p></details>
+      <details class="qa"><summary>Can I cancel?</summary><p>You can cancel the monthly plan anytime. You keep your domain, content and customer list. Setup fees are non-refundable because work begins as soon as you enroll.</p></details>
+      <details class="qa"><summary>Is there a payment plan?</summary><p>No. Empire setup is paid in full.</p></details>
+      <details class="qa"><summary>Can I start small and upgrade later?</summary><p>Yes. Start with Cornerstone and move up to Foundation or Builder anytime by paying the difference in setup.</p></details>
+      <details class="qa"><summary>Does Cornerstone include the AI assistant?</summary><p>No. Cornerstone sends automatic replies to new leads, but the AI assistant that holds real conversations comes with Empire Builder.</p></details>
+    </div>
+  </div></section>
+
+  <!-- 12. Final CTA -->
+  <section class="em-band em-final"><div class="wrap">
+    <span class="eyebrow">Built for entrepreneurs. By entrepreneurs.</span>
+    <h2 class="em-h">You've got the idea. Let's build the business behind it.</h2>
+    <p class="em-sub">Tell us about your business. Odis will reply personally with what he'd build first.</p>
+    <div class="em-btns"><a class="em-cta" href="/empire/assessment/">Build My Empire</a><a class="em-ghost" href="#empire-pk">See Packages</a></div>
+  </div></section>
+</section>
+</main>
+
+
+<footer><div class="wrap cols">
+  <div class="fcol-brand" style="display:grid;gap:12px;align-content:start"><img src="/assets/img/logo.png" alt="4 Data Points Academy" width="92" height="60" style="height:60px;width:auto"><p>Real estate investing and entrepreneurship education.</p><p>4 Data Points Academy, Inc.<br>3225 McLeod Drive, Suite 100<br>Las Vegas, NV 89121<br><a href="tel:+17027108030">702-710-8030</a> · <a href="mailto:info@4datapoints.com">info@4datapoints.com</a></p></div>
+  <div class="fcol"><h4>Real Estate</h4><ul><li><a href="/mentorship/">Mentorship</a></li><li><a href="/multifamily/">Multifamily Workshop</a></li><li><a href="/land-trust/">Land Trusts</a></li><li><a href="/financing/">Investor Financing</a></li><li><a href="/books/">Books</a></li><li><a href="https://forms.4datapoints.com/app">The App</a></li></ul></div>
+  <div class="fcol"><h4>Entrepreneurship</h4><ul><li><a href="/empire/">Empire</a></li><li><a href="/entrepreneurship/">Entrepreneur Course</a></li><li><a href="/ventureu/">VentureU Retreat</a></li><li><a href="/financing/">Business Financing</a></li><li><a href="/ascendu/">Self-Image Workshop</a></li><li><a href="/events/">Events</a></li></ul></div>
+  <div class="fcol"><h4>Company</h4><ul><li><a href="/about/">About Odis</a></li><li><a href="/contact/">Contact</a></li><li><a href="/partner/">Referral Partners</a></li><li><a href="https://portal.4datapoints.com/" target="_blank" rel="noopener">Student Portal</a></li></ul></div>
+</div><div class="wrap disclaim">4 Data Points Academy provides education. Nothing on this site is investment, legal, tax or financial advice. Real estate investing and starting a business involve risk, including loss of money. Student results and examples shown are not typical and are not a promise or guarantee of income or results; your results depend on your effort, experience, market and decisions. Odis D. James III is a licensed real estate broker in California and Georgia; 4DPA programs are educational and do not create a broker-client relationship.</div><div class="wrap legal"><span>© 2026 4 Data Points Academy, Inc.</span><span><a href="/privacy-policy/">Privacy Policy</a> · <a href="/terms-of-service/">Terms of Service</a> · <a href="/sms-terms/">Text Messaging Terms</a> · <a href="/refund-policy/">Refund Policy</a></span></div></footer>
+<script>
+(function(){
+  var root=document.getElementById('journey'); if(!root) return;
+  var tabs=[].slice.call(root.querySelectorAll('[role=tab]'));
+  var panels=tabs.map(function(t){return document.getElementById(t.getAttribute('aria-controls'));});
+  var cur=0, timer=null, user=false, inView=false, box=root.querySelector('.em-panels');
+  var reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function show(i,focus){
+    cur=(i+tabs.length)%tabs.length;
+    tabs.forEach(function(t,k){var on=k===cur;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;panels[k].hidden=!on;panels[k].classList.toggle('on',on);});
+    if(focus) tabs[cur].focus();
+    var mob=matchMedia('(max-width: 980px)').matches, list=root.querySelector('.em-steps');
+    list.setAttribute('role',mob?'group':'tablist');
+    tabs.forEach(function(t,k){ if(mob){t.removeAttribute('role');t.removeAttribute('aria-selected');t.setAttribute('aria-expanded',k===cur);t.tabIndex=0;} else {t.setAttribute('role','tab');t.removeAttribute('aria-expanded');t.setAttribute('aria-selected',k===cur);} });
+    panels.forEach(function(pn){pn.setAttribute('role',mob?'region':'tabpanel');});
+    if(mob){ tabs[cur].after(box); } else if(box.parentNode!==root){ root.appendChild(box); }
+  }
+  function stop(){user=true; if(timer){clearInterval(timer);timer=null;}}
+  tabs.forEach(function(t,k){
+    t.addEventListener('click',function(){stop();show(k);});
+    t.addEventListener('keydown',function(e){
+      var d={ArrowDown:1,ArrowRight:1,ArrowUp:-1,ArrowLeft:-1}[e.key];
+      if(d){e.preventDefault();stop();show(cur+d,true);}
+      else if(e.key==='Home'){e.preventDefault();stop();show(0,true);}
+      else if(e.key==='End'){e.preventDefault();stop();show(tabs.length-1,true);}
+    });
+  });
+  show(0);
+  addEventListener('resize',function(){show(cur);});
+  if(!reduced && 'IntersectionObserver' in window){
+    new IntersectionObserver(function(es){
+      inView=es[0].isIntersecting;
+      if(inView && !user && !timer){timer=setInterval(function(){show(cur+1);},5200);}
+      if(!inView && timer){clearInterval(timer);timer=null;}
+    },{threshold:.35}).observe(root);
+  }
+})();
+</script>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>

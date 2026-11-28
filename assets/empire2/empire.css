@@ -443,3 +443,14 @@ button{font:inherit}
 @media (max-width:760px){.cc-map{display:none}.cc-flow{display:flex;order:-1}}
 
 .ebar a,.terms3 a,.faq a,.sub .tlink,.fine a{text-decoration:underline;text-underline-offset:2px}
+@media (max-width:900px){
+  .tw{display:flex;flex-direction:column;gap:0}
+  .tw>div:last-child{display:contents}
+  .tw .tag{order:1}.tw h2{order:2;margin-bottom:22px}.tw-stage{order:3}.tw-steps{order:4;margin-top:0!important;border-top:0}
+  .tw-steps button{padding:14px 0;grid-template-columns:44px 1fr}
+  .tw-steps button h3{font-size:1.2rem}
+}
+@media (max-width:760px),(max-width:1024px) and (orientation:portrait){
+  .eh-sh{background:linear-gradient(180deg,rgba(11,12,13,.92) 0%,rgba(11,12,13,.78) 26%,rgba(11,12,13,.3) 38%,rgba(11,12,13,.25) 46%,rgba(11,12,13,.82) 56%,rgba(11,12,13,.96) 70%)}
+  .eh .lede{text-shadow:0 1px 12px rgba(0,0,0,.6)}
+}

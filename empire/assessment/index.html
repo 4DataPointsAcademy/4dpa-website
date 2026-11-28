@@ -170,5 +170,7 @@
   });
 })();
 </script>
+<script>/* Prefill industry from the Empire page's industry selector (?industry=...) */
+(function(){try{var v=new URLSearchParams(location.search).get('industry');var f=document.querySelector('input[name="industry"]');if(v&&f&&!f.value){f.value=v.slice(0,80);}}catch(e){}})();</script>
 </body>
 </html>
